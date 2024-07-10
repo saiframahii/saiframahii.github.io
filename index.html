@@ -1,7 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Food Donation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 20px;
+            font-size: 16px;
+        }
+        .disabled {
+            background-color: grey;
+            pointer-events: none;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <h1>Anonymous Food Donation</h1>
+    <p>Available Meals: <span id="meal-counter">0</span></p>
+    <button id="gifted-button" class="disabled">Gifted</button>
+    <button id="gifter-button">Gifter</button>
+
+    <script>
+        // Placeholder for meal count, this should be fetched from the database
+        let mealCount = 0;
+
+        // Function to update the meal counter
+        function updateMealCounter() {
+            document.getElementById('meal-counter').innerText = mealCount;
+            if (mealCount > 0) {
+                document.getElementById('gifted-button').classList.remove('disabled');
+            } else {
+                document.getElementById('gifted-button').classList.add('disabled');
+            }
+        }
+
+        // Initial update
+        updateMealCounter();
+
+        // Event listener for the gifter button
+        document.getElementById('gifter-button').addEventListener('click', () => {
+            // Redirect to payment (This should be replaced with actual payment processing)
+            alert('Redirecting to payment...');
+            mealCount++;
+            updateMealCounter();
+        });
+
+        // Event listener for the gifted button
+        document.getElementById('gifted-button').addEventListener('click', () => {
+            if (mealCount > 0) {
+                alert('Enjoy your meal!');
+                mealCount--;
+                updateMealCounter();
+            }
+        });
+    </script>
 </body>
 </html>
