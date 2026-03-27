@@ -1,0 +1,8 @@
+NOTES.md
+
+# Source files — OneDrive is the source of truth; src/ is a local working copy only
+src/
+
+# Local IDE artefacts
+.claude/settings.local.json
+*.local.json

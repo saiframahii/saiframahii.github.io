@@ -1,0 +1,432 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix occo: <https://w3id.org/occo#> .
+@prefix ofo: <https://w3id.org/ofo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:created a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dcterms:creator a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dcterms:description a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dcterms:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier" ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dcterms:issued a owl:DatatypeProperty ;
+    rdfs:label "issued" ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dcterms:license a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dcterms:publisher a owl:DatatypeProperty ;
+    rdfs:label "publisher" ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dcterms:title a owl:AnnotationProperty,
+        owl:DatatypeProperty ;
+    rdfs:label "title" ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dcterms:Standard a owl:Class ;
+    rdfs:label "Standard" ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/vocab/vann/> .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/vocab/vann/> .
+
+qudt:unit a owl:ObjectProperty ;
+    rdfs:label "unit" ;
+    rdfs:domain qudt:QuantityValue ;
+    rdfs:range qudt:Unit ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt/> .
+
+qudt:Unit a owl:Class ;
+    rdfs:label "Unit" ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt/> .
+
+qudt:numericValue a owl:DatatypeProperty ;
+    rdfs:label "numeric value" ;
+    rdfs:range xsd:double ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt/> .
+
+qudt:QuantityValue a owl:Class ;
+    rdfs:label "Quantity Value" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:double ;
+            owl:onProperty qudt:numericValue ] ;
+    rdfs:isDefinedBy <http://qudt.org/schema/qudt/> .
+
+rdfs:comment a owl:AnnotationProperty .
+
+owl:versionIRI a owl:AnnotationProperty .
+
+owl:versionInfo a owl:AnnotationProperty .
+
+time:hasBeginning a owl:ObjectProperty ;
+    rdfs:label "has beginning" ;
+    rdfs:domain time:Interval ;
+    rdfs:range time:Instant ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/time> .
+
+time:hasEnd a owl:ObjectProperty ;
+    rdfs:label "has end" ;
+    rdfs:domain time:Interval ;
+    rdfs:range time:Instant ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/time> .
+
+time:Instant a owl:Class ;
+    rdfs:label "Instant" ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/time> .
+
+time:Interval a owl:Class ;
+    rdfs:label "Interval" ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/time> .
+
+prov:atLocation a owl:ObjectProperty ;
+    rdfs:label "at location" ;
+    rdfs:domain ofo:Feedback ;
+    rdfs:range s4bldg:BuildingSpace ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o> .
+
+prov:generated a owl:ObjectProperty ;
+    rdfs:label "generated" ;
+    rdfs:domain sosa:Actuation ;
+    rdfs:range occo:PerformanceOutcome ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o> .
+
+prov:used a owl:ObjectProperty ;
+    rdfs:label "used" ;
+    rdfs:domain sosa:Actuation ;
+    rdfs:range occo:ControlStrategy ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o> .
+
+prov:wasAssociatedWith a owl:ObjectProperty ;
+    rdfs:label "was associated with" ;
+    rdfs:range prov:Agent ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o> .
+
+prov:Agent a owl:Class ;
+    rdfs:label "Agent" ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o> .
+
+prov:wasAttributedTo a owl:ObjectProperty ;
+    rdfs:label "was attributed to" ;
+    rdfs:domain ofo:Feedback ;
+    rdfs:range ofo:Person ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o> .
+
+prov:wasInformedBy a owl:ObjectProperty ;
+    rdfs:label "was informed by" ;
+    rdfs:domain sosa:Actuation ;
+    rdfs:range sosa:Observation ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o> .
+
+
+prov:SoftwareAgent a owl:Class ;
+    rdfs:label "Software Agent" ;
+    rdfs:subClassOf prov:Agent ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o> .
+
+prov:generatedAtTime a owl:DatatypeProperty ;
+    rdfs:label "generated at time" ;
+    rdfs:range xsd:dateTime ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/prov-o> .
+
+sosa:hasFeatureOfInterest a owl:ObjectProperty ;
+    rdfs:label "has feature of interest" ;
+    rdfs:domain sosa:Observation ;
+    rdfs:range s4bldg:BuildingSpace ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+sosa:hasResult a owl:ObjectProperty ;
+    rdfs:label "has result" ;
+    rdfs:domain sosa:Observation ;
+    rdfs:range qudt:QuantityValue ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+sosa:madeByActuator a owl:ObjectProperty ;
+    rdfs:label "made by actuator" ;
+    rdfs:domain sosa:Actuation ;
+    rdfs:range sosa:Actuator ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+sosa:madeBySensor a owl:ObjectProperty ;
+    rdfs:label "made by sensor" ;
+    rdfs:domain sosa:Observation ;
+    rdfs:range sosa:Sensor ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+sosa:observedProperty a owl:ObjectProperty ;
+    rdfs:label "observed property" ;
+    rdfs:domain sosa:Observation ;
+    rdfs:range sosa:ObservableProperty ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+sosa:Sensor a owl:Class ;
+    rdfs:label "Sensor" ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+sosa:resultTime a owl:DatatypeProperty ;
+    rdfs:label "result time" ;
+    rdfs:range xsd:dateTime ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+sosa:Actuator a owl:Class ;
+    rdfs:label "Actuator" ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+sosa:ObservableProperty a owl:Class ;
+    rdfs:label "Observable Property" ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+sosa:Observation a owl:Class ;
+    rdfs:label "Observation" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:dateTime ;
+            owl:onProperty sosa:resultTime ] ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+sosa:Actuation a owl:Class ;
+    rdfs:label "Actuation" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:dateTime ;
+            owl:onProperty prov:generatedAtTime ] ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/sosa/> .
+
+s4bldg:isContainedIn a owl:ObjectProperty ;
+    rdfs:label "is contained in" ;
+    rdfs:domain s4bldg:Lamp ;
+    rdfs:range s4bldg:BuildingSpace ;
+    rdfs:isDefinedBy <https://saref.etsi.org/saref4bldg/> .
+
+s4bldg:Lamp a owl:Class ;
+    rdfs:label "Lamp" ;
+    rdfs:subClassOf sosa:Actuator ;
+    rdfs:isDefinedBy <https://saref.etsi.org/saref4bldg/> .
+
+s4bldg:BuildingSpace a owl:Class ;
+    rdfs:label "Building Space" ;
+    rdfs:isDefinedBy <https://saref.etsi.org/saref4bldg/> .
+
+ofo:hasLocation a owl:ObjectProperty ;
+    rdfs:label "has location" ;
+    rdfs:domain ofo:Person ;
+    rdfs:range s4bldg:BuildingSpace ;
+    rdfs:isDefinedBy <https://w3id.org/ofo> .
+
+ofo:hasSimpleFeedbackState a owl:DatatypeProperty ;
+    rdfs:label "has simple feedback state" ;
+    rdfs:range xsd:string ;
+    rdfs:isDefinedBy <https://w3id.org/ofo> .
+
+ofo:Feedback a owl:Class ;
+    rdfs:label "Feedback" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:dateTime ;
+            owl:onProperty prov:generatedAtTime ] ;
+    rdfs:isDefinedBy <https://w3id.org/ofo> .
+
+ofo:Person a owl:Class ;
+    rdfs:label "Person" ;
+    rdfs:isDefinedBy <https://w3id.org/ofo> .
+
+occo: a owl:Ontology ;
+    dcterms:created "2025-09-24"^^xsd:date ;
+    dcterms:creator "Saif Alramahi" ;
+    dcterms:description "A semantic framework for occupant-centric building control. This ontology is under active development and has not yet been fully validated."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:title "Occupant-Centric Control Ontology (OCCO)"@en ;
+    vann:preferredNamespacePrefix "occo" ;
+    vann:preferredNamespaceUri occo: ;
+    rdfs:comment "This ontology was developed as part of PhD research at Birmingham City University. The version presented here reflects the state at time of publication. The ontology will continue to evolve following formal validation and implementation."@en ;
+    owl:versionIRI <https://w3id.org/occo/0.0.2> ;
+    owl:versionInfo "0.0.2-dev" ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+occo:CCT a owl:Class ;
+    rdfs:label "C C T" ;
+    rdfs:comment "Correlated Colour Temperature, an observable lighting property measured in Kelvin that characterises the warmth or coolness of a light source."@en ;
+    rdfs:subClassOf sosa:ObservableProperty .
+
+occo:Chronotype a owl:Class ;
+    rdfs:label "Chronotype" ;
+    rdfs:comment "A classification of an occupant's circadian preference, representing their natural tendency toward morning, intermediate, or evening activity patterns."@en .
+
+occo:ControlStrategy a owl:Class ;
+    rdfs:label "Control Strategy" ;
+    rdfs:comment "A defined approach for adjusting lighting parameters in a building space, such as dimming or colour tuning, selected by the controller to meet occupant requirements."@en .
+
+occo:Controller a owl:Class ;
+    rdfs:label "Controller" ;
+    rdfs:comment "An automated software agent that selects and applies a lighting control strategy within a building space based on occupant preferences and environmental observations."@en ;
+    rdfs:subClassOf prov:SoftwareAgent .
+
+occo:GlareIndex a owl:Class ;
+    rdfs:label "Glare Index" ;
+    rdfs:comment "A measure of visual discomfort caused by excessive brightness or contrast within the visual field, used as an observable lighting quality parameter."@en ;
+    rdfs:subClassOf sosa:ObservableProperty .
+
+occo:Illuminance a owl:Class ;
+    rdfs:label "Illuminance" ;
+    rdfs:comment "The luminous flux incident on a surface per unit area, measured in lux, used as a primary observable parameter for lighting control."@en ;
+    rdfs:subClassOf sosa:ObservableProperty .
+
+occo:OccupancyStatus a owl:Class ;
+    rdfs:label "Occupancy Status" ;
+    rdfs:comment "An observable property indicating whether a building space is currently occupied, used to trigger or suppress lighting control actions."@en ;
+    rdfs:subClassOf sosa:ObservableProperty .
+
+occo:OverrideEvent a owl:Class ;
+    rdfs:label "Override Event" ;
+    rdfs:comment "A manual intervention by an occupant that supersedes an automated lighting control actuation, recorded with a timestamp for audit and learning purposes."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:dateTime ;
+            owl:onProperty prov:generatedAtTime ] .
+
+occo:PerformanceOutcome a owl:Class ;
+    rdfs:label "Performance Outcome" ;
+    rdfs:comment "The result of a lighting control actuation, capturing comfort score, energy consumption, and compliance with applicable lighting standards."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty occo:meetsStandard ] .
+
+occo:Preference a owl:Class ;
+    rdfs:label "Preference" ;
+    rdfs:comment "A set of occupant-defined lighting preferences, including preferred illuminance and correlated colour temperature values for a given visual task."@en .
+
+occo:VisualTask a owl:Class ;
+    rdfs:label "Visual Task" ;
+    rdfs:comment "A task performed by an occupant that has specific visual requirements, such as reading, computer work, or collaborative meetings, which inform appropriate lighting conditions."@en .
+
+occo:EveningType a owl:NamedIndividual ;
+    a occo:Chronotype .
+
+occo:IntermediateType a owl:NamedIndividual ;
+    a occo:Chronotype .
+
+occo:MorningType a owl:NamedIndividual ;
+    a occo:Chronotype .
+
+[] a owl:AllDifferent ;
+    owl:members ( occo:MorningType occo:EveningType occo:IntermediateType ) .
+
+occo:EN_12464_1_2021 a dcterms:Standard,
+        owl:NamedIndividual ;
+    dcterms:identifier "EN 12464-1:2021" ;
+    dcterms:issued "2021-08-31"^^xsd:date ;
+    dcterms:publisher "BSI" ;
+    dcterms:title "Light and lighting. Lighting of work places - Indoor work places"@en .
+
+occo:ISO_8995_1 a dcterms:Standard,
+        owl:NamedIndividual ;
+    dcterms:identifier "ISO 8995-1" ;
+    dcterms:issued "2025-01-01"^^xsd:date ;
+    dcterms:publisher "ISO" ;
+    dcterms:title "Light and lighting — Lighting of work places Part 1: Indoor"@en .
+
+occo:appliesToSpace a owl:ObjectProperty ;
+    rdfs:label "applies to space" ;
+    rdfs:comment "Relates a control strategy to the building space in which it is applied."@en ;
+    rdfs:domain occo:ControlStrategy ;
+    rdfs:range s4bldg:BuildingSpace .
+
+occo:assessedAgainst a owl:ObjectProperty ;
+    rdfs:label "assessed against" ;
+    rdfs:comment "Relates a performance outcome to the lighting standard used to evaluate compliance."@en ;
+    rdfs:domain occo:PerformanceOutcome ;
+    rdfs:range dcterms:Standard .
+
+occo:comfortScore a owl:DatatypeProperty ;
+    rdfs:label "comfort score" ;
+    rdfs:comment "A decimal value representing the degree of visual comfort achieved by a lighting control actuation, assessed against occupant preferences."@en ;
+    rdfs:domain occo:PerformanceOutcome ;
+    rdfs:range xsd:decimal .
+
+occo:forTask a owl:ObjectProperty ;
+    rdfs:label "for task" ;
+    rdfs:comment "Relates a preference to the visual task for which it is defined."@en ;
+    rdfs:domain occo:Preference ;
+    rdfs:range occo:VisualTask .
+
+occo:hasBaseline a owl:ObjectProperty ;
+    rdfs:label "has baseline" ;
+    rdfs:comment "Relates a performance outcome to a reference baseline outcome against which it is compared. This property is directional: the subject is the measured outcome, the object is the baseline."@en ;
+    rdfs:domain occo:PerformanceOutcome ;
+    rdfs:range occo:PerformanceOutcome .
+
+occo:hasChronotype a owl:ObjectProperty ;
+    rdfs:label "has chronotype" ;
+    rdfs:comment "Relates a person to their chronotype classification, capturing their circadian activity pattern preference."@en ;
+    rdfs:domain ofo:Person ;
+    rdfs:range occo:Chronotype .
+
+occo:hasEnergyConsumption a owl:ObjectProperty ;
+    rdfs:label "has energy consumption" ;
+    rdfs:comment "Relates a performance outcome to the energy consumption recorded during the associated lighting control actuation, expressed as a quantity value."@en ;
+    rdfs:domain occo:PerformanceOutcome ;
+    rdfs:range qudt:QuantityValue .
+
+occo:hasPreference a owl:ObjectProperty ;
+    rdfs:label "has preference" ;
+    rdfs:comment "Relates a person to their lighting preference profile, which specifies desired illuminance and colour temperature for a given visual task."@en ;
+    rdfs:domain ofo:Person ;
+    rdfs:range occo:Preference .
+
+occo:includesFeedback a owl:ObjectProperty ;
+    rdfs:label "includes feedback" ;
+    rdfs:comment "Relates a performance outcome to occupant feedback received following a lighting control actuation."@en ;
+    rdfs:domain occo:PerformanceOutcome ;
+    rdfs:range ofo:Feedback .
+
+occo:meetsStandard a owl:DatatypeProperty ;
+    rdfs:label "meets standard" ;
+    rdfs:comment "A boolean value indicating whether a performance outcome satisfies the requirements of the applicable lighting standard."@en ;
+    rdfs:domain occo:PerformanceOutcome ;
+    rdfs:range xsd:boolean .
+
+occo:overrides a owl:ObjectProperty ;
+    rdfs:label "overrides" ;
+    rdfs:comment "Relates an override event to the automated actuation it supersedes."@en ;
+    rdfs:domain occo:OverrideEvent ;
+    rdfs:range sosa:Actuation .
+
+occo:preferredCCT a owl:ObjectProperty ;
+    rdfs:label "preferred c c t" ;
+    rdfs:comment "Relates a preference to the occupant's desired correlated colour temperature, expressed as a quantity value in Kelvin."@en ;
+    rdfs:domain occo:Preference ;
+    rdfs:range qudt:QuantityValue .
+
+occo:preferredIlluminance a owl:ObjectProperty ;
+    rdfs:label "preferred illuminance" ;
+    rdfs:comment "Relates a preference to the occupant's desired illuminance level, expressed as a quantity value in lux."@en ;
+    rdfs:domain occo:Preference ;
+    rdfs:range qudt:QuantityValue .
+
+occo:strategyCategory a owl:DatatypeProperty ;
+    rdfs:label "strategy category" ;
+    rdfs:comment "A string label categorising the type of control strategy applied, such as dimming, colour tuning, or scene-based control."@en ;
+    rdfs:domain occo:ControlStrategy ;
+    rdfs:range xsd:string .
+
+occo:usesStrategy a owl:ObjectProperty ;
+    rdfs:label "uses strategy" ;
+    rdfs:comment "Relates a controller to the control strategy it is currently applying in a building space."@en ;
+    rdfs:domain occo:Controller ;
+    rdfs:range occo:ControlStrategy .
