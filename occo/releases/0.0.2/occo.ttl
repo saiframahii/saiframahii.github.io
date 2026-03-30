@@ -1,3 +1,4 @@
+@prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix occo: <https://w3id.org/occo#> .
@@ -13,6 +14,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 dcterms:created a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dcterms:modified a owl:AnnotationProperty ;
     rdfs:isDefinedBy <http://purl.org/dc/terms/> .
 
 dcterms:creator a owl:AnnotationProperty ;
@@ -36,10 +40,19 @@ dcterms:publisher a owl:DatatypeProperty ;
     rdfs:label "publisher" ;
     rdfs:isDefinedBy <http://purl.org/dc/terms/> .
 
-dcterms:title a owl:AnnotationProperty,
-        owl:DatatypeProperty ;
+dcterms:title a owl:AnnotationProperty ;
     rdfs:label "title" ;
     rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dcterms:bibliographicCitation a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dcterms:source a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+bibo:status a owl:AnnotationProperty ;
+    rdfs:label "status" ;
+    rdfs:isDefinedBy <http://purl.org/ontology/bibo/> .
 
 dcterms:Standard a owl:Class ;
     rdfs:label "Standard" ;
@@ -249,10 +262,16 @@ ofo:Person a owl:Class ;
 
 occo: a owl:Ontology ;
     dcterms:created "2025-09-24"^^xsd:date ;
-    dcterms:creator "Saif Alramahi" ;
+    dcterms:issued "2026-03-29"^^xsd:date ;
+    dcterms:modified "2026-03-29"^^xsd:date ;
+    dcterms:creator "Saif Alramahi", "Mohammad Mayouf", "Elham Del Zendeh", "Khalid Ismail" ;
+    dcterms:publisher "Birmingham City University" ;
+    dcterms:bibliographicCitation "Alramahi, S., Mayouf, M., Del Zendeh, E., & Ismail, K. (2026). Towards a Semantic Ontology for Occupant-Centric Building Control. Submitted to EC3 2026 — 12th European Conference on Construction IT." ;
+    dcterms:source <https://github.com/saiframahii/saiframahii.github.io> ;
     dcterms:description "A semantic framework for occupant-centric building control. This ontology is under active development and has not yet been fully validated."@en ;
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:title "Occupant-Centric Control Ontology (OCCO)"@en ;
+    bibo:status "Ontology Specification Draft" ;
     vann:preferredNamespacePrefix "occo" ;
     vann:preferredNamespaceUri occo: ;
     rdfs:comment "This ontology was developed as part of PhD research at Birmingham City University. The version presented here reflects the state at time of publication. The ontology will continue to evolve following formal validation and implementation."@en ;

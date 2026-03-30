@@ -1,0 +1,102 @@
+# CQ5 Synthetic Data — v0.0.2
+# CQ: How has an occupant's lighting preference profile changed over time?
+
+@prefix occo: <https://w3id.org/occo#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
+@prefix ofo: <https://w3id.org/ofo#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/occo/> .
+
+# --- Person ---
+ex:person_sarah a ofo:Person ;
+    rdfs:label "Sarah" .
+
+# --- Visual Tasks ---
+ex:task_reading a occo:VisualTask ;
+    rdfs:label "Reading" .
+
+ex:task_screen a occo:VisualTask ;
+    rdfs:label "Screen Work" .
+
+# --- Snapshot 1: March 2025 ---
+ex:qv_illum_read_mar a qudt:QuantityValue ;
+    qudt:numericValue "400.0"^^xsd:double .
+ex:qv_cct_read_mar a qudt:QuantityValue ;
+    qudt:numericValue "3800.0"^^xsd:double .
+
+ex:pref_sarah_read_mar a occo:Preference ;
+    occo:forTask ex:task_reading ;
+    occo:preferredIlluminance ex:qv_illum_read_mar ;
+    occo:preferredCCT ex:qv_cct_read_mar ;
+    prov:generatedAtTime "2025-03-01T00:00:00"^^xsd:dateTime .
+
+ex:qv_illum_screen_mar a qudt:QuantityValue ;
+    qudt:numericValue "350.0"^^xsd:double .
+ex:qv_cct_screen_mar a qudt:QuantityValue ;
+    qudt:numericValue "4000.0"^^xsd:double .
+
+ex:pref_sarah_screen_mar a occo:Preference ;
+    occo:forTask ex:task_screen ;
+    occo:preferredIlluminance ex:qv_illum_screen_mar ;
+    occo:preferredCCT ex:qv_cct_screen_mar ;
+    prov:generatedAtTime "2025-03-01T00:00:00"^^xsd:dateTime .
+
+# --- Snapshot 2: June 2025 ---
+ex:qv_illum_read_jun a qudt:QuantityValue ;
+    qudt:numericValue "500.0"^^xsd:double .
+ex:qv_cct_read_jun a qudt:QuantityValue ;
+    qudt:numericValue "4500.0"^^xsd:double .
+
+ex:pref_sarah_read_jun a occo:Preference ;
+    occo:forTask ex:task_reading ;
+    occo:preferredIlluminance ex:qv_illum_read_jun ;
+    occo:preferredCCT ex:qv_cct_read_jun ;
+    prov:generatedAtTime "2025-06-01T00:00:00"^^xsd:dateTime .
+
+ex:qv_illum_screen_jun a qudt:QuantityValue ;
+    qudt:numericValue "420.0"^^xsd:double .
+ex:qv_cct_screen_jun a qudt:QuantityValue ;
+    qudt:numericValue "4800.0"^^xsd:double .
+
+ex:pref_sarah_screen_jun a occo:Preference ;
+    occo:forTask ex:task_screen ;
+    occo:preferredIlluminance ex:qv_illum_screen_jun ;
+    occo:preferredCCT ex:qv_cct_screen_jun ;
+    prov:generatedAtTime "2025-06-01T00:00:00"^^xsd:dateTime .
+
+# --- Snapshot 3: September 2025 ---
+ex:qv_illum_read_sep a qudt:QuantityValue ;
+    qudt:numericValue "480.0"^^xsd:double .
+ex:qv_cct_read_sep a qudt:QuantityValue ;
+    qudt:numericValue "4200.0"^^xsd:double .
+
+ex:pref_sarah_read_sep a occo:Preference ;
+    occo:forTask ex:task_reading ;
+    occo:preferredIlluminance ex:qv_illum_read_sep ;
+    occo:preferredCCT ex:qv_cct_read_sep ;
+    prov:generatedAtTime "2025-09-01T00:00:00"^^xsd:dateTime .
+
+ex:qv_illum_screen_sep a qudt:QuantityValue ;
+    qudt:numericValue "400.0"^^xsd:double .
+ex:qv_cct_screen_sep a qudt:QuantityValue ;
+    qudt:numericValue "4600.0"^^xsd:double .
+
+ex:pref_sarah_screen_sep a occo:Preference ;
+    occo:forTask ex:task_screen ;
+    occo:preferredIlluminance ex:qv_illum_screen_sep ;
+    occo:preferredCCT ex:qv_cct_screen_sep ;
+    prov:generatedAtTime "2025-09-01T00:00:00"^^xsd:dateTime .
+
+# --- Person → Preference links (all 6 snapshots) ---
+ex:person_sarah occo:hasPreference ex:pref_sarah_read_mar ;
+    occo:hasPreference ex:pref_sarah_screen_mar ;
+    occo:hasPreference ex:pref_sarah_read_jun ;
+    occo:hasPreference ex:pref_sarah_screen_jun ;
+    occo:hasPreference ex:pref_sarah_read_sep ;
+    occo:hasPreference ex:pref_sarah_screen_sep .

@@ -1,0 +1,131 @@
+# CQ7 Synthetic Data — v0.0.2
+# CQ: Which building spaces meet EN 12464-1:2021 illuminance standards
+# while also receiving negative comfort feedback from occupants?
+
+@prefix occo: <https://w3id.org/occo#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
+@prefix ofo: <https://w3id.org/ofo#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/occo/> .
+
+# --- Building Spaces ---
+ex:office_401 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 401" .
+
+ex:office_402 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 402" .
+
+# Edge case: space meets standard AND has positive feedback — should NOT appear
+ex:office_403 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 403" .
+
+# Edge case: space fails standard AND has negative feedback — should NOT appear
+ex:office_404 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 404" .
+
+# --- Persons ---
+ex:person_james a ofo:Person ;
+    rdfs:label "James" .
+
+ex:person_priya a ofo:Person ;
+    rdfs:label "Priya" .
+
+ex:person_anna a ofo:Person ;
+    rdfs:label "Anna" .
+
+ex:person_carlos a ofo:Person ;
+    rdfs:label "Carlos" .
+
+# --- Control Strategies ---
+ex:strategy_401 a occo:ControlStrategy ;
+    rdfs:label "Occupancy Strategy 401" ;
+    occo:strategyCategory "Occupancy-Based" ;
+    occo:appliesToSpace ex:office_401 .
+
+ex:strategy_402 a occo:ControlStrategy ;
+    rdfs:label "Occupancy Strategy 402" ;
+    occo:strategyCategory "Occupancy-Based" ;
+    occo:appliesToSpace ex:office_402 .
+
+ex:strategy_403 a occo:ControlStrategy ;
+    rdfs:label "Preference Strategy 403" ;
+    occo:strategyCategory "Preference-Based" ;
+    occo:appliesToSpace ex:office_403 .
+
+ex:strategy_404 a occo:ControlStrategy ;
+    rdfs:label "Static Strategy 404" ;
+    occo:strategyCategory "Static" ;
+    occo:appliesToSpace ex:office_404 .
+
+# --- Feedback instances ---
+ex:feedback_james a ofo:Feedback ;
+    rdfs:label "James glare complaint" ;
+    occo:comfortScore "-2"^^xsd:decimal ;
+    prov:atLocation ex:office_401 ;
+    prov:generatedAtTime "2026-03-01T10:30:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith ex:person_james .
+
+ex:feedback_priya a ofo:Feedback ;
+    rdfs:label "Priya brightness complaint" ;
+    occo:comfortScore "-1"^^xsd:decimal ;
+    prov:atLocation ex:office_402 ;
+    prov:generatedAtTime "2026-03-01T14:00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith ex:person_priya .
+
+# Edge case: positive feedback in office_403
+ex:feedback_anna a ofo:Feedback ;
+    rdfs:label "Anna comfort confirmation" ;
+    occo:comfortScore "2"^^xsd:decimal ;
+    prov:atLocation ex:office_403 ;
+    prov:generatedAtTime "2026-03-01T11:00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith ex:person_anna .
+
+# Edge case: negative feedback in office_404 (fails standard)
+ex:feedback_carlos a ofo:Feedback ;
+    rdfs:label "Carlos darkness complaint" ;
+    occo:comfortScore "-3"^^xsd:decimal ;
+    prov:atLocation ex:office_404 ;
+    prov:generatedAtTime "2026-03-01T09:00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith ex:person_carlos .
+
+# --- Performance Outcomes ---
+# Office 401: meetsStandard=true, includes negative feedback → SHOULD APPEAR
+ex:outcome_401 a occo:PerformanceOutcome ;
+    rdfs:label "Outcome Office 401" ;
+    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:meetsStandard "true"^^xsd:boolean ;
+    occo:comfortScore "-2"^^xsd:decimal ;
+    occo:includesFeedback ex:feedback_james ;
+    prov:wasGeneratedBy ex:strategy_401 .
+
+# Office 402: meetsStandard=true, includes negative feedback → SHOULD APPEAR
+ex:outcome_402 a occo:PerformanceOutcome ;
+    rdfs:label "Outcome Office 402" ;
+    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:meetsStandard "true"^^xsd:boolean ;
+    occo:comfortScore "-1"^^xsd:decimal ;
+    occo:includesFeedback ex:feedback_priya ;
+    prov:wasGeneratedBy ex:strategy_402 .
+
+# Office 403: meetsStandard=true, positive feedback → should NOT appear (filter: score < 0)
+ex:outcome_403 a occo:PerformanceOutcome ;
+    rdfs:label "Outcome Office 403" ;
+    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:meetsStandard "true"^^xsd:boolean ;
+    occo:comfortScore "2"^^xsd:decimal ;
+    occo:includesFeedback ex:feedback_anna ;
+    prov:wasGeneratedBy ex:strategy_403 .
+
+# Office 404: meetsStandard=false, negative feedback → should NOT appear (filter: meetsStandard=true)
+ex:outcome_404 a occo:PerformanceOutcome ;
+    rdfs:label "Outcome Office 404" ;
+    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:meetsStandard "false"^^xsd:boolean ;
+    occo:comfortScore "-3"^^xsd:decimal ;
+    occo:includesFeedback ex:feedback_carlos ;
+    prov:wasGeneratedBy ex:strategy_404 .

@@ -1,0 +1,23 @@
+# CQ9: Which occupants most frequently override automated lighting controls,
+# and in which spaces do overrides occur?
+
+PREFIX occo: <https://w3id.org/occo#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX s4bldg: <https://saref.etsi.org/saref4bldg/>
+PREFIX ofo: <https://w3id.org/ofo#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?personLabel (COUNT(?override) AS ?overrideCount)
+       (GROUP_CONCAT(DISTINCT ?spaceLabel; SEPARATOR=", ") AS ?spaces)
+WHERE {
+    ?override a occo:OverrideEvent ;
+              prov:wasAssociatedWith ?person ;
+              prov:atLocation ?space .
+
+    ?person rdfs:label ?personLabel .
+    ?space rdfs:label ?spaceLabel .
+}
+GROUP BY ?person ?personLabel
+ORDER BY DESC(?overrideCount)

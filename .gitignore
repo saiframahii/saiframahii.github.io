@@ -3,6 +3,6 @@ NOTES.md
 # Source files — OneDrive is the source of truth; src/ is a local working copy only
 src/
 
-# Local IDE artefacts
-.claude/settings.local.json
-*.local.json
+# AI assistant context — internal workflow notes, not for public consumption
+CLAUDE.md
+.claude/

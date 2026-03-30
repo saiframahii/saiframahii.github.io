@@ -1,0 +1,124 @@
+# CQ6 Synthetic Data — v0.0.2
+# CQ: Which building spaces have circadian-friendly lighting control strategies
+# applied, and what are the CCT patterns across different times of day?
+
+@prefix occo: <https://w3id.org/occo#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
+@prefix ofo: <https://w3id.org/ofo#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/occo/> .
+
+# --- Building Spaces ---
+ex:office_301 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 301" .
+
+ex:office_302 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 302" .
+
+ex:office_303 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 303" .
+
+# --- Control Strategies ---
+ex:strategy_circ_std a occo:ControlStrategy ;
+    rdfs:label "Standard Circadian Schedule" ;
+    occo:strategyCategory "Circadian" ;
+    occo:appliesToSpace ex:office_301 .
+
+ex:strategy_circ_morn a occo:ControlStrategy ;
+    rdfs:label "Morning Chronotype Circadian Schedule" ;
+    occo:strategyCategory "Circadian" ;
+    occo:appliesToSpace ex:office_302 .
+
+# Edge case: static (non-circadian) strategy — should not appear in circadian query
+ex:strategy_static a occo:ControlStrategy ;
+    rdfs:label "Static Lighting" ;
+    occo:strategyCategory "Static" ;
+    occo:appliesToSpace ex:office_303 .
+
+# --- Persons with Chronotypes ---
+ex:person_david a ofo:Person ;
+    rdfs:label "David" ;
+    occo:hasChronotype occo:MorningType .
+
+ex:person_emily a ofo:Person ;
+    rdfs:label "Emily" ;
+    occo:hasChronotype occo:EveningType .
+
+# --- CCT observable property instance ---
+ex:cctProp a occo:CCT ;
+    rdfs:label "Correlated Colour Temperature" .
+
+# --- Actuators ---
+ex:lamp_301 a s4bldg:Lamp ;
+    rdfs:label "Lamp 301" ;
+    s4bldg:isContainedIn ex:office_301 .
+
+ex:lamp_302 a s4bldg:Lamp ;
+    rdfs:label "Lamp 302" ;
+    s4bldg:isContainedIn ex:office_302 .
+
+ex:lamp_303 a s4bldg:Lamp ;
+    rdfs:label "Lamp 303" ;
+    s4bldg:isContainedIn ex:office_303 .
+
+# --- Controller ---
+ex:controller_circ a occo:Controller ;
+    rdfs:label "Circadian Controller" ;
+    occo:usesStrategy ex:strategy_circ_std .
+
+# --- Observations for Office 301 (standard circadian: cool morning → warm evening) ---
+ex:obs_cct_301_am a sosa:Observation ;
+    sosa:observedProperty ex:cctProp ;
+    sosa:hasFeatureOfInterest ex:office_301 ;
+    sosa:hasSimpleResult "5000.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T08:00:00"^^xsd:dateTime .
+
+ex:obs_cct_301_pm a sosa:Observation ;
+    sosa:observedProperty ex:cctProp ;
+    sosa:hasFeatureOfInterest ex:office_301 ;
+    sosa:hasSimpleResult "4000.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T14:00:00"^^xsd:dateTime .
+
+ex:obs_cct_301_eve a sosa:Observation ;
+    sosa:observedProperty ex:cctProp ;
+    sosa:hasFeatureOfInterest ex:office_301 ;
+    sosa:hasSimpleResult "2700.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T19:00:00"^^xsd:dateTime .
+
+# --- Observations for Office 302 (morning chronotype: even earlier peak) ---
+ex:obs_cct_302_am a sosa:Observation ;
+    sosa:observedProperty ex:cctProp ;
+    sosa:hasFeatureOfInterest ex:office_302 ;
+    sosa:hasSimpleResult "5500.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T07:00:00"^^xsd:dateTime .
+
+ex:obs_cct_302_pm a sosa:Observation ;
+    sosa:observedProperty ex:cctProp ;
+    sosa:hasFeatureOfInterest ex:office_302 ;
+    sosa:hasSimpleResult "4200.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T12:00:00"^^xsd:dateTime .
+
+ex:obs_cct_302_eve a sosa:Observation ;
+    sosa:observedProperty ex:cctProp ;
+    sosa:hasFeatureOfInterest ex:office_302 ;
+    sosa:hasSimpleResult "3000.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T17:00:00"^^xsd:dateTime .
+
+# --- Observations for Office 303 (static: constant 4000K — should be excluded by query) ---
+ex:obs_cct_303_am a sosa:Observation ;
+    sosa:observedProperty ex:cctProp ;
+    sosa:hasFeatureOfInterest ex:office_303 ;
+    sosa:hasSimpleResult "4000.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T08:00:00"^^xsd:dateTime .
+
+ex:obs_cct_303_pm a sosa:Observation ;
+    sosa:observedProperty ex:cctProp ;
+    sosa:hasFeatureOfInterest ex:office_303 ;
+    sosa:hasSimpleResult "4000.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T14:00:00"^^xsd:dateTime .

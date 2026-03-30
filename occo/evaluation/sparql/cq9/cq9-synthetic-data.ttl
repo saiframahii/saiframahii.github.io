@@ -1,0 +1,91 @@
+# CQ9 Synthetic Data — v0.0.2
+# CQ: Which occupants most frequently override automated lighting controls,
+# and in which spaces do overrides occur?
+
+@prefix occo: <https://w3id.org/occo#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
+@prefix ofo: <https://w3id.org/ofo#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/occo/> .
+
+# --- Building Spaces ---
+ex:office_601 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 601" .
+
+ex:office_602 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 602" .
+
+ex:meeting_room_603 a s4bldg:BuildingSpace ;
+    rdfs:label "Meeting Room 603" .
+
+# --- Persons ---
+ex:person_tom a ofo:Person ;
+    rdfs:label "Tom" .
+
+ex:person_lisa a ofo:Person ;
+    rdfs:label "Lisa" .
+
+ex:person_omar a ofo:Person ;
+    rdfs:label "Omar" .
+
+# Edge case: person with no overrides (should not appear or appear with count 0)
+ex:person_nina a ofo:Person ;
+    rdfs:label "Nina" .
+
+# --- Controllers ---
+ex:controller_601 a occo:Controller ;
+    rdfs:label "Controller 601" .
+
+ex:controller_602 a occo:Controller ;
+    rdfs:label "Controller 602" .
+
+# --- Override Events ---
+# Tom: 3 overrides (highest frequency)
+ex:override_tom_1 a occo:OverrideEvent ;
+    rdfs:label "Tom override 1" ;
+    prov:wasAssociatedWith ex:person_tom ;
+    prov:atLocation ex:office_601 ;
+    prov:generatedAtTime "2026-03-01T09:15:00"^^xsd:dateTime .
+
+ex:override_tom_2 a occo:OverrideEvent ;
+    rdfs:label "Tom override 2" ;
+    prov:wasAssociatedWith ex:person_tom ;
+    prov:atLocation ex:office_601 ;
+    prov:generatedAtTime "2026-03-02T10:30:00"^^xsd:dateTime .
+
+ex:override_tom_3 a occo:OverrideEvent ;
+    rdfs:label "Tom override 3" ;
+    prov:wasAssociatedWith ex:person_tom ;
+    prov:atLocation ex:meeting_room_603 ;
+    prov:generatedAtTime "2026-03-03T14:00:00"^^xsd:dateTime .
+
+# Lisa: 2 overrides
+ex:override_lisa_1 a occo:OverrideEvent ;
+    rdfs:label "Lisa override 1" ;
+    prov:wasAssociatedWith ex:person_lisa ;
+    prov:atLocation ex:office_602 ;
+    prov:generatedAtTime "2026-03-01T11:00:00"^^xsd:dateTime .
+
+ex:override_lisa_2 a occo:OverrideEvent ;
+    rdfs:label "Lisa override 2" ;
+    prov:wasAssociatedWith ex:person_lisa ;
+    prov:atLocation ex:office_602 ;
+    prov:generatedAtTime "2026-03-04T15:45:00"^^xsd:dateTime .
+
+# Omar: 1 override
+ex:override_omar_1 a occo:OverrideEvent ;
+    rdfs:label "Omar override 1" ;
+    prov:wasAssociatedWith ex:person_omar ;
+    prov:atLocation ex:office_601 ;
+    prov:generatedAtTime "2026-03-02T13:20:00"^^xsd:dateTime .
+
+# --- Override links to controller (occo:overrides) ---
+ex:override_tom_1 occo:overrides ex:controller_601 .
+ex:override_tom_2 occo:overrides ex:controller_601 .
+ex:override_tom_3 occo:overrides ex:controller_602 .
+ex:override_lisa_1 occo:overrides ex:controller_602 .
+ex:override_lisa_2 occo:overrides ex:controller_602 .
+ex:override_omar_1 occo:overrides ex:controller_601 .

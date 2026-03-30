@@ -1,0 +1,17 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://w3id.org/occo/0.0.2> a prov:Entity;
+	 dc:title "Occupant-Centric Control Ontology (OCCO)";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2026-03-29";
+.
+:agent0 a prov:Agent; foaf:name "Saif Alramahi".
+:agent1 a prov:Agent; foaf:name "Mohammad Mayouf".
+:agent2 a prov:Agent; foaf:name "Elham Del Zendeh".
+:agent3 a prov:Agent; foaf:name "Khalid Ismail".

@@ -1,0 +1,113 @@
+# CQ3 Synthetic Data — v0.0.2
+# CQ: Which lighting control strategy achieved the highest combined comfort scores
+# and lowest energy consumption over the evaluation period?
+
+@prefix occo: <https://w3id.org/occo#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
+@prefix ofo: <https://w3id.org/ofo#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/occo/> .
+
+# --- Building Spaces ---
+ex:office_A a s4bldg:BuildingSpace ;
+    rdfs:label "Office A" .
+
+ex:office_B a s4bldg:BuildingSpace ;
+    rdfs:label "Office B" .
+
+ex:office_C a s4bldg:BuildingSpace ;
+    rdfs:label "Office C" .
+
+ex:office_D a s4bldg:BuildingSpace ;
+    rdfs:label "Office D" .
+
+# --- Control Strategies ---
+ex:strategy_occupancy a occo:ControlStrategy ;
+    rdfs:label "Occupancy-Based Control" ;
+    occo:strategyCategory "Occupancy-responsive" ;
+    occo:appliesToSpace ex:office_A .
+
+ex:strategy_preference a occo:ControlStrategy ;
+    rdfs:label "Preference-Based Control" ;
+    occo:strategyCategory "Adaptive" ;
+    occo:appliesToSpace ex:office_B .
+
+ex:strategy_circadian a occo:ControlStrategy ;
+    rdfs:label "Circadian-Optimised Control" ;
+    occo:strategyCategory "Circadian" ;
+    occo:appliesToSpace ex:office_C .
+
+ex:strategy_energy a occo:ControlStrategy ;
+    rdfs:label "Energy-Minimisation Control" ;
+    occo:strategyCategory "Energy-minimisation" ;
+    occo:appliesToSpace ex:office_D .
+
+# --- Controller ---
+ex:controller_main a occo:Controller ;
+    rdfs:label "Main Lighting Controller" ;
+    occo:usesStrategy ex:strategy_circadian .
+
+# --- Feedback instances ---
+ex:fb_occ_1 a ofo:Feedback ; occo:comfortScore "1.2"^^xsd:decimal ; prov:atLocation ex:office_A .
+ex:fb_occ_2 a ofo:Feedback ; occo:comfortScore "1.3"^^xsd:decimal ; prov:atLocation ex:office_A .
+
+ex:fb_pref_1 a ofo:Feedback ; occo:comfortScore "2.8"^^xsd:decimal ; prov:atLocation ex:office_B .
+ex:fb_pref_2 a ofo:Feedback ; occo:comfortScore "2.9"^^xsd:decimal ; prov:atLocation ex:office_B .
+
+ex:fb_circ_1 a ofo:Feedback ; occo:comfortScore "3.1"^^xsd:decimal ; prov:atLocation ex:office_C .
+ex:fb_circ_2 a ofo:Feedback ; occo:comfortScore "3.0"^^xsd:decimal ; prov:atLocation ex:office_C .
+
+ex:fb_enrg_1 a ofo:Feedback ; occo:comfortScore "1.9"^^xsd:decimal ; prov:atLocation ex:office_D .
+ex:fb_enrg_2 a ofo:Feedback ; occo:comfortScore "2.0"^^xsd:decimal ; prov:atLocation ex:office_D .
+
+# --- Energy Quantity Values (kWh) ---
+ex:energy_occ a qudt:QuantityValue ;
+    qudt:numericValue "45.5"^^xsd:double .
+
+ex:energy_pref a qudt:QuantityValue ;
+    qudt:numericValue "62.3"^^xsd:double .
+
+ex:energy_circ a qudt:QuantityValue ;
+    qudt:numericValue "48.5"^^xsd:double .
+
+ex:energy_enrg a qudt:QuantityValue ;
+    qudt:numericValue "38.0"^^xsd:double .
+
+# --- Performance Outcomes (one per strategy) ---
+ex:outcome_occ a occo:PerformanceOutcome ;
+    occo:comfortScore "1.25"^^xsd:decimal ;
+    occo:hasEnergyConsumption ex:energy_occ ;
+    occo:includesFeedback ex:fb_occ_1 ;
+    occo:includesFeedback ex:fb_occ_2 ;
+    prov:wasGeneratedBy ex:strategy_occupancy ;
+    occo:assessedAgainst occo:EN_12464_1_2021 .
+
+ex:outcome_pref a occo:PerformanceOutcome ;
+    occo:comfortScore "2.85"^^xsd:decimal ;
+    occo:hasEnergyConsumption ex:energy_pref ;
+    occo:includesFeedback ex:fb_pref_1 ;
+    occo:includesFeedback ex:fb_pref_2 ;
+    prov:wasGeneratedBy ex:strategy_preference ;
+    occo:assessedAgainst occo:EN_12464_1_2021 .
+
+ex:outcome_circ a occo:PerformanceOutcome ;
+    occo:comfortScore "3.05"^^xsd:decimal ;
+    occo:hasEnergyConsumption ex:energy_circ ;
+    occo:includesFeedback ex:fb_circ_1 ;
+    occo:includesFeedback ex:fb_circ_2 ;
+    prov:wasGeneratedBy ex:strategy_circadian ;
+    occo:assessedAgainst occo:EN_12464_1_2021 .
+
+ex:outcome_enrg a occo:PerformanceOutcome ;
+    occo:comfortScore "1.95"^^xsd:decimal ;
+    occo:hasEnergyConsumption ex:energy_enrg ;
+    occo:includesFeedback ex:fb_enrg_1 ;
+    occo:includesFeedback ex:fb_enrg_2 ;
+    prov:wasGeneratedBy ex:strategy_energy ;
+    occo:assessedAgainst occo:EN_12464_1_2021 .

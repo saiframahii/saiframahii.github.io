@@ -1,0 +1,99 @@
+# CQ10 Synthetic Data — v0.0.2
+# CQ: Which control strategy achieves the best balance of energy efficiency,
+# occupant comfort, and compliance with EN 12464-1:2021?
+
+@prefix occo: <https://w3id.org/occo#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
+@prefix ofo: <https://w3id.org/ofo#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/occo/> .
+
+# --- Building Spaces ---
+ex:office_701 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 701" .
+
+ex:office_702 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 702" .
+
+ex:office_703 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 703" .
+
+ex:office_704 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 704" .
+
+# --- Control Strategies ---
+ex:strategy_occ a occo:ControlStrategy ;
+    rdfs:label "Occupancy-Based Strategy" ;
+    occo:strategyCategory "Occupancy-Based" ;
+    occo:appliesToSpace ex:office_701 .
+
+ex:strategy_pref a occo:ControlStrategy ;
+    rdfs:label "Preference-Based Strategy" ;
+    occo:strategyCategory "Preference-Based" ;
+    occo:appliesToSpace ex:office_702 .
+
+ex:strategy_circ a occo:ControlStrategy ;
+    rdfs:label "Circadian-Optimised Strategy" ;
+    occo:strategyCategory "Circadian" ;
+    occo:appliesToSpace ex:office_703 .
+
+ex:strategy_min a occo:ControlStrategy ;
+    rdfs:label "Energy-Minimisation Strategy" ;
+    occo:strategyCategory "Energy-Minimisation" ;
+    occo:appliesToSpace ex:office_704 .
+
+# --- Energy Consumption (QUDT QuantityValues) ---
+ex:energy_occ a qudt:QuantityValue ;
+    qudt:numericValue "45.5"^^xsd:double .
+
+ex:energy_pref a qudt:QuantityValue ;
+    qudt:numericValue "62.3"^^xsd:double .
+
+ex:energy_circ a qudt:QuantityValue ;
+    qudt:numericValue "48.5"^^xsd:double .
+
+ex:energy_min a qudt:QuantityValue ;
+    qudt:numericValue "38.0"^^xsd:double .
+
+# --- Performance Outcomes ---
+# Occupancy-Based: moderate comfort, moderate energy, meets standard
+ex:outcome_occ a occo:PerformanceOutcome ;
+    rdfs:label "Outcome Occupancy-Based" ;
+    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:meetsStandard "true"^^xsd:boolean ;
+    occo:comfortScore "1.8"^^xsd:decimal ;
+    occo:hasEnergyConsumption ex:energy_occ ;
+    prov:wasGeneratedBy ex:strategy_occ .
+
+# Preference-Based: high comfort, higher energy, meets standard
+ex:outcome_pref a occo:PerformanceOutcome ;
+    rdfs:label "Outcome Preference-Based" ;
+    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:meetsStandard "true"^^xsd:boolean ;
+    occo:comfortScore "3.2"^^xsd:decimal ;
+    occo:hasEnergyConsumption ex:energy_pref ;
+    prov:wasGeneratedBy ex:strategy_pref .
+
+# Circadian: highest comfort, moderate energy, meets standard → BEST BALANCE
+ex:outcome_circ a occo:PerformanceOutcome ;
+    rdfs:label "Outcome Circadian-Optimised" ;
+    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:meetsStandard "true"^^xsd:boolean ;
+    occo:comfortScore "3.5"^^xsd:decimal ;
+    occo:hasEnergyConsumption ex:energy_circ ;
+    prov:wasGeneratedBy ex:strategy_circ .
+
+# Energy-Minimisation: low comfort, lowest energy, does NOT meet standard
+# Edge case: best energy but fails compliance — should be excluded by meetsStandard filter
+ex:outcome_min a occo:PerformanceOutcome ;
+    rdfs:label "Outcome Energy-Minimisation" ;
+    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:meetsStandard "false"^^xsd:boolean ;
+    occo:comfortScore "0.5"^^xsd:decimal ;
+    occo:hasEnergyConsumption ex:energy_min ;
+    prov:wasGeneratedBy ex:strategy_min .

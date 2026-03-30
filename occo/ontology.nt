@@ -1,0 +1,630 @@
+<https://w3id.org/occo#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/occo#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/occo/0.0.2> .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/bibliographicCitation> "Alramahi, S., Mayouf, M., Del Zendeh, E., & Ismail, K. (2026). Towards a Semantic Ontology for Occupant-Centric Building Control. Submitted to EC3 2026 — 12th European Conference on Construction IT." .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/created> "2025-09-24"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/creator> "Saif Alramahi" .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/creator> "Mohammad Mayouf" .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/creator> "Elham Del Zendeh" .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/creator> "Khalid Ismail" .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/description> "A semantic framework for occupant-centric building control. This ontology is under active development and has not yet been fully validated."@en .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/modified> "2026-03-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/source> <https://github.com/saiframahii/saiframahii.github.io> .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/title> "Occupant-Centric Control Ontology (OCCO)"@en .
+<https://w3id.org/occo#> <http://purl.org/ontology/bibo/status> "Ontology Specification Draft" .
+<https://w3id.org/occo#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "occo" .
+<https://w3id.org/occo#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/occo#> .
+<https://w3id.org/occo#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology was developed as part of PhD research at Birmingham City University. The version presented here reflects the state at time of publication. The ontology will continue to evolve following formal validation and implementation."@en .
+<https://w3id.org/occo#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2-dev" .
+<https://w3id.org/occo#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#comment
+<http://www.w3.org/2000/01/rdf-schema#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionIRI
+<http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt/unit
+<http://qudt.org/schema/qudt/unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://qudt.org/schema/qudt/unit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://qudt.org/schema/qudt/QuantityValue> .
+<http://qudt.org/schema/qudt/unit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
+<http://qudt.org/schema/qudt/unit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt/> .
+<http://qudt.org/schema/qudt/unit> <http://www.w3.org/2000/01/rdf-schema#label> "unit" .
+# 
+# http://www.w3.org/2006/time#hasBeginning
+<http://www.w3.org/2006/time#hasBeginning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2006/time#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/time#Interval> .
+<http://www.w3.org/2006/time#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> .
+<http://www.w3.org/2006/time#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time> .
+<http://www.w3.org/2006/time#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#label> "has beginning" .
+# 
+# http://www.w3.org/2006/time#hasEnd
+<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/time#Interval> .
+<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> .
+<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time> .
+<http://www.w3.org/2006/time#hasEnd> <http://www.w3.org/2000/01/rdf-schema#label> "has end" .
+# 
+# http://www.w3.org/ns/prov#atLocation
+<http://www.w3.org/ns/prov#atLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#atLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ofo#Feedback> .
+<http://www.w3.org/ns/prov#atLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/saref4bldg/BuildingSpace> .
+<http://www.w3.org/ns/prov#atLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov-o> .
+<http://www.w3.org/ns/prov#atLocation> <http://www.w3.org/2000/01/rdf-schema#label> "at location" .
+# 
+# http://www.w3.org/ns/prov#generated
+<http://www.w3.org/ns/prov#generated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#generated> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Actuation> .
+<http://www.w3.org/ns/prov#generated> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/occo#PerformanceOutcome> .
+<http://www.w3.org/ns/prov#generated> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov-o> .
+<http://www.w3.org/ns/prov#generated> <http://www.w3.org/2000/01/rdf-schema#label> "generated" .
+# 
+# http://www.w3.org/ns/prov#used
+<http://www.w3.org/ns/prov#used> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#used> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Actuation> .
+<http://www.w3.org/ns/prov#used> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/occo#ControlStrategy> .
+<http://www.w3.org/ns/prov#used> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov-o> .
+<http://www.w3.org/ns/prov#used> <http://www.w3.org/2000/01/rdf-schema#label> "used" .
+# 
+# http://www.w3.org/ns/prov#wasAssociatedWith
+<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Agent> .
+<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov-o> .
+<http://www.w3.org/ns/prov#wasAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "was associated with" .
+# 
+# http://www.w3.org/ns/prov#wasAttributedTo
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ofo#Feedback> .
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ofo#Person> .
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov-o> .
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/2000/01/rdf-schema#label> "was attributed to" .
+# 
+# http://www.w3.org/ns/prov#wasInformedBy
+<http://www.w3.org/ns/prov#wasInformedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#wasInformedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Actuation> .
+<http://www.w3.org/ns/prov#wasInformedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/prov#wasInformedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov-o> .
+<http://www.w3.org/ns/prov#wasInformedBy> <http://www.w3.org/2000/01/rdf-schema#label> "was informed by" .
+# 
+# http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/saref4bldg/BuildingSpace> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has feature of interest" .
+# 
+# http://www.w3.org/ns/sosa/hasResult
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "has result" .
+# 
+# http://www.w3.org/ns/sosa/madeByActuator
+<http://www.w3.org/ns/sosa/madeByActuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/madeByActuator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Actuation> .
+<http://www.w3.org/ns/sosa/madeByActuator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Actuator> .
+<http://www.w3.org/ns/sosa/madeByActuator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeByActuator> <http://www.w3.org/2000/01/rdf-schema#label> "made by actuator" .
+# 
+# http://www.w3.org/ns/sosa/madeBySensor
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Sensor> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#label> "made by sensor" .
+# 
+# http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "observed property" .
+# 
+# https://saref.etsi.org/saref4bldg/isContainedIn
+<https://saref.etsi.org/saref4bldg/isContainedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://saref.etsi.org/saref4bldg/isContainedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4bldg/Lamp> .
+<https://saref.etsi.org/saref4bldg/isContainedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/saref4bldg/BuildingSpace> .
+<https://saref.etsi.org/saref4bldg/isContainedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/isContainedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is contained in" .
+# 
+# https://w3id.org/occo#appliesToSpace
+<https://w3id.org/occo#appliesToSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/occo#appliesToSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/occo#ControlStrategy> .
+<https://w3id.org/occo#appliesToSpace> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/saref4bldg/BuildingSpace> .
+<https://w3id.org/occo#appliesToSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a control strategy to the building space in which it is applied."@en .
+<https://w3id.org/occo#appliesToSpace> <http://www.w3.org/2000/01/rdf-schema#label> "applies to space" .
+# 
+# https://w3id.org/occo#assessedAgainst
+<https://w3id.org/occo#assessedAgainst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/occo#assessedAgainst> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/occo#PerformanceOutcome> .
+<https://w3id.org/occo#assessedAgainst> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/Standard> .
+<https://w3id.org/occo#assessedAgainst> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a performance outcome to the lighting standard used to evaluate compliance."@en .
+<https://w3id.org/occo#assessedAgainst> <http://www.w3.org/2000/01/rdf-schema#label> "assessed against" .
+# 
+# https://w3id.org/occo#forTask
+<https://w3id.org/occo#forTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/occo#forTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/occo#Preference> .
+<https://w3id.org/occo#forTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/occo#VisualTask> .
+<https://w3id.org/occo#forTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a preference to the visual task for which it is defined."@en .
+<https://w3id.org/occo#forTask> <http://www.w3.org/2000/01/rdf-schema#label> "for task" .
+# 
+# https://w3id.org/occo#hasBaseline
+<https://w3id.org/occo#hasBaseline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/occo#hasBaseline> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/occo#PerformanceOutcome> .
+<https://w3id.org/occo#hasBaseline> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/occo#PerformanceOutcome> .
+<https://w3id.org/occo#hasBaseline> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a performance outcome to a reference baseline outcome against which it is compared. This property is directional: the subject is the measured outcome, the object is the baseline."@en .
+<https://w3id.org/occo#hasBaseline> <http://www.w3.org/2000/01/rdf-schema#label> "has baseline" .
+# 
+# https://w3id.org/occo#hasChronotype
+<https://w3id.org/occo#hasChronotype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/occo#hasChronotype> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ofo#Person> .
+<https://w3id.org/occo#hasChronotype> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/occo#Chronotype> .
+<https://w3id.org/occo#hasChronotype> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a person to their chronotype classification, capturing their circadian activity pattern preference."@en .
+<https://w3id.org/occo#hasChronotype> <http://www.w3.org/2000/01/rdf-schema#label> "has chronotype" .
+# 
+# https://w3id.org/occo#hasEnergyConsumption
+<https://w3id.org/occo#hasEnergyConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/occo#hasEnergyConsumption> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/occo#PerformanceOutcome> .
+<https://w3id.org/occo#hasEnergyConsumption> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+<https://w3id.org/occo#hasEnergyConsumption> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a performance outcome to the energy consumption recorded during the associated lighting control actuation, expressed as a quantity value."@en .
+<https://w3id.org/occo#hasEnergyConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "has energy consumption" .
+# 
+# https://w3id.org/occo#hasPreference
+<https://w3id.org/occo#hasPreference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/occo#hasPreference> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ofo#Person> .
+<https://w3id.org/occo#hasPreference> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/occo#Preference> .
+<https://w3id.org/occo#hasPreference> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a person to their lighting preference profile, which specifies desired illuminance and colour temperature for a given visual task."@en .
+<https://w3id.org/occo#hasPreference> <http://www.w3.org/2000/01/rdf-schema#label> "has preference" .
+# 
+# https://w3id.org/occo#includesFeedback
+<https://w3id.org/occo#includesFeedback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/occo#includesFeedback> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/occo#PerformanceOutcome> .
+<https://w3id.org/occo#includesFeedback> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ofo#Feedback> .
+<https://w3id.org/occo#includesFeedback> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a performance outcome to occupant feedback received following a lighting control actuation."@en .
+<https://w3id.org/occo#includesFeedback> <http://www.w3.org/2000/01/rdf-schema#label> "includes feedback" .
+# 
+# https://w3id.org/occo#overrides
+<https://w3id.org/occo#overrides> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/occo#overrides> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/occo#OverrideEvent> .
+<https://w3id.org/occo#overrides> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/sosa/Actuation> .
+<https://w3id.org/occo#overrides> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an override event to the automated actuation it supersedes."@en .
+<https://w3id.org/occo#overrides> <http://www.w3.org/2000/01/rdf-schema#label> "overrides" .
+# 
+# https://w3id.org/occo#preferredCCT
+<https://w3id.org/occo#preferredCCT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/occo#preferredCCT> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/occo#Preference> .
+<https://w3id.org/occo#preferredCCT> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+<https://w3id.org/occo#preferredCCT> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a preference to the occupant's desired correlated colour temperature, expressed as a quantity value in Kelvin."@en .
+<https://w3id.org/occo#preferredCCT> <http://www.w3.org/2000/01/rdf-schema#label> "preferred c c t" .
+# 
+# https://w3id.org/occo#preferredIlluminance
+<https://w3id.org/occo#preferredIlluminance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/occo#preferredIlluminance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/occo#Preference> .
+<https://w3id.org/occo#preferredIlluminance> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+<https://w3id.org/occo#preferredIlluminance> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a preference to the occupant's desired illuminance level, expressed as a quantity value in lux."@en .
+<https://w3id.org/occo#preferredIlluminance> <http://www.w3.org/2000/01/rdf-schema#label> "preferred illuminance" .
+# 
+# https://w3id.org/occo#usesStrategy
+<https://w3id.org/occo#usesStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/occo#usesStrategy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/occo#Controller> .
+<https://w3id.org/occo#usesStrategy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/occo#ControlStrategy> .
+<https://w3id.org/occo#usesStrategy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a controller to the control strategy it is currently applying in a building space."@en .
+<https://w3id.org/occo#usesStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "uses strategy" .
+# 
+# https://w3id.org/ofo#hasLocation
+<https://w3id.org/ofo#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/ofo#hasLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ofo#Person> .
+<https://w3id.org/ofo#hasLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/saref4bldg/BuildingSpace> .
+<https://w3id.org/ofo#hasLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ofo> .
+<https://w3id.org/ofo#hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has location" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/2000/01/rdf-schema#label> "issued" .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/2000/01/rdf-schema#label> "publisher" .
+# 
+# http://qudt.org/schema/qudt/numericValue
+<http://qudt.org/schema/qudt/numericValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://qudt.org/schema/qudt/numericValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://qudt.org/schema/qudt/numericValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt/> .
+<http://qudt.org/schema/qudt/numericValue> <http://www.w3.org/2000/01/rdf-schema#label> "numeric value" .
+# 
+# http://www.w3.org/ns/prov#generatedAtTime
+<http://www.w3.org/ns/prov#generatedAtTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/prov#generatedAtTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.w3.org/ns/prov#generatedAtTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov-o> .
+<http://www.w3.org/ns/prov#generatedAtTime> <http://www.w3.org/2000/01/rdf-schema#label> "generated at time" .
+# 
+# http://www.w3.org/ns/sosa/resultTime
+<http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/2000/01/rdf-schema#label> "result time" .
+# 
+# https://w3id.org/occo#comfortScore
+<https://w3id.org/occo#comfortScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/occo#comfortScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/occo#PerformanceOutcome> .
+<https://w3id.org/occo#comfortScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/occo#comfortScore> <http://www.w3.org/2000/01/rdf-schema#comment> "A decimal value representing the degree of visual comfort achieved by a lighting control actuation, assessed against occupant preferences."@en .
+<https://w3id.org/occo#comfortScore> <http://www.w3.org/2000/01/rdf-schema#label> "comfort score" .
+# 
+# https://w3id.org/occo#meetsStandard
+<https://w3id.org/occo#meetsStandard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/occo#meetsStandard> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/occo#PerformanceOutcome> .
+<https://w3id.org/occo#meetsStandard> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/occo#meetsStandard> <http://www.w3.org/2000/01/rdf-schema#comment> "A boolean value indicating whether a performance outcome satisfies the requirements of the applicable lighting standard."@en .
+<https://w3id.org/occo#meetsStandard> <http://www.w3.org/2000/01/rdf-schema#label> "meets standard" .
+# 
+# https://w3id.org/occo#strategyCategory
+<https://w3id.org/occo#strategyCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/occo#strategyCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/occo#ControlStrategy> .
+<https://w3id.org/occo#strategyCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/occo#strategyCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "A string label categorising the type of control strategy applied, such as dimming, colour tuning, or scene-based control."@en .
+<https://w3id.org/occo#strategyCategory> <http://www.w3.org/2000/01/rdf-schema#label> "strategy category" .
+# 
+# https://w3id.org/ofo#hasSimpleFeedbackState
+<https://w3id.org/ofo#hasSimpleFeedbackState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/ofo#hasSimpleFeedbackState> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/ofo#hasSimpleFeedbackState> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ofo> .
+<https://w3id.org/ofo#hasSimpleFeedbackState> <http://www.w3.org/2000/01/rdf-schema#label> "has simple feedback state" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/Standard
+<http://purl.org/dc/terms/Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/Standard> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Standard> <http://www.w3.org/2000/01/rdf-schema#label> "Standard" .
+# 
+# http://qudt.org/schema/qudt/QuantityValue
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#double> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt/numericValue> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt/> .
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/2000/01/rdf-schema#label> "Quantity Value" .
+# 
+# http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt/> .
+<http://qudt.org/schema/qudt/Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit" .
+# 
+# http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#label> "Instant" .
+# 
+# http://www.w3.org/2006/time#Interval
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/time> .
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#label> "Interval" .
+# 
+# http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov-o> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+# 
+# http://www.w3.org/ns/prov#SoftwareAgent
+<http://www.w3.org/ns/prov#SoftwareAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/prov#SoftwareAgent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
+<http://www.w3.org/ns/prov#SoftwareAgent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov-o> .
+<http://www.w3.org/ns/prov#SoftwareAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Software Agent" .
+# 
+# http://www.w3.org/ns/sosa/Actuation
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#generatedAtTime> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/2000/01/rdf-schema#label> "Actuation" .
+# 
+# http://www.w3.org/ns/sosa/Actuator
+<http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Actuator> <http://www.w3.org/2000/01/rdf-schema#label> "Actuator" .
+# 
+# http://www.w3.org/ns/sosa/ObservableProperty
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Observable Property" .
+# 
+# http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/resultTime> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation" .
+# 
+# http://www.w3.org/ns/sosa/Sensor
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor" .
+# 
+# https://saref.etsi.org/saref4bldg/BuildingSpace
+<https://saref.etsi.org/saref4bldg/BuildingSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/saref4bldg/BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Building Space" .
+# 
+# https://saref.etsi.org/saref4bldg/Lamp
+<https://saref.etsi.org/saref4bldg/Lamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/saref4bldg/Lamp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Actuator> .
+<https://saref.etsi.org/saref4bldg/Lamp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/Lamp> <http://www.w3.org/2000/01/rdf-schema#label> "Lamp" .
+# 
+# https://w3id.org/occo#CCT
+<https://w3id.org/occo#CCT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/occo#CCT> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<https://w3id.org/occo#CCT> <http://www.w3.org/2000/01/rdf-schema#comment> "Correlated Colour Temperature, an observable lighting property measured in Kelvin that characterises the warmth or coolness of a light source."@en .
+<https://w3id.org/occo#CCT> <http://www.w3.org/2000/01/rdf-schema#label> "C C T" .
+# 
+# https://w3id.org/occo#Chronotype
+<https://w3id.org/occo#Chronotype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/occo#Chronotype> <http://www.w3.org/2000/01/rdf-schema#comment> "A classification of an occupant's circadian preference, representing their natural tendency toward morning, intermediate, or evening activity patterns."@en .
+<https://w3id.org/occo#Chronotype> <http://www.w3.org/2000/01/rdf-schema#label> "Chronotype" .
+# 
+# https://w3id.org/occo#ControlStrategy
+<https://w3id.org/occo#ControlStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/occo#ControlStrategy> <http://www.w3.org/2000/01/rdf-schema#comment> "A defined approach for adjusting lighting parameters in a building space, such as dimming or colour tuning, selected by the controller to meet occupant requirements."@en .
+<https://w3id.org/occo#ControlStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "Control Strategy" .
+# 
+# https://w3id.org/occo#Controller
+<https://w3id.org/occo#Controller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/occo#Controller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#SoftwareAgent> .
+<https://w3id.org/occo#Controller> <http://www.w3.org/2000/01/rdf-schema#comment> "An automated software agent that selects and applies a lighting control strategy within a building space based on occupant preferences and environmental observations."@en .
+<https://w3id.org/occo#Controller> <http://www.w3.org/2000/01/rdf-schema#label> "Controller" .
+# 
+# https://w3id.org/occo#GlareIndex
+<https://w3id.org/occo#GlareIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/occo#GlareIndex> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<https://w3id.org/occo#GlareIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "A measure of visual discomfort caused by excessive brightness or contrast within the visual field, used as an observable lighting quality parameter."@en .
+<https://w3id.org/occo#GlareIndex> <http://www.w3.org/2000/01/rdf-schema#label> "Glare Index" .
+# 
+# https://w3id.org/occo#Illuminance
+<https://w3id.org/occo#Illuminance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/occo#Illuminance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<https://w3id.org/occo#Illuminance> <http://www.w3.org/2000/01/rdf-schema#comment> "The luminous flux incident on a surface per unit area, measured in lux, used as a primary observable parameter for lighting control."@en .
+<https://w3id.org/occo#Illuminance> <http://www.w3.org/2000/01/rdf-schema#label> "Illuminance" .
+# 
+# https://w3id.org/occo#OccupancyStatus
+<https://w3id.org/occo#OccupancyStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/occo#OccupancyStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> .
+<https://w3id.org/occo#OccupancyStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "An observable property indicating whether a building space is currently occupied, used to trigger or suppress lighting control actions."@en .
+<https://w3id.org/occo#OccupancyStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Occupancy Status" .
+# 
+# https://w3id.org/occo#OverrideEvent
+<https://w3id.org/occo#OverrideEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/occo#OverrideEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#generatedAtTime> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/occo#OverrideEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "A manual intervention by an occupant that supersedes an automated lighting control actuation, recorded with a timestamp for audit and learning purposes."@en .
+<https://w3id.org/occo#OverrideEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Override Event" .
+# 
+# https://w3id.org/occo#PerformanceOutcome
+<https://w3id.org/occo#PerformanceOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/occo#PerformanceOutcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/occo#meetsStandard> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/occo#PerformanceOutcome> <http://www.w3.org/2000/01/rdf-schema#comment> "The result of a lighting control actuation, capturing comfort score, energy consumption, and compliance with applicable lighting standards."@en .
+<https://w3id.org/occo#PerformanceOutcome> <http://www.w3.org/2000/01/rdf-schema#label> "Performance Outcome" .
+# 
+# https://w3id.org/occo#Preference
+<https://w3id.org/occo#Preference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/occo#Preference> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of occupant-defined lighting preferences, including preferred illuminance and correlated colour temperature values for a given visual task."@en .
+<https://w3id.org/occo#Preference> <http://www.w3.org/2000/01/rdf-schema#label> "Preference" .
+# 
+# https://w3id.org/occo#VisualTask
+<https://w3id.org/occo#VisualTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/occo#VisualTask> <http://www.w3.org/2000/01/rdf-schema#comment> "A task performed by an occupant that has specific visual requirements, such as reading, computer work, or collaborative meetings, which inform appropriate lighting conditions."@en .
+<https://w3id.org/occo#VisualTask> <http://www.w3.org/2000/01/rdf-schema#label> "Visual Task" .
+# 
+# https://w3id.org/ofo#Feedback
+<https://w3id.org/ofo#Feedback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ofo#Feedback> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#generatedAtTime> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/ofo#Feedback> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ofo> .
+<https://w3id.org/ofo#Feedback> <http://www.w3.org/2000/01/rdf-schema#label> "Feedback" .
+# 
+# https://w3id.org/ofo#Person
+<https://w3id.org/ofo#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/ofo#Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/ofo> .
+<https://w3id.org/ofo#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/occo#
+<https://w3id.org/occo#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/issued> "2026-03-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/publisher> "Birmingham City University" .
+# 
+# https://w3id.org/occo#EN_12464_1_2021
+<https://w3id.org/occo#EN_12464_1_2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/occo#EN_12464_1_2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/Standard> .
+<https://w3id.org/occo#EN_12464_1_2021> <http://purl.org/dc/terms/identifier> "EN 12464-1:2021" .
+<https://w3id.org/occo#EN_12464_1_2021> <http://purl.org/dc/terms/issued> "2021-08-31"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/occo#EN_12464_1_2021> <http://purl.org/dc/terms/publisher> "BSI" .
+<https://w3id.org/occo#EN_12464_1_2021> <http://purl.org/dc/terms/title> "Light and lighting. Lighting of work places - Indoor work places"@en .
+# 
+# https://w3id.org/occo#EveningType
+<https://w3id.org/occo#EveningType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/occo#EveningType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/occo#Chronotype> .
+# 
+# https://w3id.org/occo#ISO_8995_1
+<https://w3id.org/occo#ISO_8995_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/occo#ISO_8995_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/Standard> .
+<https://w3id.org/occo#ISO_8995_1> <http://purl.org/dc/terms/identifier> "ISO 8995-1" .
+<https://w3id.org/occo#ISO_8995_1> <http://purl.org/dc/terms/issued> "2025-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/occo#ISO_8995_1> <http://purl.org/dc/terms/publisher> "ISO" .
+<https://w3id.org/occo#ISO_8995_1> <http://purl.org/dc/terms/title> "Light and lighting — Lighting of work places Part 1: Indoor"@en .
+# 
+# https://w3id.org/occo#IntermediateType
+<https://w3id.org/occo#IntermediateType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/occo#IntermediateType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/occo#Chronotype> .
+# 
+# https://w3id.org/occo#MorningType
+<https://w3id.org/occo#MorningType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/occo#MorningType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/occo#Chronotype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+# 
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+# 
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+# 
+<http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+# 
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+# 
+<http://purl.org/dc/terms/modified> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+# 
+<http://purl.org/dc/terms/source> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+# 
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#label> "title" .
+# 
+<http://purl.org/ontology/bibo/status> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/status> <http://www.w3.org/2000/01/rdf-schema#label> "status" .
+# 
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/vann/> .
+# 
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/vann/> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid7 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/occo#MorningType> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/occo#IntermediateType> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/occo#EveningType> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

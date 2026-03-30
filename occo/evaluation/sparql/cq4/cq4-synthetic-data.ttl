@@ -1,0 +1,102 @@
+# CQ4 Synthetic Data — v0.0.2
+# CQ: What are the preferred illuminance and CCT levels for occupants
+# performing specific visual tasks (e.g., reading, screen work)?
+
+@prefix occo: <https://w3id.org/occo#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
+@prefix ofo: <https://w3id.org/ofo#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/occo/> .
+
+# --- Visual Tasks ---
+ex:task_reading a occo:VisualTask ;
+    rdfs:label "Reading" .
+
+ex:task_screen a occo:VisualTask ;
+    rdfs:label "Screen Work" .
+
+ex:task_drawing a occo:VisualTask ;
+    rdfs:label "Detailed Drawing" .
+
+# --- Occupants ---
+ex:person_alice a ofo:Person ;
+    rdfs:label "Alice" .
+
+ex:person_bob a ofo:Person ;
+    rdfs:label "Bob" .
+
+ex:person_carol a ofo:Person ;
+    rdfs:label "Carol" .
+
+# --- Quantity Values: Illuminance (lux) ---
+ex:qv_illum_alice_read a qudt:QuantityValue ;
+    qudt:numericValue "500.0"^^xsd:double .
+
+ex:qv_illum_alice_screen a qudt:QuantityValue ;
+    qudt:numericValue "350.0"^^xsd:double .
+
+ex:qv_illum_bob_read a qudt:QuantityValue ;
+    qudt:numericValue "600.0"^^xsd:double .
+
+ex:qv_illum_bob_screen a qudt:QuantityValue ;
+    qudt:numericValue "400.0"^^xsd:double .
+
+ex:qv_illum_carol_drawing a qudt:QuantityValue ;
+    qudt:numericValue "750.0"^^xsd:double .
+
+# --- Quantity Values: CCT (Kelvin) ---
+ex:qv_cct_alice_read a qudt:QuantityValue ;
+    qudt:numericValue "4000.0"^^xsd:double .
+
+ex:qv_cct_alice_screen a qudt:QuantityValue ;
+    qudt:numericValue "4500.0"^^xsd:double .
+
+ex:qv_cct_bob_read a qudt:QuantityValue ;
+    qudt:numericValue "3500.0"^^xsd:double .
+
+ex:qv_cct_bob_screen a qudt:QuantityValue ;
+    qudt:numericValue "5000.0"^^xsd:double .
+
+ex:qv_cct_carol_drawing a qudt:QuantityValue ;
+    qudt:numericValue "5000.0"^^xsd:double .
+
+# --- Preferences ---
+ex:pref_alice_read a occo:Preference ;
+    occo:forTask ex:task_reading ;
+    occo:preferredIlluminance ex:qv_illum_alice_read ;
+    occo:preferredCCT ex:qv_cct_alice_read .
+
+ex:pref_alice_screen a occo:Preference ;
+    occo:forTask ex:task_screen ;
+    occo:preferredIlluminance ex:qv_illum_alice_screen ;
+    occo:preferredCCT ex:qv_cct_alice_screen .
+
+ex:pref_bob_read a occo:Preference ;
+    occo:forTask ex:task_reading ;
+    occo:preferredIlluminance ex:qv_illum_bob_read ;
+    occo:preferredCCT ex:qv_cct_bob_read .
+
+ex:pref_bob_screen a occo:Preference ;
+    occo:forTask ex:task_screen ;
+    occo:preferredIlluminance ex:qv_illum_bob_screen ;
+    occo:preferredCCT ex:qv_cct_bob_screen .
+
+ex:pref_carol_drawing a occo:Preference ;
+    occo:forTask ex:task_drawing ;
+    occo:preferredIlluminance ex:qv_illum_carol_drawing ;
+    occo:preferredCCT ex:qv_cct_carol_drawing .
+
+# --- Person → Preference links ---
+ex:person_alice occo:hasPreference ex:pref_alice_read ;
+    occo:hasPreference ex:pref_alice_screen .
+
+ex:person_bob occo:hasPreference ex:pref_bob_read ;
+    occo:hasPreference ex:pref_bob_screen .
+
+ex:person_carol occo:hasPreference ex:pref_carol_drawing .

@@ -1,0 +1,1719 @@
+<h2 id="crossreference" class="list">Cross-reference for Occupant-Centric Control Ontology (OCCO) classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Occupant-Centric Control Ontology (OCCO).
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/Actuator" title="http://www.w3.org/ns/sosa/Actuator">Actuator</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a></li>
+  <li><a href="#https://saref.etsi.org/saref4bldg/BuildingSpace" title="https://saref.etsi.org/saref4bldg/BuildingSpace">Building Space</a></li>
+  <li><a href="#CCT" title="https://w3id.org/occo#CCT">C C T</a></li>
+  <li><a href="#Chronotype" title="https://w3id.org/occo#Chronotype">Chronotype</a></li>
+  <li><a href="#ControlStrategy" title="https://w3id.org/occo#ControlStrategy">Control Strategy</a></li>
+  <li><a href="#Controller" title="https://w3id.org/occo#Controller">Controller</a></li>
+  <li><a href="#https://w3id.org/ofo#Feedback" title="https://w3id.org/ofo#Feedback">Feedback</a></li>
+  <li><a href="#GlareIndex" title="https://w3id.org/occo#GlareIndex">Glare Index</a></li>
+  <li><a href="#Illuminance" title="https://w3id.org/occo#Illuminance">Illuminance</a></li>
+  <li><a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">Instant</a></li>
+  <li><a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">Interval</a></li>
+  <li><a href="#https://saref.etsi.org/saref4bldg/Lamp" title="https://saref.etsi.org/saref4bldg/Lamp">Lamp</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">Observable Property</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a></li>
+  <li><a href="#OccupancyStatus" title="https://w3id.org/occo#OccupancyStatus">Occupancy Status</a></li>
+  <li><a href="#OverrideEvent" title="https://w3id.org/occo#OverrideEvent">Override Event</a></li>
+  <li><a href="#PerformanceOutcome" title="https://w3id.org/occo#PerformanceOutcome">Performance Outcome</a></li>
+  <li><a href="#https://w3id.org/ofo#Person" title="https://w3id.org/ofo#Person">Person</a></li>
+  <li><a href="#Preference" title="https://w3id.org/occo#Preference">Preference</a></li>
+  <li><a href="#http://qudt.org/schema/qudt/QuantityValue" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">Software Agent</a></li>
+  <li><a href="#http://purl.org/dc/terms/Standard" title="http://purl.org/dc/terms/Standard">Standard</a></li>
+  <li><a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a></li>
+  <li><a href="#VisualTask" title="https://w3id.org/occo#VisualTask">Visual Task</a></li>
+ </ul>
+ <div class="entity" id="http://www.w3.org/ns/sosa/Actuation">
+  <h3>Actuation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/Actuation</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#generated" title="http://www.w3.org/ns/prov#generated">generated</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/madeByActuator" title="http://www.w3.org/ns/sosa/madeByActuator">made by actuator</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#used" title="http://www.w3.org/ns/prov#used">used</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasInformedBy" title="http://www.w3.org/ns/prov#wasInformedBy">was informed by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#overrides" title="https://w3id.org/occo#overrides">overrides</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/Actuator">
+  <h3>Actuator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/Actuator</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#https://saref.etsi.org/saref4bldg/Lamp" title="https://saref.etsi.org/saref4bldg/Lamp">Lamp</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/madeByActuator" title="http://www.w3.org/ns/sosa/madeByActuator">made by actuator</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#Agent">
+  <h3>Agent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#Agent</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov-o">http://www.w3.org/ns/prov-o</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">Software Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#wasAssociatedWith" title="http://www.w3.org/ns/prov#wasAssociatedWith">was associated with</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://saref.etsi.org/saref4bldg/BuildingSpace">
+  <h3>Building Space<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://saref.etsi.org/saref4bldg/BuildingSpace</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://saref.etsi.org/saref4bldg/">https://saref.etsi.org/saref4bldg/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#appliesToSpace" title="https://w3id.org/occo#appliesToSpace">applies to space</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#atLocation" title="http://www.w3.org/ns/prov#atLocation">at location</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/ofo#hasLocation" title="https://w3id.org/ofo#hasLocation">has location</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://saref.etsi.org/saref4bldg/isContainedIn" title="https://saref.etsi.org/saref4bldg/isContainedIn">is contained in</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CCT">
+  <h3>C C T<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#CCT</p>
+  <div class="comment">
+   <span class="markdown">Correlated Colour Temperature, an observable lighting property measured in Kelvin that characterises the warmth or coolness of a light source.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">Observable Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Chronotype">
+  <h3>Chronotype<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#Chronotype</p>
+  <div class="comment">
+   <span class="markdown">A classification of an occupant's circadian preference, representing their natural tendency toward morning, intermediate, or evening activity patterns.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasChronotype" title="https://w3id.org/occo#hasChronotype">has chronotype</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#EveningType" title="https://w3id.org/occo#EveningType">Evening Type</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#IntermediateType" title="https://w3id.org/occo#IntermediateType">Intermediate Type</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#MorningType" title="https://w3id.org/occo#MorningType">Morning Type</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ControlStrategy">
+  <h3>Control Strategy<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#ControlStrategy</p>
+  <div class="comment">
+   <span class="markdown">A defined approach for adjusting lighting parameters in a building space, such as dimming or colour tuning, selected by the controller to meet occupant requirements.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#appliesToSpace" title="https://w3id.org/occo#appliesToSpace">applies to space</a> <sup class="type-op" title="object property">op</sup>, <a href="#strategyCategory" title="https://w3id.org/occo#strategyCategory">strategy category</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#used" title="http://www.w3.org/ns/prov#used">used</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesStrategy" title="https://w3id.org/occo#usesStrategy">uses strategy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Controller">
+  <h3>Controller<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#Controller</p>
+  <div class="comment">
+   <span class="markdown">An automated software agent that selects and applies a lighting control strategy within a building space based on occupant preferences and environmental observations.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">Software Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#usesStrategy" title="https://w3id.org/occo#usesStrategy">uses strategy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/ofo#Feedback">
+  <h3>Feedback<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ofo#Feedback</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ofo">https://w3id.org/ofo</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#atLocation" title="http://www.w3.org/ns/prov#atLocation">at location</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#wasAttributedTo" title="http://www.w3.org/ns/prov#wasAttributedTo">was attributed to</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#includesFeedback" title="https://w3id.org/occo#includesFeedback">includes feedback</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GlareIndex">
+  <h3>Glare Index<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#GlareIndex</p>
+  <div class="comment">
+   <span class="markdown">A measure of visual discomfort caused by excessive brightness or contrast within the visual field, used as an observable lighting quality parameter.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">Observable Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Illuminance">
+  <h3>Illuminance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#Illuminance</p>
+  <div class="comment">
+   <span class="markdown">The luminous flux incident on a surface per unit area, measured in lux, used as a primary observable parameter for lighting control.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">Observable Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2006/time#Instant">
+  <h3>Instant<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2006/time#Instant</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2006/time">http://www.w3.org/2006/time</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2006/time#hasBeginning" title="http://www.w3.org/2006/time#hasBeginning">has beginning</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2006/time#hasEnd" title="http://www.w3.org/2006/time#hasEnd">has end</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/2006/time#Interval">
+  <h3>Interval<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2006/time#Interval</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2006/time">http://www.w3.org/2006/time</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/2006/time#hasBeginning" title="http://www.w3.org/2006/time#hasBeginning">has beginning</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/2006/time#hasEnd" title="http://www.w3.org/2006/time#hasEnd">has end</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://saref.etsi.org/saref4bldg/Lamp">
+  <h3>Lamp<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://saref.etsi.org/saref4bldg/Lamp</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://saref.etsi.org/saref4bldg/">https://saref.etsi.org/saref4bldg/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/Actuator" title="http://www.w3.org/ns/sosa/Actuator">Actuator</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#https://saref.etsi.org/saref4bldg/isContainedIn" title="https://saref.etsi.org/saref4bldg/isContainedIn">is contained in</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/ObservableProperty">
+  <h3>Observable Property<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/ObservableProperty</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CCT" title="https://w3id.org/occo#CCT">C C T</a> <sup class="type-c" title="class">c</sup>, <a href="#GlareIndex" title="https://w3id.org/occo#GlareIndex">Glare Index</a> <sup class="type-c" title="class">c</sup>, <a href="#Illuminance" title="https://w3id.org/occo#Illuminance">Illuminance</a> <sup class="type-c" title="class">c</sup>, <a href="#OccupancyStatus" title="https://w3id.org/occo#OccupancyStatus">Occupancy Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/observedProperty" title="http://www.w3.org/ns/sosa/observedProperty">observed property</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/Observation">
+  <h3>Observation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/Observation</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/hasResult" title="http://www.w3.org/ns/sosa/hasResult">has result</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/madeBySensor" title="http://www.w3.org/ns/sosa/madeBySensor">made by sensor</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/observedProperty" title="http://www.w3.org/ns/sosa/observedProperty">observed property</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#wasInformedBy" title="http://www.w3.org/ns/prov#wasInformedBy">was informed by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OccupancyStatus">
+  <h3>Occupancy Status<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#OccupancyStatus</p>
+  <div class="comment">
+   <span class="markdown">An observable property indicating whether a building space is currently occupied, used to trigger or suppress lighting control actions.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">Observable Property</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OverrideEvent">
+  <h3>Override Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#OverrideEvent</p>
+  <div class="comment">
+   <span class="markdown">A manual intervention by an occupant that supersedes an automated lighting control actuation, recorded with a timestamp for audit and learning purposes.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#overrides" title="https://w3id.org/occo#overrides">overrides</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PerformanceOutcome">
+  <h3>Performance Outcome<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#PerformanceOutcome</p>
+  <div class="comment">
+   <span class="markdown">The result of a lighting control actuation, capturing comfort score, energy consumption, and compliance with applicable lighting standards.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#assessedAgainst" title="https://w3id.org/occo#assessedAgainst">assessed against</a> <sup class="type-op" title="object property">op</sup>, <a href="#comfortScore" title="https://w3id.org/occo#comfortScore">comfort score</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasBaseline" title="https://w3id.org/occo#hasBaseline">has baseline</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEnergyConsumption" title="https://w3id.org/occo#hasEnergyConsumption">has energy consumption</a> <sup class="type-op" title="object property">op</sup>, <a href="#includesFeedback" title="https://w3id.org/occo#includesFeedback">includes feedback</a> <sup class="type-op" title="object property">op</sup>, <a href="#meetsStandard" title="https://w3id.org/occo#meetsStandard">meets standard</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#generated" title="http://www.w3.org/ns/prov#generated">generated</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasBaseline" title="https://w3id.org/occo#hasBaseline">has baseline</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://w3id.org/ofo#Person">
+  <h3>Person<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ofo#Person</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ofo">https://w3id.org/ofo</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasChronotype" title="https://w3id.org/occo#hasChronotype">has chronotype</a> <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/ofo#hasLocation" title="https://w3id.org/ofo#hasLocation">has location</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPreference" title="https://w3id.org/occo#hasPreference">has preference</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#wasAttributedTo" title="http://www.w3.org/ns/prov#wasAttributedTo">was attributed to</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Preference">
+  <h3>Preference<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#Preference</p>
+  <div class="comment">
+   <span class="markdown">A set of occupant-defined lighting preferences, including preferred illuminance and correlated colour temperature values for a given visual task.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#forTask" title="https://w3id.org/occo#forTask">for task</a> <sup class="type-op" title="object property">op</sup>, <a href="#preferredCCT" title="https://w3id.org/occo#preferredCCT">preferred c c t</a> <sup class="type-op" title="object property">op</sup>, <a href="#preferredIlluminance" title="https://w3id.org/occo#preferredIlluminance">preferred illuminance</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasPreference" title="https://w3id.org/occo#hasPreference">has preference</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://qudt.org/schema/qudt/QuantityValue">
+  <h3>Quantity Value<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt/QuantityValue</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://qudt.org/schema/qudt/">http://qudt.org/schema/qudt/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit">unit</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasEnergyConsumption" title="https://w3id.org/occo#hasEnergyConsumption">has energy consumption</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/sosa/hasResult" title="http://www.w3.org/ns/sosa/hasResult">has result</a> <sup class="type-op" title="object property">op</sup>, <a href="#preferredCCT" title="https://w3id.org/occo#preferredCCT">preferred c c t</a> <sup class="type-op" title="object property">op</sup>, <a href="#preferredIlluminance" title="https://w3id.org/occo#preferredIlluminance">preferred illuminance</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/Sensor">
+  <h3>Sensor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/Sensor</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/sosa/madeBySensor" title="http://www.w3.org/ns/sosa/madeBySensor">made by sensor</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#SoftwareAgent">
+  <h3>Software Agent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#SoftwareAgent</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov-o">http://www.w3.org/ns/prov-o</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Controller" title="https://w3id.org/occo#Controller">Controller</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/Standard">
+  <h3>Standard<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/Standard</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#assessedAgainst" title="https://w3id.org/occo#assessedAgainst">assessed against</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#EN_12464_1_2021" title="https://w3id.org/occo#EN_12464_1_2021">E N 12464 1 2021</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ISO_8995_1" title="https://w3id.org/occo#ISO_8995_1">I S O 8995 1</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://qudt.org/schema/qudt/Unit">
+  <h3>Unit<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt/Unit</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://qudt.org/schema/qudt/">http://qudt.org/schema/qudt/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit">unit</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VisualTask">
+  <h3>Visual Task<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#VisualTask</p>
+  <div class="comment">
+   <span class="markdown">A task performed by an occupant that has specific visual requirements, such as reading, computer work, or collaborative meetings, which inform appropriate lighting conditions.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#forTask" title="https://w3id.org/occo#forTask">for task</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#appliesToSpace" title="https://w3id.org/occo#appliesToSpace">applies to space</a></li>
+  <li><a href="#assessedAgainst" title="https://w3id.org/occo#assessedAgainst">assessed against</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#atLocation" title="http://www.w3.org/ns/prov#atLocation">at location</a></li>
+  <li><a href="#forTask" title="https://w3id.org/occo#forTask">for task</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#generated" title="http://www.w3.org/ns/prov#generated">generated</a></li>
+  <li><a href="#hasBaseline" title="https://w3id.org/occo#hasBaseline">has baseline</a></li>
+  <li><a href="#http://www.w3.org/2006/time#hasBeginning" title="http://www.w3.org/2006/time#hasBeginning">has beginning</a></li>
+  <li><a href="#hasChronotype" title="https://w3id.org/occo#hasChronotype">has chronotype</a></li>
+  <li><a href="#http://www.w3.org/2006/time#hasEnd" title="http://www.w3.org/2006/time#hasEnd">has end</a></li>
+  <li><a href="#hasEnergyConsumption" title="https://w3id.org/occo#hasEnergyConsumption">has energy consumption</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/hasFeatureOfInterest" title="http://www.w3.org/ns/sosa/hasFeatureOfInterest">has feature of interest</a></li>
+  <li><a href="#https://w3id.org/ofo#hasLocation" title="https://w3id.org/ofo#hasLocation">has location</a></li>
+  <li><a href="#hasPreference" title="https://w3id.org/occo#hasPreference">has preference</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/hasResult" title="http://www.w3.org/ns/sosa/hasResult">has result</a></li>
+  <li><a href="#includesFeedback" title="https://w3id.org/occo#includesFeedback">includes feedback</a></li>
+  <li><a href="#https://saref.etsi.org/saref4bldg/isContainedIn" title="https://saref.etsi.org/saref4bldg/isContainedIn">is contained in</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/madeByActuator" title="http://www.w3.org/ns/sosa/madeByActuator">made by actuator</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/madeBySensor" title="http://www.w3.org/ns/sosa/madeBySensor">made by sensor</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/observedProperty" title="http://www.w3.org/ns/sosa/observedProperty">observed property</a></li>
+  <li><a href="#overrides" title="https://w3id.org/occo#overrides">overrides</a></li>
+  <li><a href="#preferredCCT" title="https://w3id.org/occo#preferredCCT">preferred c c t</a></li>
+  <li><a href="#preferredIlluminance" title="https://w3id.org/occo#preferredIlluminance">preferred illuminance</a></li>
+  <li><a href="#http://qudt.org/schema/qudt/unit" title="http://qudt.org/schema/qudt/unit">unit</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#used" title="http://www.w3.org/ns/prov#used">used</a></li>
+  <li><a href="#usesStrategy" title="https://w3id.org/occo#usesStrategy">uses strategy</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasAssociatedWith" title="http://www.w3.org/ns/prov#wasAssociatedWith">was associated with</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasAttributedTo" title="http://www.w3.org/ns/prov#wasAttributedTo">was attributed to</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasInformedBy" title="http://www.w3.org/ns/prov#wasInformedBy">was informed by</a></li>
+ </ul>
+ <div class="entity" id="appliesToSpace">
+  <h3>applies to space<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#appliesToSpace</p>
+  <div class="comment">
+   <span class="markdown">Relates a control strategy to the building space in which it is applied.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ControlStrategy" title="https://w3id.org/occo#ControlStrategy">Control Strategy</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://saref.etsi.org/saref4bldg/BuildingSpace" title="https://saref.etsi.org/saref4bldg/BuildingSpace">Building Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="assessedAgainst">
+  <h3>assessed against<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#assessedAgainst</p>
+  <div class="comment">
+   <span class="markdown">Relates a performance outcome to the lighting standard used to evaluate compliance.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PerformanceOutcome" title="https://w3id.org/occo#PerformanceOutcome">Performance Outcome</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://purl.org/dc/terms/Standard" title="http://purl.org/dc/terms/Standard">Standard</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#atLocation">
+  <h3>at location<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#atLocation</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov-o">http://www.w3.org/ns/prov-o</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ofo#Feedback" title="https://w3id.org/ofo#Feedback">Feedback</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://saref.etsi.org/saref4bldg/BuildingSpace" title="https://saref.etsi.org/saref4bldg/BuildingSpace">Building Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="forTask">
+  <h3>for task<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#forTask</p>
+  <div class="comment">
+   <span class="markdown">Relates a preference to the visual task for which it is defined.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Preference" title="https://w3id.org/occo#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#VisualTask" title="https://w3id.org/occo#VisualTask">Visual Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#generated">
+  <h3>generated<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#generated</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov-o">http://www.w3.org/ns/prov-o</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PerformanceOutcome" title="https://w3id.org/occo#PerformanceOutcome">Performance Outcome</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasBaseline">
+  <h3>has baseline<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#hasBaseline</p>
+  <div class="comment">
+   <span class="markdown">Relates a performance outcome to a reference baseline outcome against which it is compared. This property is directional: the subject is the measured outcome, the object is the baseline.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PerformanceOutcome" title="https://w3id.org/occo#PerformanceOutcome">Performance Outcome</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PerformanceOutcome" title="https://w3id.org/occo#PerformanceOutcome">Performance Outcome</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2006/time#hasBeginning">
+  <h3>has beginning<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2006/time#hasBeginning</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2006/time">http://www.w3.org/2006/time</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">Interval</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">Instant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasChronotype">
+  <h3>has chronotype<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#hasChronotype</p>
+  <div class="comment">
+   <span class="markdown">Relates a person to their chronotype classification, capturing their circadian activity pattern preference.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ofo#Person" title="https://w3id.org/ofo#Person">Person</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Chronotype" title="https://w3id.org/occo#Chronotype">Chronotype</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/2006/time#hasEnd">
+  <h3>has end<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2006/time#hasEnd</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2006/time">http://www.w3.org/2006/time</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">Interval</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">Instant</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEnergyConsumption">
+  <h3>has energy consumption<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#hasEnergyConsumption</p>
+  <div class="comment">
+   <span class="markdown">Relates a performance outcome to the energy consumption recorded during the associated lighting control actuation, expressed as a quantity value.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PerformanceOutcome" title="https://w3id.org/occo#PerformanceOutcome">Performance Outcome</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://qudt.org/schema/qudt/QuantityValue" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+  <h3>has feature of interest<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/hasFeatureOfInterest</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://saref.etsi.org/saref4bldg/BuildingSpace" title="https://saref.etsi.org/saref4bldg/BuildingSpace">Building Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/ofo#hasLocation">
+  <h3>has location<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ofo#hasLocation</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ofo">https://w3id.org/ofo</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ofo#Person" title="https://w3id.org/ofo#Person">Person</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://saref.etsi.org/saref4bldg/BuildingSpace" title="https://saref.etsi.org/saref4bldg/BuildingSpace">Building Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPreference">
+  <h3>has preference<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#hasPreference</p>
+  <div class="comment">
+   <span class="markdown">Relates a person to their lighting preference profile, which specifies desired illuminance and colour temperature for a given visual task.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ofo#Person" title="https://w3id.org/ofo#Person">Person</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Preference" title="https://w3id.org/occo#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/hasResult">
+  <h3>has result<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/hasResult</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://qudt.org/schema/qudt/QuantityValue" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="includesFeedback">
+  <h3>includes feedback<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#includesFeedback</p>
+  <div class="comment">
+   <span class="markdown">Relates a performance outcome to occupant feedback received following a lighting control actuation.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PerformanceOutcome" title="https://w3id.org/occo#PerformanceOutcome">Performance Outcome</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ofo#Feedback" title="https://w3id.org/ofo#Feedback">Feedback</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://saref.etsi.org/saref4bldg/isContainedIn">
+  <h3>is contained in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://saref.etsi.org/saref4bldg/isContainedIn</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://saref.etsi.org/saref4bldg/">https://saref.etsi.org/saref4bldg/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://saref.etsi.org/saref4bldg/Lamp" title="https://saref.etsi.org/saref4bldg/Lamp">Lamp</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://saref.etsi.org/saref4bldg/BuildingSpace" title="https://saref.etsi.org/saref4bldg/BuildingSpace">Building Space</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/madeByActuator">
+  <h3>made by actuator<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/madeByActuator</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Actuator" title="http://www.w3.org/ns/sosa/Actuator">Actuator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/madeBySensor">
+  <h3>made by sensor<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/madeBySensor</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/observedProperty">
+  <h3>observed property<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/observedProperty</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/ObservableProperty" title="http://www.w3.org/ns/sosa/ObservableProperty">Observable Property</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="overrides">
+  <h3>overrides<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#overrides</p>
+  <div class="comment">
+   <span class="markdown">Relates an override event to the automated actuation it supersedes.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#OverrideEvent" title="https://w3id.org/occo#OverrideEvent">Override Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="preferredCCT">
+  <h3>preferred c c t<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#preferredCCT</p>
+  <div class="comment">
+   <span class="markdown">Relates a preference to the occupant's desired correlated colour temperature, expressed as a quantity value in Kelvin.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Preference" title="https://w3id.org/occo#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://qudt.org/schema/qudt/QuantityValue" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="preferredIlluminance">
+  <h3>preferred illuminance<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#preferredIlluminance</p>
+  <div class="comment">
+   <span class="markdown">Relates a preference to the occupant's desired illuminance level, expressed as a quantity value in lux.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Preference" title="https://w3id.org/occo#Preference">Preference</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://qudt.org/schema/qudt/QuantityValue" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://qudt.org/schema/qudt/unit">
+  <h3>unit<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt/unit</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://qudt.org/schema/qudt/">http://qudt.org/schema/qudt/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://qudt.org/schema/qudt/QuantityValue" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">Unit</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#used">
+  <h3>used<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#used</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov-o">http://www.w3.org/ns/prov-o</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ControlStrategy" title="https://w3id.org/occo#ControlStrategy">Control Strategy</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="usesStrategy">
+  <h3>uses strategy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#usesStrategy</p>
+  <div class="comment">
+   <span class="markdown">Relates a controller to the control strategy it is currently applying in a building space.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Controller" title="https://w3id.org/occo#Controller">Controller</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ControlStrategy" title="https://w3id.org/occo#ControlStrategy">Control Strategy</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasAssociatedWith">
+  <h3>was associated with<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasAssociatedWith</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov-o">http://www.w3.org/ns/prov-o</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasAttributedTo">
+  <h3>was attributed to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasAttributedTo</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov-o">http://www.w3.org/ns/prov-o</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ofo#Feedback" title="https://w3id.org/ofo#Feedback">Feedback</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#https://w3id.org/ofo#Person" title="https://w3id.org/ofo#Person">Person</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasInformedBy">
+  <h3>was informed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasInformedBy</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov-o">http://www.w3.org/ns/prov-o</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Actuation" title="http://www.w3.org/ns/sosa/Actuation">Actuation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#http://www.w3.org/ns/sosa/Observation" title="http://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#comfortScore" title="https://w3id.org/occo#comfortScore">comfort score</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#generatedAtTime" title="http://www.w3.org/ns/prov#generatedAtTime">generated at time</a></li>
+  <li><a href="#https://w3id.org/ofo#hasSimpleFeedbackState" title="https://w3id.org/ofo#hasSimpleFeedbackState">has simple feedback state</a></li>
+  <li><a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a></li>
+  <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">issued</a></li>
+  <li><a href="#meetsStandard" title="https://w3id.org/occo#meetsStandard">meets standard</a></li>
+  <li><a href="#http://qudt.org/schema/qudt/numericValue" title="http://qudt.org/schema/qudt/numericValue">numeric value</a></li>
+  <li><a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">publisher</a></li>
+  <li><a href="#http://www.w3.org/ns/sosa/resultTime" title="http://www.w3.org/ns/sosa/resultTime">result time</a></li>
+  <li><a href="#strategyCategory" title="https://w3id.org/occo#strategyCategory">strategy category</a></li>
+ </ul>
+ <div class="entity" id="comfortScore">
+  <h3>comfort score<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#comfortScore</p>
+  <div class="comment">
+   <span class="markdown">A decimal value representing the degree of visual comfort achieved by a lighting control actuation, assessed against occupant preferences.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PerformanceOutcome" title="https://w3id.org/occo#PerformanceOutcome">Performance Outcome</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#generatedAtTime">
+  <h3>generated at time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#generatedAtTime</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov-o">http://www.w3.org/ns/prov-o</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://w3id.org/ofo#hasSimpleFeedbackState">
+  <h3>has simple feedback state<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/ofo#hasSimpleFeedbackState</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://w3id.org/ofo">https://w3id.org/ofo</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/identifier">
+  <h3>identifier<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/identifier</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/issued">
+  <h3>issued<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="meetsStandard">
+  <h3>meets standard<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#meetsStandard</p>
+  <div class="comment">
+   <span class="markdown">A boolean value indicating whether a performance outcome satisfies the requirements of the applicable lighting standard.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PerformanceOutcome" title="https://w3id.org/occo#PerformanceOutcome">Performance Outcome</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://qudt.org/schema/qudt/numericValue">
+  <h3>numeric value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://qudt.org/schema/qudt/numericValue</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://qudt.org/schema/qudt/">http://qudt.org/schema/qudt/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#double" target="_blank" title="http://www.w3.org/2001/XMLSchema#double">double</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/publisher">
+  <h3>publisher<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/sosa/resultTime">
+  <h3>result time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/sosa/resultTime</p>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/">http://www.w3.org/ns/sosa/</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="strategyCategory">
+  <h3>strategy category<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#strategyCategory</p>
+  <div class="comment">
+   <span class="markdown">A string label categorising the type of control strategy applied, such as dimming, colour tuning, or scene-based control.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ControlStrategy" title="https://w3id.org/occo#ControlStrategy">Control Strategy</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#" title="https://w3id.org/occo#"> <span></span> </a></li>
+  <li><a href="#EN_12464_1_2021" title="https://w3id.org/occo#EN_12464_1_2021"> <span>E N 12464 1 2021</span> </a></li>
+  <li><a href="#EveningType" title="https://w3id.org/occo#EveningType"> <span>Evening Type</span> </a></li>
+  <li><a href="#ISO_8995_1" title="https://w3id.org/occo#ISO_8995_1"> <span>I S O 8995 1</span> </a></li>
+  <li><a href="#IntermediateType" title="https://w3id.org/occo#IntermediateType"> <span>Intermediate Type</span> </a></li>
+  <li><a href="#MorningType" title="https://w3id.org/occo#MorningType"> <span>Morning Type</span> </a></li>
+ </ul>
+ <div class="entity" id="">
+  <h3>:<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#</p>
+  <dl class="description">
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">issued</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2026-03-29"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">publisher</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"Birmingham City University"</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EN_12464_1_2021">
+  <h3>E N 12464 1 2021<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#EN_12464_1_2021</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/Standard" title="http://purl.org/dc/terms/Standard">Standard</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"EN 12464-1:2021"</span>
+   </dd>
+   <dd>
+    <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">issued</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2021-08-31"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">publisher</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"BSI"</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/title" target="_blank" title="http://purl.org/dc/terms/title">title</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Light and lighting. Lighting of work places - Indoor work places"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EveningType">
+  <h3>Evening Type<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#EveningType</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Chronotype" title="https://w3id.org/occo#Chronotype">Chronotype</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ISO_8995_1">
+  <h3>I S O 8995 1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#ISO_8995_1</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/Standard" title="http://purl.org/dc/terms/Standard">Standard</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"ISO 8995-1"</span>
+   </dd>
+   <dd>
+    <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">issued</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2025-01-01"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
+   </dd>
+   <dd>
+    <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">publisher</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"ISO"</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/title" target="_blank" title="http://purl.org/dc/terms/title">title</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Light and lighting — Lighting of work places Part 1: Indoor"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="IntermediateType">
+  <h3>Intermediate Type<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#IntermediateType</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Chronotype" title="https://w3id.org/occo#Chronotype">Chronotype</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MorningType">
+  <h3>Morning Type<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#MorningType</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#Chronotype" title="https://w3id.org/occo#Chronotype">Chronotype</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>

@@ -1,0 +1,44 @@
+# CQ2: Which building spaces received user-reported visual discomfort feedback
+# in the past 7 days, and what were the corresponding glare or illuminance values?
+
+PREFIX occo: <https://w3id.org/occo#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX s4bldg: <https://saref.etsi.org/saref4bldg/>
+PREFIX ofo: <https://w3id.org/ofo#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?spaceLabel ?feedbackTime ?score ?obsValue ?propType
+WHERE {
+    ?feedback a ofo:Feedback ;
+              occo:comfortScore ?score ;
+              prov:atLocation ?space ;
+              prov:generatedAtTime ?feedbackTime .
+
+    ?space rdfs:label ?spaceLabel .
+
+    FILTER(?score < 0)
+    FILTER(
+        ?feedbackTime >= "2026-03-22T00:00:00"^^xsd:dateTime &&
+        ?feedbackTime <= "2026-03-29T23:59:59"^^xsd:dateTime
+    )
+
+    OPTIONAL {
+        ?obs a sosa:Observation ;
+             sosa:hasFeatureOfInterest ?space ;
+             sosa:observedProperty ?prop ;
+             sosa:hasSimpleResult ?obsValue ;
+             sosa:resultTime ?feedbackTime .
+
+        BIND(
+            IF(EXISTS { ?prop a occo:GlareIndex }, "GlareIndex",
+            IF(EXISTS { ?prop a occo:Illuminance }, "Illuminance", "Other"))
+            AS ?propType
+        )
+    }
+}
+ORDER BY ?spaceLabel ?feedbackTime

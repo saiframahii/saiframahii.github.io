@@ -1,0 +1,32 @@
+# CQ7: Which building spaces meet EN 12464-1:2021 illuminance standards
+# while also receiving negative comfort feedback from occupants?
+
+PREFIX occo: <https://w3id.org/occo#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX s4bldg: <https://saref.etsi.org/saref4bldg/>
+PREFIX ofo: <https://w3id.org/ofo#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?spaceLabel ?outcomeLabel ?comfortScore ?feedbackLabel ?personLabel
+WHERE {
+    ?outcome a occo:PerformanceOutcome ;
+             rdfs:label ?outcomeLabel ;
+             occo:assessedAgainst occo:EN_12464_1_2021 ;
+             occo:meetsStandard "true"^^xsd:boolean ;
+             occo:comfortScore ?comfortScore ;
+             occo:includesFeedback ?feedback ;
+             prov:wasGeneratedBy ?strategy .
+
+    FILTER(?comfortScore < 0)
+
+    ?feedback rdfs:label ?feedbackLabel ;
+              prov:atLocation ?space ;
+              prov:wasAssociatedWith ?person .
+
+    ?space rdfs:label ?spaceLabel .
+    ?person rdfs:label ?personLabel .
+}
+ORDER BY ?spaceLabel ?comfortScore

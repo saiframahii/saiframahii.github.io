@@ -1,0 +1,146 @@
+# CQ2 Synthetic Data — v0.0.2
+# CQ: Which building spaces received user-reported visual discomfort feedback
+# in the past 7 days, and what were the corresponding glare or illuminance values?
+
+@prefix occo: <https://w3id.org/occo#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
+@prefix ofo: <https://w3id.org/ofo#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/occo/> .
+
+# --- Building Spaces ---
+ex:meeting_room_A a s4bldg:BuildingSpace ;
+    rdfs:label "Meeting Room A" .
+
+ex:meeting_room_B a s4bldg:BuildingSpace ;
+    rdfs:label "Meeting Room B" .
+
+ex:office_301 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 301" .
+
+# --- Occupants ---
+ex:person_alice a ofo:Person ;
+    rdfs:label "Alice" .
+
+ex:person_bob a ofo:Person ;
+    rdfs:label "Bob" .
+
+ex:person_carol a ofo:Person ;
+    rdfs:label "Carol" .
+
+# --- Observable property instances ---
+ex:glareIndex a occo:GlareIndex ;
+    rdfs:label "Glare Index" .
+
+ex:illuminance a occo:Illuminance ;
+    rdfs:label "Illuminance" .
+
+# --- Sensors ---
+ex:sensor_glare_A a sosa:Sensor ;
+    rdfs:label "Glare Sensor A" .
+
+ex:sensor_illum_A a sosa:Sensor ;
+    rdfs:label "Illuminance Sensor A" .
+
+ex:sensor_glare_B a sosa:Sensor ;
+    rdfs:label "Glare Sensor B" .
+
+ex:sensor_illum_B a sosa:Sensor ;
+    rdfs:label "Illuminance Sensor B" .
+
+# --- Glare observations (within 7-day window ending 2026-03-29) ---
+ex:obs_glare_A1 a sosa:Observation ;
+    sosa:observedProperty ex:glareIndex ;
+    sosa:hasFeatureOfInterest ex:meeting_room_A ;
+    sosa:madeBySensor ex:sensor_glare_A ;
+    sosa:hasSimpleResult "26.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-25T10:00:00"^^xsd:dateTime .
+
+ex:obs_glare_B1 a sosa:Observation ;
+    sosa:observedProperty ex:glareIndex ;
+    sosa:hasFeatureOfInterest ex:meeting_room_B ;
+    sosa:madeBySensor ex:sensor_glare_B ;
+    sosa:hasSimpleResult "22.5"^^xsd:decimal ;
+    sosa:resultTime "2026-03-26T14:00:00"^^xsd:dateTime .
+
+# --- Illuminance observations (same spaces, same timestamps) ---
+ex:obs_illum_A1 a sosa:Observation ;
+    sosa:observedProperty ex:illuminance ;
+    sosa:hasFeatureOfInterest ex:meeting_room_A ;
+    sosa:madeBySensor ex:sensor_illum_A ;
+    sosa:hasSimpleResult "820.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-25T10:00:00"^^xsd:dateTime .
+
+ex:obs_illum_B1 a sosa:Observation ;
+    sosa:observedProperty ex:illuminance ;
+    sosa:hasFeatureOfInterest ex:meeting_room_B ;
+    sosa:madeBySensor ex:sensor_illum_B ;
+    sosa:hasSimpleResult "750.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-26T14:00:00"^^xsd:dateTime .
+
+ex:obs_illum_301 a sosa:Observation ;
+    sosa:observedProperty ex:illuminance ;
+    sosa:hasFeatureOfInterest ex:office_301 ;
+    sosa:madeBySensor ex:sensor_illum_A ;
+    sosa:hasSimpleResult "480.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-27T09:30:00"^^xsd:dateTime .
+
+# --- Feedback instances (discomfort: negative comfortScore) ---
+ex:feedback_1 a ofo:Feedback ;
+    ofo:hasSimpleFeedbackState "too bright, causing glare" ;
+    occo:comfortScore "-2.0"^^xsd:decimal ;
+    prov:wasAssociatedWith ex:person_alice ;
+    prov:atLocation ex:meeting_room_A ;
+    prov:generatedAtTime "2026-03-25T10:05:00"^^xsd:dateTime .
+
+ex:feedback_2 a ofo:Feedback ;
+    ofo:hasSimpleFeedbackState "uncomfortable lighting" ;
+    occo:comfortScore "-1.5"^^xsd:decimal ;
+    prov:wasAssociatedWith ex:person_bob ;
+    prov:atLocation ex:meeting_room_B ;
+    prov:generatedAtTime "2026-03-26T14:10:00"^^xsd:dateTime .
+
+ex:feedback_3 a ofo:Feedback ;
+    ofo:hasSimpleFeedbackState "glare from window" ;
+    occo:comfortScore "-1.0"^^xsd:decimal ;
+    prov:wasAssociatedWith ex:person_carol ;
+    prov:atLocation ex:office_301 ;
+    prov:generatedAtTime "2026-03-27T09:35:00"^^xsd:dateTime .
+
+# --- Edge case: positive feedback (should be filtered out) ---
+ex:feedback_pos a ofo:Feedback ;
+    ofo:hasSimpleFeedbackState "lighting is comfortable" ;
+    occo:comfortScore "2.0"^^xsd:decimal ;
+    prov:wasAssociatedWith ex:person_alice ;
+    prov:atLocation ex:office_301 ;
+    prov:generatedAtTime "2026-03-28T11:00:00"^^xsd:dateTime .
+
+# --- Edge case: feedback outside 7-day window (should be filtered out) ---
+ex:feedback_old a ofo:Feedback ;
+    ofo:hasSimpleFeedbackState "too dim" ;
+    occo:comfortScore "-1.8"^^xsd:decimal ;
+    prov:wasAssociatedWith ex:person_bob ;
+    prov:atLocation ex:meeting_room_A ;
+    prov:generatedAtTime "2026-03-20T10:00:00"^^xsd:dateTime .
+
+# --- Performance outcomes linking feedback to spaces ---
+ex:outcome_1 a occo:PerformanceOutcome ;
+    occo:comfortScore "-2.0"^^xsd:decimal ;
+    occo:includesFeedback ex:feedback_1 ;
+    occo:assessedAgainst occo:EN_12464_1_2021 .
+
+ex:outcome_2 a occo:PerformanceOutcome ;
+    occo:comfortScore "-1.5"^^xsd:decimal ;
+    occo:includesFeedback ex:feedback_2 ;
+    occo:assessedAgainst occo:EN_12464_1_2021 .
+
+ex:outcome_3 a occo:PerformanceOutcome ;
+    occo:comfortScore "-1.0"^^xsd:decimal ;
+    occo:includesFeedback ex:feedback_3 ;
+    occo:assessedAgainst occo:EN_12464_1_2021 .

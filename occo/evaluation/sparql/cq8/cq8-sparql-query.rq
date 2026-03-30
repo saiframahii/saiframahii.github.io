@@ -1,0 +1,19 @@
+# CQ8: What proportion of illuminance observations fall within the
+# EN 12464-1:2021 recommended range of 300–750 lux?
+
+PREFIX occo: <https://w3id.org/occo#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT
+    (COUNT(?obs) AS ?totalObservations)
+    (SUM(IF(?luxValue >= 300 && ?luxValue <= 750, 1, 0)) AS ?inRangeCount)
+    (ROUND(100 * SUM(IF(?luxValue >= 300 && ?luxValue <= 750, 1, 0)) / COUNT(?obs)) AS ?percentageInRange)
+WHERE {
+    ?obs a sosa:Observation ;
+         sosa:observedProperty ?prop ;
+         sosa:hasSimpleResult ?luxValue .
+
+    ?prop a occo:Illuminance .
+}

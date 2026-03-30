@@ -1,0 +1,98 @@
+# CQ8 Synthetic Data — v0.0.2
+# CQ: What proportion of illuminance observations fall within the
+# EN 12464-1:2021 recommended range of 300–750 lux?
+
+@prefix occo: <https://w3id.org/occo#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/occo/> .
+
+# --- Building Spaces ---
+ex:office_501 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 501" .
+
+ex:office_502 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 502" .
+
+# --- Observable Property: Illuminance ---
+ex:illumProp a occo:Illuminance ;
+    rdfs:label "Illuminance" .
+
+# --- Sensor ---
+ex:sensor_lux a sosa:Sensor ;
+    rdfs:label "Lux Sensor" .
+
+# --- Observations: 10 total ---
+# In-range (300–750 lux): 7 observations
+ex:obs_lux_1 a sosa:Observation ;
+    sosa:observedProperty ex:illumProp ;
+    sosa:hasFeatureOfInterest ex:office_501 ;
+    sosa:madeBySensor ex:sensor_lux ;
+    sosa:hasSimpleResult "320.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T08:00:00"^^xsd:dateTime .
+
+ex:obs_lux_2 a sosa:Observation ;
+    sosa:observedProperty ex:illumProp ;
+    sosa:hasFeatureOfInterest ex:office_501 ;
+    sosa:madeBySensor ex:sensor_lux ;
+    sosa:hasSimpleResult "450.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T09:00:00"^^xsd:dateTime .
+
+ex:obs_lux_3 a sosa:Observation ;
+    sosa:observedProperty ex:illumProp ;
+    sosa:hasFeatureOfInterest ex:office_501 ;
+    sosa:madeBySensor ex:sensor_lux ;
+    sosa:hasSimpleResult "600.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T10:00:00"^^xsd:dateTime .
+
+ex:obs_lux_4 a sosa:Observation ;
+    sosa:observedProperty ex:illumProp ;
+    sosa:hasFeatureOfInterest ex:office_501 ;
+    sosa:madeBySensor ex:sensor_lux ;
+    sosa:hasSimpleResult "750.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T11:00:00"^^xsd:dateTime .
+
+ex:obs_lux_5 a sosa:Observation ;
+    sosa:observedProperty ex:illumProp ;
+    sosa:hasFeatureOfInterest ex:office_502 ;
+    sosa:madeBySensor ex:sensor_lux ;
+    sosa:hasSimpleResult "300.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T08:00:00"^^xsd:dateTime .
+
+ex:obs_lux_6 a sosa:Observation ;
+    sosa:observedProperty ex:illumProp ;
+    sosa:hasFeatureOfInterest ex:office_502 ;
+    sosa:madeBySensor ex:sensor_lux ;
+    sosa:hasSimpleResult "500.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T10:00:00"^^xsd:dateTime .
+
+ex:obs_lux_7 a sosa:Observation ;
+    sosa:observedProperty ex:illumProp ;
+    sosa:hasFeatureOfInterest ex:office_502 ;
+    sosa:madeBySensor ex:sensor_lux ;
+    sosa:hasSimpleResult "680.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T12:00:00"^^xsd:dateTime .
+
+# Out-of-range: 3 observations (below 300 or above 750)
+ex:obs_lux_8 a sosa:Observation ;
+    sosa:observedProperty ex:illumProp ;
+    sosa:hasFeatureOfInterest ex:office_501 ;
+    sosa:madeBySensor ex:sensor_lux ;
+    sosa:hasSimpleResult "150.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T07:00:00"^^xsd:dateTime .
+
+ex:obs_lux_9 a sosa:Observation ;
+    sosa:observedProperty ex:illumProp ;
+    sosa:hasFeatureOfInterest ex:office_502 ;
+    sosa:madeBySensor ex:sensor_lux ;
+    sosa:hasSimpleResult "900.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T13:00:00"^^xsd:dateTime .
+
+ex:obs_lux_10 a sosa:Observation ;
+    sosa:observedProperty ex:illumProp ;
+    sosa:hasFeatureOfInterest ex:office_502 ;
+    sosa:madeBySensor ex:sensor_lux ;
+    sosa:hasSimpleResult "250.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T17:00:00"^^xsd:dateTime .

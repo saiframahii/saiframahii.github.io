@@ -1,0 +1,36 @@
+# CQ1: What lighting control actions were taken in response to detected occupancy
+# in each building space during working hours (08:00–18:00)?
+
+PREFIX occo: <https://w3id.org/occo#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX s4bldg: <https://saref.etsi.org/saref4bldg/>
+PREFIX ofo: <https://w3id.org/ofo#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?spaceLabel ?occupancyTime ?actuationLabel ?actuationTime
+WHERE {
+    ?obs a sosa:Observation ;
+         sosa:observedProperty ?occProp ;
+         sosa:hasFeatureOfInterest ?space ;
+         sosa:resultTime ?occupancyTime .
+
+    ?occProp a occo:OccupancyStatus .
+
+    ?actuation a sosa:Actuation ;
+               prov:wasInformedBy ?obs ;
+               rdfs:label ?actuationLabel ;
+               prov:generatedAtTime ?actuationTime .
+
+    ?space rdfs:label ?spaceLabel .
+
+    FILTER(
+        ?occupancyTime >= "2026-03-01T08:00:00"^^xsd:dateTime &&
+        ?occupancyTime <= "2026-03-01T18:00:00"^^xsd:dateTime
+    )
+}
+ORDER BY ?space ?occupancyTime

@@ -1,0 +1,27 @@
+# CQ3: Which lighting control strategy achieved the highest combined comfort scores
+# and lowest energy consumption over the evaluation period?
+
+PREFIX occo: <https://w3id.org/occo#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX s4bldg: <https://saref.etsi.org/saref4bldg/>
+PREFIX ofo: <https://w3id.org/ofo#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?strategyLabel ?category ?comfortScore ?energyKwh
+WHERE {
+    ?outcome a occo:PerformanceOutcome ;
+             occo:comfortScore ?comfortScore ;
+             occo:hasEnergyConsumption ?energyQV ;
+             prov:wasGeneratedBy ?strategy .
+
+    ?energyQV qudt:numericValue ?energyKwh .
+
+    ?strategy rdfs:label ?strategyLabel ;
+              occo:strategyCategory ?category .
+}
+ORDER BY DESC(?comfortScore) ASC(?energyKwh)

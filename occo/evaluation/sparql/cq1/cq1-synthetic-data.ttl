@@ -1,0 +1,130 @@
+# CQ1 Synthetic Data — v0.0.2
+# CQ: What lighting control actions were taken in response to detected occupancy
+# in each building space during working hours (08:00–18:00)?
+
+@prefix occo: <https://w3id.org/occo#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
+@prefix ofo: <https://w3id.org/ofo#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://example.org/occo/> .
+
+# --- Building Spaces ---
+ex:office_101 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 101" .
+
+ex:office_102 a s4bldg:BuildingSpace ;
+    rdfs:label "Office 102" .
+
+ex:meeting_room_201 a s4bldg:BuildingSpace ;
+    rdfs:label "Meeting Room 201" .
+
+# --- Sensors ---
+ex:sensor_occ_101 a sosa:Sensor ;
+    rdfs:label "Occupancy Sensor 101" .
+
+ex:sensor_occ_102 a sosa:Sensor ;
+    rdfs:label "Occupancy Sensor 102" .
+
+ex:sensor_occ_201 a sosa:Sensor ;
+    rdfs:label "Occupancy Sensor 201" .
+
+# --- Observable Property Instance ---
+ex:occStatus a occo:OccupancyStatus ;
+    rdfs:label "Occupancy Status" .
+
+# --- Occupancy Observations (working hours: 08:00–18:00) ---
+ex:obs_occ_1 a sosa:Observation ;
+    sosa:observedProperty ex:occStatus ;
+    sosa:hasFeatureOfInterest ex:office_101 ;
+    sosa:madeBySensor ex:sensor_occ_101 ;
+    sosa:hasSimpleResult "1.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T08:30:00"^^xsd:dateTime .
+
+ex:obs_occ_2 a sosa:Observation ;
+    sosa:observedProperty ex:occStatus ;
+    sosa:hasFeatureOfInterest ex:office_101 ;
+    sosa:madeBySensor ex:sensor_occ_101 ;
+    sosa:hasSimpleResult "1.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T14:00:00"^^xsd:dateTime .
+
+ex:obs_occ_3 a sosa:Observation ;
+    sosa:observedProperty ex:occStatus ;
+    sosa:hasFeatureOfInterest ex:office_102 ;
+    sosa:madeBySensor ex:sensor_occ_102 ;
+    sosa:hasSimpleResult "1.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T09:15:00"^^xsd:dateTime .
+
+ex:obs_occ_4 a sosa:Observation ;
+    sosa:observedProperty ex:occStatus ;
+    sosa:hasFeatureOfInterest ex:meeting_room_201 ;
+    sosa:madeBySensor ex:sensor_occ_201 ;
+    sosa:hasSimpleResult "1.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T11:00:00"^^xsd:dateTime .
+
+# --- Edge case: out-of-hours observation (should be filtered out by query) ---
+ex:obs_occ_oor a sosa:Observation ;
+    sosa:observedProperty ex:occStatus ;
+    sosa:hasFeatureOfInterest ex:office_101 ;
+    sosa:madeBySensor ex:sensor_occ_101 ;
+    sosa:hasSimpleResult "1.0"^^xsd:decimal ;
+    sosa:resultTime "2026-03-01T20:00:00"^^xsd:dateTime .
+
+# --- Actuators (Lamps) ---
+ex:lamp_101 a s4bldg:Lamp ;
+    rdfs:label "Lamp 101" ;
+    s4bldg:isContainedIn ex:office_101 .
+
+ex:lamp_102 a s4bldg:Lamp ;
+    rdfs:label "Lamp 102" ;
+    s4bldg:isContainedIn ex:office_102 .
+
+ex:lamp_201 a s4bldg:Lamp ;
+    rdfs:label "Lamp 201" ;
+    s4bldg:isContainedIn ex:meeting_room_201 .
+
+# --- Controller ---
+ex:controller_1 a occo:Controller ;
+    rdfs:label "Lighting Controller A" .
+
+# --- Actuations triggered by occupancy observations ---
+ex:actuation_1 a sosa:Actuation ;
+    rdfs:label "Lighting ON — Office 101 (08:30)" ;
+    prov:wasInformedBy ex:obs_occ_1 ;
+    sosa:madeByActuator ex:lamp_101 ;
+    prov:wasAssociatedWith ex:controller_1 ;
+    prov:generatedAtTime "2026-03-01T08:30:05"^^xsd:dateTime .
+
+ex:actuation_2 a sosa:Actuation ;
+    rdfs:label "Lighting ON — Office 101 (14:00)" ;
+    prov:wasInformedBy ex:obs_occ_2 ;
+    sosa:madeByActuator ex:lamp_101 ;
+    prov:wasAssociatedWith ex:controller_1 ;
+    prov:generatedAtTime "2026-03-01T14:00:05"^^xsd:dateTime .
+
+ex:actuation_3 a sosa:Actuation ;
+    rdfs:label "Lighting ON — Office 102 (09:15)" ;
+    prov:wasInformedBy ex:obs_occ_3 ;
+    sosa:madeByActuator ex:lamp_102 ;
+    prov:wasAssociatedWith ex:controller_1 ;
+    prov:generatedAtTime "2026-03-01T09:15:05"^^xsd:dateTime .
+
+ex:actuation_4 a sosa:Actuation ;
+    rdfs:label "Lighting ON — Meeting Room 201 (11:00)" ;
+    prov:wasInformedBy ex:obs_occ_4 ;
+    sosa:madeByActuator ex:lamp_201 ;
+    prov:wasAssociatedWith ex:controller_1 ;
+    prov:generatedAtTime "2026-03-01T11:00:05"^^xsd:dateTime .
+
+# --- Edge case: actuation triggered by out-of-hours observation (should be filtered) ---
+ex:actuation_oor a sosa:Actuation ;
+    rdfs:label "Lighting ON — Office 101 (20:00 — out of hours)" ;
+    prov:wasInformedBy ex:obs_occ_oor ;
+    sosa:madeByActuator ex:lamp_101 ;
+    prov:wasAssociatedWith ex:controller_1 ;
+    prov:generatedAtTime "2026-03-01T20:00:05"^^xsd:dateTime .
