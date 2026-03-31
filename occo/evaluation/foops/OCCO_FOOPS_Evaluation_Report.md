@@ -2,28 +2,24 @@
 
 **Ontology:** Occupant-Centric Control Ontology (OCCO)
 **Namespace:** `https://w3id.org/occo#`
-**Evaluation tool:** FOOPS! v0.3.1 (FAIR Ontology Pitfall Scanner) — https://foops.linkeddata.es
-**Input (pre-publication):** Local file `OCCO v0.0.2.ttl`, run via Docker (eclipse-temurin:11)
-**Input (post-publication):** `https://w3id.org/occo` — *to be run after w3id.org PR is merged*
-**Version evaluated:** v0.0.2-dev (365 triples)
-**Date of pre-publication pass:** 2026-03-29
+**Evaluation tool:** FOOPS! (FAIR Ontology Pitfall Scanner) — https://foops.linkeddata.es
+**Input:** `https://w3id.org/occo` (live persistent URI via w3id.org)
+**Version evaluated:** v0.0.2-dev
+**Date of evaluation:** 2026-03-31
 
 ---
 
 ## 1. Purpose
 
-This report documents the FAIRness evaluation of OCCO using the FOOPS! scanner. FOOPS assesses ontologies against the FAIR principles (Findability, Accessibility, Interoperability, Reusability) as applied to ontology engineering. It complements the OOPS! structural quality evaluation (see `OCCO_OOPS_Evaluation_Report.md`).
+This report documents the FAIRness evaluation of OCCO using the FOOPS! scanner, run against the live published URI `https://w3id.org/occo`. FOOPS assesses ontologies against the FAIR principles (Findability, Accessibility, Interoperability, Reusability) as applied to ontology engineering.
 
-FOOPS is run in two passes:
-
-1. **Pre-publication pass** (this document, Section 3) — run locally against the TTL file. Catches R/I (Reusability/Interoperability) issues before publishing. F/A checks are expected to be infrastructure-dependent and may report warnings until the w3id.org redirect is live.
-2. **Post-publication pass** (Section 5) — run against the live URI `https://w3id.org/occo` after the w3id.org PR is merged. Validates F/A checks.
+The evaluation was conducted post-publication, after the w3id.org persistent redirect was confirmed live and GitHub Pages was serving all serialisations (RDF/XML, TTL, HTML). FOOPS resolves the ontology via `application/rdf+xml` content negotiation, and all 22 checks were run against the live URI.
 
 ---
 
-## 2. Pre-evaluation Metadata Checklist
+## 2. Metadata Declared in OCCO v0.0.2
 
-The following metadata properties were added to OCCO v0.0.2 in preparation for FOOPS:
+The following metadata properties are present in the published ontology:
 
 | Metadata | Property | Value |
 |----------|----------|-------|
@@ -33,7 +29,9 @@ The following metadata properties were added to OCCO v0.0.2 in preparation for F
 | Version string | `owl:versionInfo` | `"0.0.2-dev"` |
 | Creator | `dcterms:creator` | Saif Alramahi; Mohammad Mayouf; Elham Del Zendeh; Khalid Ismail |
 | Publisher | `dcterms:publisher` | Birmingham City University |
+| Date created | `dcterms:created` | `"2025-09-24"^^xsd:date` |
 | Date issued | `dcterms:issued` | `"2026-03-29"^^xsd:date` |
+| Date modified | `dcterms:modified` | `"2026-03-29"^^xsd:date` |
 | License | `dcterms:license` | CC BY 4.0 |
 | Namespace prefix | `vann:preferredNamespacePrefix` | `"occo"` |
 | Namespace URI | `vann:preferredNamespaceUri` | `https://w3id.org/occo#` |
@@ -41,88 +39,83 @@ The following metadata properties were added to OCCO v0.0.2 in preparation for F
 | Source repository | `dcterms:source` | GitHub Pages repo |
 | Ontology status | `bibo:status` | "Ontology Specification Draft" |
 | Persistent URI | w3id.org redirect | `https://w3id.org/occo` → GitHub Pages |
-| Labels | `rdfs:label` | All 26 native terms + re-declared external terms |
+| Labels | `rdfs:label` | All 26 native OCCO terms |
 | Definitions | `rdfs:comment` | All 26 native OCCO terms |
 | Source traceability | `rdfs:isDefinedBy` | All re-declared external terms |
 
 ---
 
-## 3. Pre-publication Results (2026-03-29)
+## 3. Results
 
-**Overall FOOPS score: 0.978 (97.8%)** — 14/15 checks passed
+**Overall FOOPS score: 0.882 (88.2%)** — 22 checks run
 
 ### Score by FAIR Dimension
 
-| Dimension | Passed | Total | Score |
-|-----------|--------|-------|-------|
-| Findable | 4 | 4 | 100% |
-| Accessible | — | — | n/a (no dedicated checks in v0.3.1) |
-| Interoperable | 3 | 3 | 100% |
-| Reusable | 7 | 8 | 87.5% |
-| **Total** | **14** | **15** | **97.8%** |
+| Dimension | Checks | Failures | Notes |
+|-----------|--------|----------|-------|
+| Findable | PURL1, URI1, URI2, VER1, VER2, OM1, FIND1, FIND2, FIND3 | FIND2, FIND3 | See §4 |
+| Accessible | CN1, HTTP1, FIND_3_BIS | FIND_3_BIS | Tied to LOV registration |
+| Interoperable | RDF1, VOC1, VOC2 | — | 100% |
+| Reusable | DOC1, OM2, OM3, OM4.1, OM4.2, OM5.1, OM5.2, VOC3, VOC4 | OM3 (partial) | See §4 |
 
 ### Detailed Check Results
 
-| Check | Title | Result |
-|-------|-------|--------|
-| PURL1 | Ontology has a persistent URL | ✅ Pass |
-| RDF1 | Ontology is available in RDF | ✅ Pass |
-| OM1 | Ontology minimum metadata is declared | ✅ Pass |
-| OM2 | Ontology declares recommended metadata | ✅ Pass |
-| OM3 | Ontology declares detailed metadata | ❌ Fail |
-| OM4.1 | Ontology has a license available | ✅ Pass |
-| OM4.2 | Ontology license is resolvable | ✅ Pass |
-| OM5.1 | Ontology declares basic provenance metadata | ✅ Pass |
-| OM5.2 | Ontology declares detailed provenance metadata | ✅ Pass |
-| FIND1 | Ontology prefix is declared | ✅ Pass |
-| VOC1 | Ontology reuses existing vocabularies for metadata | ✅ Pass |
-| VOC2 | Ontology imports/reuses well-established vocabularies | ✅ Pass |
-| VOC3 | All terms have labels | ✅ Pass |
-| VOC4 | All terms have definitions | ✅ Pass |
-| VER1 | Version IRI is declared | ✅ Pass |
-
-### Failure Detail
-
-**OM3 — Ontology declares detailed metadata** ❌
-
-- **Missing (required):** `doi`, `logo`
-- **Missing (optional):** previous version URI, backwards compatibility statement
-- **Decision:** Not fixable pre-publication. DOI requires a published paper (paper submitted to EC3 2026, DOI pending). A logo image is cosmetic and not needed for initial publication. These will be addressed if/when DOI is assigned and in a future version.
-
----
-
-## 4. Remediation Actions Taken
-
-The following issues were identified and resolved during the pre-publication pass:
-
-| Issue | Check | Action Taken |
-|-------|-------|-------------|
-| Missing `dcterms:bibliographicCitation` | OM2 | Added to ontology header with EC3 2026 submitted paper reference |
-| Missing `dcterms:publisher` in header | OM3, OM5.2 | Added `"Birmingham City University"` to ontology header |
-| Missing `bibo:status` | OM3 | Added `"Ontology Specification Draft"` + MIREOT declaration |
-| Missing `dcterms:source` | OM3 | Added GitHub Pages repo URI + MIREOT declaration |
-| `dcterms:title` punning (AnnotationProperty + DatatypeProperty) | OWLAPI warning | Fixed — removed duplicate DatatypeProperty declaration |
+| Check | Title | Result | Detail |
+|-------|-------|--------|--------|
+| PURL1 | Ontology has a persistent URL | ✅ Pass | w3id.org URI scheme confirmed |
+| URI1 | Ontology URI is resolvable | ✅ Pass | Resolves in application/rdf+xml |
+| URI2 | Consistent ontology IDs are employed | ✅ Pass | Ontology URI = ontology ID |
+| CN1 | Ontology has content negotiation for RDF | ✅ Pass | HTML and RDF both available |
+| HTTP1 | Ontology uses an open protocol | ✅ Pass | HTTPS |
+| RDF1 | Ontology is available in RDF | ✅ Pass | Valid RDF serialisation loaded |
+| DOC1 | Ontology has HTML documentation | ✅ Pass | WIDOCO-generated HTML served |
+| OM1 | Ontology minimum metadata is declared | ✅ Pass | All 6/6 minimum fields found |
+| OM2 | Ontology declares recommended metadata | ✅ Pass | All 4/4 required fields found (contributor: optional, not present) |
+| OM3 | Ontology declares detailed metadata | ❌ Fail | 4/6 — missing: doi, logo |
+| OM4.1 | Ontology has a license available | ✅ Pass | CC BY 4.0 |
+| OM4.2 | Ontology license is resolvable | ✅ Pass | License URI resolves |
+| OM5.1 | Ontology declares basic provenance metadata | ✅ Pass | creator + creation date found |
+| OM5.2 | Ontology declares detailed provenance metadata | ✅ Pass | issued date + publisher found |
+| FIND1 | Ontology prefix is declared | ✅ Pass | `occo` prefix declared |
+| FIND2 | Ontology prefix found in prefix.cc or LOV | ❌ Fail | `occo` exists in prefix.cc but maps to a different OBO ontology (`http://purl.obolibrary.org/obo/OCCO_`) — namespace mismatch |
+| FIND3 | Ontology found in community registry (LOV) | ❌ Fail | Not yet registered in LOV |
+| FIND_3_BIS | Ontology metadata accessible even when ontology is not | ❌ Fail | Dependent on LOV registration |
+| VER1 | A version IRI is declared | ✅ Pass | `owl:versionIRI` + `owl:versionInfo` both present |
+| VER2 | Ontology version IRI resolves | ✅ Pass | `https://w3id.org/occo/0.0.2` resolves |
+| VOC1 | Ontology reuses existing vocabularies for metadata | ✅ Pass | dcterms, bibo, vann, rdfs, owl, mod |
+| VOC2 | Ontology imports/reuses well-established vocabularies | ✅ Pass | SOSA, PROV-O, QUDT, OWL-Time, OFO, SAREF4BLDG |
+| VOC3 | All terms have labels | ✅ Pass | 26/26 terms labelled |
+| VOC4 | All terms have definitions | ✅ Pass | 26/26 terms defined |
 
 ---
 
-## 5. Post-publication Results
+## 4. Failure Analysis
 
-*To be completed after the w3id.org PR is merged and `https://w3id.org/occo` is live.*
+### OM3 — Ontology declares detailed metadata ❌ (4/6)
 
-Run command:
-```bash
-MSYS_NO_PATHCONV=1 docker run --rm \
-  -v "C:/Users/sbram/AppData/Local/Temp/foops_run:/work" \
-  eclipse-temurin:11 \
-  java -jar /work/foops.jar -ontURI https://w3id.org/occo -out /work/out_postpub
-```
+**Missing (required):** `doi`, `logo`
 
-| Check | Title | Result |
-|-------|-------|--------|
-| *(all 15 checks)* | — | *pending* |
+- **DOI:** Requires a published paper with an assigned DOI. The associated paper (Alramahi et al.) has been submitted to EC3 2026 but a DOI has not yet been assigned. This will be added to the ontology header once available.
+- **Logo:** Cosmetic metadata; not planned for v0.0.2.
 
-**Score:** *pending*
+**Missing (optional, no penalty):** previous version URI, backwards compatibility statement. Not applicable — v0.0.2 is the first published release.
+
+### FIND2 — Prefix found with incorrect namespace ❌
+
+The prefix `occo` is registered in prefix.cc but maps to a different ontology: `http://purl.obolibrary.org/obo/OCCO_` (an OBO ontology unrelated to OCCO). This is a name collision and is not fixable without coordination with the OBO community. Registration of OCCO in LOV (see FIND3) would allow FOOPS to resolve the correct namespace via that registry.
+
+### FIND3 / FIND_3_BIS — Not in LOV ❌
+
+OCCO has not yet been submitted to the Linked Open Vocabularies (LOV) registry. LOV registration is planned as a post-v0.0.2 task. Once registered, both FIND3 and FIND_3_BIS will pass, and the overall score will increase to approximately 94.4%.
 
 ---
 
-*Pre-publication pass run locally on 2026-03-29 using FOOPS! v0.3.1 JAR via Docker (eclipse-temurin:11).*
+## 5. Known Limitations
+
+- The FIND2 failure reflects a pre-existing prefix.cc name collision with an OBO ontology, not an error in OCCO's metadata.
+- FIND3 and FIND_3_BIS are expected to fail for any newly published ontology not yet registered in LOV. These are infrastructure gaps, not design issues.
+- OM3 will be partially resolved once the EC3 2026 DOI is assigned.
+
+---
+
+*Evaluation run on 2026-03-31 using FOOPS! against the live URI `https://w3id.org/occo`. FOOPS resolves the ontology via `application/rdf+xml` content negotiation.*
