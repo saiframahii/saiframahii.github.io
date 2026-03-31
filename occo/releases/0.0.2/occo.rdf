@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
+   xmlns:bibo="http://purl.org/ontology/bibo/"
    xmlns:dcterms="http://purl.org/dc/terms/"
    xmlns:mod="https://w3id.org/mod#"
    xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -95,6 +96,10 @@
     <owl:versionIRI rdf:resource="https://w3id.org/occo/0.0.2"/>
     <owl:versionInfo>0.0.2-dev</owl:versionInfo>
     <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
+    <dcterms:publisher>Birmingham City University</dcterms:publisher>
+    <dcterms:bibliographicCitation>Alramahi, S., Mayouf, M., Del Zendeh, E., &amp; Ismail, K. (2026). Towards a Semantic Ontology for Occupant-Centric Building Control. Submitted to EC3 2026 — 12th European Conference on Construction IT.</dcterms:bibliographicCitation>
+    <dcterms:source rdf:resource="https://github.com/saiframahii/saiframahii.github.io"/>
+    <bibo:status>Ontology Specification Draft</bibo:status>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
