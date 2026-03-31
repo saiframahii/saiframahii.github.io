@@ -43,7 +43,7 @@ Content negotiation is supported — dereference `https://w3id.org/occo` with th
 | Tool | Report |
 |------|--------|
 | OOPS! (structural quality) | [evaluation/oops/OCCO_OOPS_Evaluation_Report.md](evaluation/oops/OCCO_OOPS_Evaluation_Report.md) |
-| FOOPS! (FAIR compliance, 97.8%) | [evaluation/foops/OCCO_FOOPS_Evaluation_Report.md](evaluation/foops/OCCO_FOOPS_Evaluation_Report.md) |
+| FOOPS! (FAIR compliance, 88.2%) | [evaluation/foops/OCCO_FOOPS_Evaluation_Report.md](evaluation/foops/OCCO_FOOPS_Evaluation_Report.md) |
 | SPARQL competency questions (CQ1–CQ10) | [evaluation/sparql/](evaluation/sparql/) |
 
 ---

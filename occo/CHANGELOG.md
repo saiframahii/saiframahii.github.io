@@ -17,10 +17,10 @@ All notable changes to OCCO are documented here.
 - Tested all 10 competency questions (CQ-01–CQ-10) using rdflib 7.6.0 (SPARQL 1.1); all queries return expected results against synthetic ABox data
 - Published query files (`.rq`), synthetic instance data (`.ttl`), and result tables at `evaluation/sparql/` — one subdirectory per CQ
 
-### FAIR Evaluation (FOOPS! v0.3.1)
-- Pre-publication pass score: **97.8% (14/15 checks passed)** — full report at `evaluation/foops/OCCO_FOOPS_Evaluation_Report.md`
-- One known failure: OM3 (`doi`, `logo`) — DOI pending EC3 2026 paper publication; logo not required for initial release
-- Post-publication pass: pending (to be run after `https://w3id.org/occo` is live)
+### FAIR Evaluation (FOOPS!)
+- Post-publication score: **88.2% (19 of 22 checks passed)** — evaluated against live URI `https://w3id.org/occo` on 2026-03-31 — full report at `evaluation/foops/OCCO_FOOPS_Evaluation_Report.md`
+- Failures: OM3 (`doi`/`logo` not yet available), FIND2 (OBO prefix.cc namespace collision — not fixable), FIND3/FIND_3_BIS (LOV registration pending)
+- Expected score after LOV registration: ~94.4%
 
 ### Structural Evaluation (OOPS! pitfall scanner)
 - Evaluated against OOPS! (P02–P29); full report at `evaluation/oops/OCCO_OOPS_Evaluation_Report.md`
