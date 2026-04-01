@@ -1,0 +1,12 @@
+
+<h2 id="evaluation" class="list">Evaluation <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">
+OCCO v0.0.2 was evaluated for structural quality, FAIR compliance, and competency question coverage. Full reports are linked below.
+
+**Structural quality — OOPS!** The ontology was assessed using the OOPS! pitfall scanner [[Poveda-Villalón et al., 2012]](#ref-poveda2012). The sole Critical finding from v0.0.1 (P19 — multiple `rdfs:domain` axioms on `prov:wasAssociatedWith`) was eliminated. All remaining Important and Minor findings were either resolved or accepted with documented rationale (principally P11/P08 on re-declared external terms, consistent with the MIREOT reuse pattern). Full report: [evaluation/oops/OCCO_OOPS_Evaluation_Report.md](evaluation/oops/OCCO_OOPS_Evaluation_Report.md).
+
+**FAIR compliance — FOOPS!** The ontology was evaluated using the FOOPS! scanner [[Osborne et al., 2023]](#ref-osborne2023), run against the live URI `https://w3id.org/occo`. The ontology scored **88.2% (19/22 checks passed)**. Failures are infrastructure-related: a prefix namespace collision in prefix.cc with an unrelated OBO ontology (not fixable), and LOV registry registration (planned for a future release). Full report: [evaluation/foops/OCCO_FOOPS_Evaluation_Report.md](evaluation/foops/OCCO_FOOPS_Evaluation_Report.md).
+
+**Competency questions — SPARQL** All ten competency questions (CQ-01–CQ-10), derived from a systematic review of 41 OCC studies, were validated using rdflib 7.6.0 (SPARQL 1.1) against purpose-built synthetic ABox instances. Each query was tested with edge cases to verify correct exclusion behaviour. All ten queries return expected results. Full report: [evaluation/sparql/OCCO_SPARQL_CQ_Evaluation_Report.md](evaluation/sparql/OCCO_SPARQL_CQ_Evaluation_Report.md).
+</span>

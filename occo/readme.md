@@ -1,9 +1,13 @@
 # Occupant-Centric Control Ontology (OCCO)
 
 **Namespace:** `https://w3id.org/occo#`
+
 **Persistent URI:** `https://w3id.org/occo`
+
 **Version:** 0.0.2-dev
+
 **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+
 **Status:** Ontology Specification Draft — ongoing doctoral research
 
 ---
