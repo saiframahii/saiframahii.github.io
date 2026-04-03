@@ -1,5 +1,5 @@
 <https://w3id.org/occo#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/occo#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/occo/0.0.2> .
+<https://w3id.org/occo#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/occo/0.1.1> .
 <https://w3id.org/occo#> <http://purl.org/dc/terms/bibliographicCitation> "Alramahi, S., Mayouf, M., Del Zendeh, E., & Ismail, K. (2026). Towards a Semantic Ontology for Occupant-Centric Building Control. Submitted to EC3 2026 — 12th European Conference on Construction IT." .
 <https://w3id.org/occo#> <http://purl.org/dc/terms/created> "2025-09-24"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/occo#> <http://purl.org/dc/terms/creator> "Saif Alramahi" .
@@ -15,7 +15,7 @@
 <https://w3id.org/occo#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "occo" .
 <https://w3id.org/occo#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/occo#> .
 <https://w3id.org/occo#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology was developed as part of PhD research at Birmingham City University. The version presented here reflects the state at time of publication. The ontology will continue to evolve following formal validation and implementation."@en .
-<https://w3id.org/occo#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2-dev" .
+<https://w3id.org/occo#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1-dev" .
 <https://w3id.org/occo#> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
 # 
 # 

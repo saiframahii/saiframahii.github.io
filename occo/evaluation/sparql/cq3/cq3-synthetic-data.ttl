@@ -1,4 +1,4 @@
-# CQ3 Synthetic Data — v0.0.2
+# CQ3 Synthetic Data — v0.1.1
 # CQ: Which lighting control strategy achieved the highest combined comfort scores
 # and lowest energy consumption over the evaluation period?
 

@@ -1,4 +1,4 @@
-# CQ6 Synthetic Data — v0.0.2
+# CQ6 Synthetic Data — v0.1.1
 # CQ: Which building spaces have circadian-friendly lighting control strategies
 # applied, and what are the CCT patterns across different times of day?
 

@@ -1,4 +1,4 @@
-# CQ4 Synthetic Data — v0.0.2
+# CQ4 Synthetic Data — v0.1.1
 # CQ: What are the preferred illuminance and CCT levels for occupants
 # performing specific visual tasks (e.g., reading, screen work)?
 

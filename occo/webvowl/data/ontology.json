@@ -7,7 +7,7 @@
       "en" : "Occupant-Centric Control Ontology (OCCO)"
     },
     "iri" : "https://w3id.org/occo#",
-    "version" : "0.0.2-dev",
+    "version" : "0.1.1-dev",
     "author" : [ "Saif Alramahi", "Mohammad Mayouf", "Elham Del Zendeh", "Khalid Ismail" ],
     "description" : {
       "en" : "A semantic framework for occupant-centric building control. This ontology is under active development and has not yet been fully validated."
@@ -76,7 +76,7 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "0.0.2-dev",
+        "value" : "0.1.1-dev",
         "type" : "label"
       } ],
       "bibliographicCitation" : [ {

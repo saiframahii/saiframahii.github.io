@@ -1,4 +1,4 @@
-# CQ1 Synthetic Data — v0.0.2
+# CQ1 Synthetic Data — v0.1.1
 # CQ: What lighting control actions were taken in response to detected occupancy
 # in each building space during working hours (08:00–18:00)?
 

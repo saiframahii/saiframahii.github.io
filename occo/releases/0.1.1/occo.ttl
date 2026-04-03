@@ -275,8 +275,8 @@ occo: a owl:Ontology ;
     vann:preferredNamespacePrefix "occo" ;
     vann:preferredNamespaceUri occo: ;
     rdfs:comment "This ontology was developed as part of PhD research at Birmingham City University. The version presented here reflects the state at time of publication. The ontology will continue to evolve following formal validation and implementation."@en ;
-    owl:versionIRI <https://w3id.org/occo/0.0.2> ;
-    owl:versionInfo "0.0.2-dev" ;
+    owl:versionIRI <https://w3id.org/occo/0.1.1> ;
+    owl:versionInfo "0.1.1-dev" ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
 occo:CCT a owl:Class ;

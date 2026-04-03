@@ -1,5 +1,5 @@
-# CQ1: What lighting control actions were taken in response to detected occupancy
-# in each building space during working hours (08:00–18:00)?
+# CQ1: What control actions were taken in response to detected occupancy
+# in each building space during working hours?
 
 PREFIX occo: <https://w3id.org/occo#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>

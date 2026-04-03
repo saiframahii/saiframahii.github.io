@@ -2,7 +2,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<https://w3id.org/occo/0.0.2> a prov:Entity;
+<https://w3id.org/occo/0.1.1> a prov:Entity;
 	 dc:title "Occupant-Centric Control Ontology (OCCO)";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;

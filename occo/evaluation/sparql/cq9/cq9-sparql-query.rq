@@ -1,5 +1,5 @@
-# CQ9: Which occupants most frequently override automated lighting controls,
-# and in which spaces do overrides occur?
+# CQ9: Which occupants most frequently override automated controls,
+# and in which building spaces do overrides occur?
 
 PREFIX occo: <https://w3id.org/occo#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>

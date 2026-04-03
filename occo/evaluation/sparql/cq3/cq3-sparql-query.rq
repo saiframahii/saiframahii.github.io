@@ -1,4 +1,4 @@
-# CQ3: Which lighting control strategy achieved the highest combined comfort scores
+# CQ3: Which control strategy resulted in the highest combined comfort scores
 # and lowest energy consumption over the evaluation period?
 
 PREFIX occo: <https://w3id.org/occo#>

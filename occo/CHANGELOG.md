@@ -4,7 +4,7 @@ All notable changes to OCCO are documented here.
 
 ---
 
-## [0.0.2] — 2026-03-29
+## [0.1.1] — 2026-03-29
 
 ### Publication Infrastructure
 - Published WIDOCO-generated HTML documentation at `occo/index-en.html` with all seven sections (abstract, introduction, overview, description, crossref, ns, references)
@@ -24,7 +24,7 @@ All notable changes to OCCO are documented here.
 
 ### Structural Evaluation (OOPS! pitfall scanner)
 - Evaluated against OOPS! (P02–P29); full report at `evaluation/oops/OCCO_OOPS_Evaluation_Report.md`
-- Eliminated the sole Critical finding from v0.0.1; reduced Important and Minor findings
+- Eliminated the sole Critical finding from v0.1.0; reduced Important and Minor findings
 
 ### Fixed
 - **P19 (Critical)** — Removed multiple `rdfs:domain` axioms from `prov:wasAssociatedWith`; added single `rdfs:range prov:Agent` consistent with PROV-O
@@ -38,7 +38,7 @@ All notable changes to OCCO are documented here.
 
 ### Improved
 - **P11 (Important)** — Added `rdfs:domain` to three native datatype properties: `occo:comfortScore`, `occo:meetsStandard`, `occo:strategyCategory`; 9 external-ontology properties accepted (no domain/range axiom hijacking)
-- **P10 (Important)** — Added `owl:AllDifferent` for the three `occo:Chronotype` named individuals; full class disjointness deferred to v0.0.3
+- **P10 (Important)** — Added `owl:AllDifferent` for the three `occo:Chronotype` named individuals; full class disjointness deferred to v0.2.0
 - **P08 (Minor)** — Added `rdfs:comment` annotations to all 26 OCCO-native classes and properties; 40 external-ontology elements accepted
 
 ### Accepted (no change)
@@ -47,17 +47,17 @@ All notable changes to OCCO are documented here.
 
 ### Metadata
 - Added `rdfs:isDefinedBy` to all ~30 re-declared external terms (MIREOT pattern)
-- Updated `owl:versionIRI` to `https://w3id.org/occo/0.0.2`
-- Updated `owl:versionInfo` to `"0.0.2-dev"`
+- Updated `owl:versionIRI` to `https://w3id.org/occo/0.1.1`
+- Updated `owl:versionInfo` to `"0.1.1-dev"`
 - Added `rdfs:label` to all 26 native terms and re-declared external terms
 
 ---
 
-## [0.0.1] — 2026-03-26
+## [0.1.0] — 2026-03-26
 
 Initial release. Generated from Chowlk diagram and submitted with the EC3 2026 conference paper.
 
-### Known issues at time of release (addressed in v0.0.2)
+### Known issues at time of release (addressed in v0.1.1)
 - P19 Critical: multiple `rdfs:domain` on `prov:wasAssociatedWith` interpreted as class intersection
 - P11 Important: three native datatype properties missing `rdfs:domain`
 - P22 Minor: `occo:IncludesFeedback` and `occo:Overrides` used PascalCase

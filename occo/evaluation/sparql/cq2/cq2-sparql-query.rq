@@ -1,5 +1,5 @@
-# CQ2: Which building spaces received user-reported visual discomfort feedback
-# in the past 7 days, and what were the corresponding glare or illuminance values?
+# CQ2: Which building spaces received visual discomfort feedback,
+# and what were the corresponding glare or illuminance levels?
 
 PREFIX occo: <https://w3id.org/occo#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>

@@ -1,4 +1,4 @@
-# CQ2 Synthetic Data — v0.0.2
+# CQ2 Synthetic Data — v0.1.1
 # CQ: Which building spaces received user-reported visual discomfort feedback
 # in the past 7 days, and what were the corresponding glare or illuminance values?
 

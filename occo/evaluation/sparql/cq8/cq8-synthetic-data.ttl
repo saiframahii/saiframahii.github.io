@@ -1,4 +1,4 @@
-# CQ8 Synthetic Data — v0.0.2
+# CQ8 Synthetic Data — v0.1.1
 # CQ: What proportion of illuminance observations fall within the
 # EN 12464-1:2021 recommended range of 300–750 lux?
 

@@ -4,7 +4,7 @@
 **Namespace:** `https://w3id.org/occo#`
 **Evaluation tool:** FOOPS! (FAIR Ontology Pitfall Scanner) — https://foops.linkeddata.es
 **Input:** `https://w3id.org/occo` (live persistent URI via w3id.org)
-**Version evaluated:** v0.0.2-dev
+**Version evaluated:** v0.1.1-dev
 **Date of evaluation:** 2026-03-31
 
 ---
@@ -17,7 +17,7 @@ The evaluation was conducted post-publication, after the w3id.org persistent red
 
 ---
 
-## 2. Metadata Declared in OCCO v0.0.2
+## 2. Metadata Declared in OCCO v0.1.1
 
 The following metadata properties are present in the published ontology:
 
@@ -25,8 +25,8 @@ The following metadata properties are present in the published ontology:
 |----------|----------|-------|
 | Title | `dcterms:title` | "Occupant-Centric Control Ontology (OCCO)" |
 | Description | `dcterms:description` | present |
-| Version IRI | `owl:versionIRI` | `https://w3id.org/occo/0.0.2` |
-| Version string | `owl:versionInfo` | `"0.0.2-dev"` |
+| Version IRI | `owl:versionIRI` | `https://w3id.org/occo/0.1.1` |
+| Version string | `owl:versionInfo` | `"0.1.1-dev"` |
 | Creator | `dcterms:creator` | Saif Alramahi; Mohammad Mayouf; Elham Del Zendeh; Khalid Ismail |
 | Publisher | `dcterms:publisher` | Birmingham City University |
 | Date created | `dcterms:created` | `"2025-09-24"^^xsd:date` |
@@ -81,7 +81,7 @@ The following metadata properties are present in the published ontology:
 | FIND3 | Ontology found in community registry (LOV) | ❌ Fail | Not yet registered in LOV |
 | FIND_3_BIS | Ontology metadata accessible even when ontology is not | ❌ Fail | Dependent on LOV registration |
 | VER1 | A version IRI is declared | ✅ Pass | `owl:versionIRI` + `owl:versionInfo` both present |
-| VER2 | Ontology version IRI resolves | ✅ Pass | `https://w3id.org/occo/0.0.2` resolves |
+| VER2 | Ontology version IRI resolves | ✅ Pass | `https://w3id.org/occo/0.1.1` resolves |
 | VOC1 | Ontology reuses existing vocabularies for metadata | ✅ Pass | dcterms, bibo, vann, rdfs, owl, mod |
 | VOC2 | Ontology imports/reuses well-established vocabularies | ✅ Pass | SOSA, PROV-O, QUDT, OWL-Time, OFO, SAREF4BLDG |
 | VOC3 | All terms have labels | ✅ Pass | 26/26 terms labelled |
@@ -96,9 +96,9 @@ The following metadata properties are present in the published ontology:
 **Missing (required):** `doi`, `logo`
 
 - **DOI:** Requires a published paper with an assigned DOI. The associated paper (Alramahi et al.) has been submitted to EC3 2026 but a DOI has not yet been assigned. This will be added to the ontology header once available.
-- **Logo:** Cosmetic metadata; not planned for v0.0.2.
+- **Logo:** Cosmetic metadata; not planned for v0.1.1.
 
-**Missing (optional, no penalty):** previous version URI, backwards compatibility statement. Not applicable — v0.0.2 is the first published release.
+**Missing (optional, no penalty):** previous version URI, backwards compatibility statement. Not applicable — v0.1.1 is the first published release.
 
 ### FIND2 — Prefix found with incorrect namespace ❌
 
@@ -106,7 +106,7 @@ The prefix `occo` is registered in prefix.cc but maps to a different ontology: `
 
 ### FIND3 / FIND_3_BIS — Not in LOV ❌
 
-OCCO has not yet been submitted to the Linked Open Vocabularies (LOV) registry. LOV registration is planned as a post-v0.0.2 task. Once registered, both FIND3 and FIND_3_BIS will pass, and the overall score will increase to approximately 94.4%.
+OCCO has not yet been submitted to the Linked Open Vocabularies (LOV) registry. LOV registration is planned as a post-v0.1.1 task. Once registered, both FIND3 and FIND_3_BIS will pass, and the overall score will increase to approximately 94.4%.
 
 ---
 

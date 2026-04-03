@@ -1,5 +1,5 @@
-# CQ8: What proportion of illuminance observations fall within the
-# EN 12464-1:2021 recommended range of 300–750 lux?
+# CQ8: What proportion of illuminance observations fall within the range
+# recommended by the applicable comfort standard?
 
 PREFIX occo: <https://w3id.org/occo#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>

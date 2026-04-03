@@ -1,4 +1,4 @@
-# CQ5 Synthetic Data — v0.0.2
+# CQ5 Synthetic Data — v0.1.1
 # CQ: How has an occupant's lighting preference profile changed over time?
 
 @prefix occo: <https://w3id.org/occo#> .

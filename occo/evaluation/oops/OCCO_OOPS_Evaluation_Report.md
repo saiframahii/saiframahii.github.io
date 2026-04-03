@@ -5,13 +5,13 @@
 **Evaluation tool:** OOPS! (OntOlogy Pitfall Scanner) — https://oops.linkeddata.es
 **Method:** OOPS! REST API (POST to `https://oops.linkeddata.es/rest`)
 **Input format:** RDF/XML
-**Versions evaluated:** v0.0.1 (baseline, 2026-03-26) and v0.0.2 (post-remediation, 2026-03-27)
+**Versions evaluated:** v0.1.0 (baseline, 2026-03-26) and v0.1.1 (post-remediation, 2026-03-27)
 
 ---
 
 ## 1. Purpose
 
-This report documents the quality evaluation of OCCO using the OOPS! automated pitfall scanner, covering both the initial baseline evaluation (v0.0.1) and the subsequent remediation cycle (v0.0.2). It is intended as reviewer-facing documentation for the EC3 2026 conference paper submission, where evidence of ontology quality evaluation and remediation was requested.
+This report documents the quality evaluation of OCCO using the OOPS! automated pitfall scanner, covering both the initial baseline evaluation (v0.1.0) and the subsequent remediation cycle (v0.1.1). It is intended as reviewer-facing documentation for the EC3 2026 conference paper submission, where evidence of ontology quality evaluation and remediation was requested.
 
 OOPS! checks ontologies against a catalogue of common modelling pitfalls derived from OWL 2 best-practice guidelines. Each detected pitfall carries a severity level:
 
@@ -23,9 +23,9 @@ OOPS! checks ontologies against a catalogue of common modelling pitfalls derived
 
 ---
 
-## 2. v0.0.1 Baseline Results
+## 2. v0.1.0 Baseline Results
 
-**Version:** 0.0.1-dev · **Date:** 2026-03-26 · **Pitfalls scanned:** P02–P29
+**Version:** 0.1.0 · **Date:** 2026-03-26 · **Pitfalls scanned:** P02–P29
 
 | Pitfall | Name | Severity | Count |
 |---------|------|----------|-------|
@@ -42,9 +42,9 @@ OOPS! checks ontologies against a catalogue of common modelling pitfalls derived
 
 ---
 
-## 3. Remediation Actions — v0.0.1 → v0.0.2
+## 3. Remediation Actions — v0.1.0 → v0.1.1
 
-The following changes were applied to the ontology to address v0.0.1 findings. All changes target specific OOPS! pitfalls; the rationale for each accepted or partially-accepted finding is documented in Section 5.
+The following changes were applied to the ontology to address v0.1.0 findings. All changes target specific OOPS! pitfalls; the rationale for each accepted or partially-accepted finding is documented in Section 5.
 
 | Change | Pitfall Addressed |
 |--------|-------------------|
@@ -59,13 +59,13 @@ The following changes were applied to the ontology to address v0.0.1 findings. A
 | Add `rdfs:comment` to all 26 OCCO-native classes and properties | P08 (Minor) |
 | Remove isolated `time:TemporalEntity` class declaration | P04 (Minor) |
 | Add `rdfs:isDefinedBy` to all ~30 re-declared external terms | P04 / MIREOT best practice |
-| Update `owl:versionIRI` to `https://w3id.org/occo/0.0.2` and `owl:versionInfo` to `"0.0.2-dev"` | Metadata |
+| Update `owl:versionIRI` to `https://w3id.org/occo/0.1.1` and `owl:versionInfo` to `"0.1.1-dev"` | Metadata |
 
 ---
 
-## 4. v0.0.2 Results
+## 4. v0.1.1 Results
 
-**Version:** 0.0.2-dev · **Date:** 2026-03-27 · **Triples:** 348
+**Version:** 0.1.1-dev · **Date:** 2026-03-27 · **Triples:** 348
 
 | Pitfall | Name | Severity | Count |
 |---------|------|----------|-------|
@@ -81,7 +81,7 @@ The following changes were applied to the ontology to address v0.0.1 findings. A
 
 ## 5. Before/After Comparison
 
-| Pitfall | Severity | v0.0.1 | v0.0.2 | Outcome |
+| Pitfall | Severity | v0.1.0 | v0.1.1 | Outcome |
 |---------|----------|--------|--------|---------|
 | P19 | **Critical** | 1 | **0** | ✅ Resolved |
 | P10 | Important | 1 | 1 | Partial — `owl:AllDifferent` added for Chronotype individuals; class disjointness deferred |
@@ -101,18 +101,18 @@ The following changes were applied to the ontology to address v0.0.1 findings. A
 ---
 
 ### P19 — Defining Multiple Domains or Ranges in Properties
-**Severity: Critical** · **v0.0.1: 1 · v0.0.2: 0 · ✅ Resolved**
+**Severity: Critical** · **v0.1.0: 1 · v0.1.1: 0 · ✅ Resolved**
 
-In v0.0.1, `prov:wasAssociatedWith` was declared with three separate `rdfs:domain` statements (`sosa:Actuation`, `occo:OverrideEvent`, `occo:VisualTask`). In OWL 2, multiple `rdfs:domain` axioms are interpreted as logical conjunction (AND), not disjunction (OR). This asserted that any subject of the property must simultaneously belong to all three classes — an unintended and likely unsatisfiable intersection.
+In v0.1.0, `prov:wasAssociatedWith` was declared with three separate `rdfs:domain` statements (`sosa:Actuation`, `occo:OverrideEvent`, `occo:VisualTask`). In OWL 2, multiple `rdfs:domain` axioms are interpreted as logical conjunction (AND), not disjunction (OR). This asserted that any subject of the property must simultaneously belong to all three classes — an unintended and likely unsatisfiable intersection.
 
 **Fix:** All local `rdfs:domain` axioms were removed from `prov:wasAssociatedWith`. A single `rdfs:range prov:Agent` was added, consistent with the PROV-O specification for this property. A single range axiom does not trigger P19.
 
 ---
 
 ### P10 — Missing Disjointness
-**Severity: Important** · **v0.0.1: 1 (ontology-level) · v0.0.2: 1 (ontology-level) · Partial fix**
+**Severity: Important** · **v0.1.0: 1 (ontology-level) · v0.1.1: 1 (ontology-level) · Partial fix**
 
-OCCO v0.0.1 contained no `owl:disjointWith` or `owl:AllDifferent` axioms. Without disjointness constraints, a reasoner may treat distinct named individuals or classes as co-referential under the Open World Assumption.
+OCCO v0.1.0 contained no `owl:disjointWith` or `owl:AllDifferent` axioms. Without disjointness constraints, a reasoner may treat distinct named individuals or classes as co-referential under the Open World Assumption.
 
 **Partial fix:** An `owl:AllDifferent` block was added for the three `occo:Chronotype` named individuals:
 
@@ -123,12 +123,12 @@ OCCO v0.0.1 contained no `owl:disjointWith` or `owl:AllDifferent` axioms. Withou
 
 This ensures a reasoner cannot conflate `MorningType`, `EveningType`, and `IntermediateType`.
 
-**Deferred:** Comprehensive `owl:disjointWith` axioms between top-level domain classes (e.g., `occo:PerformanceOutcome`, `occo:ControlStrategy`, `ofo:Person`) require domain expert validation to confirm that the class boundaries are semantically correct and will not inadvertently render the ontology inconsistent. This is planned for v0.0.3.
+**Deferred:** Comprehensive `owl:disjointWith` axioms between top-level domain classes (e.g., `occo:PerformanceOutcome`, `occo:ControlStrategy`, `ofo:Person`) require domain expert validation to confirm that the class boundaries are semantically correct and will not inadvertently render the ontology inconsistent. This is planned for v0.2.0.
 
 ---
 
 ### P11 — Missing Domain or Range in Properties
-**Severity: Important** · **v0.0.1: 11 · v0.0.2: 9 · ✅ Reduced**
+**Severity: Important** · **v0.1.0: 11 · v0.1.1: 9 · ✅ Reduced**
 
 **Fixed (3 OCCO-native datatype properties):**
 
@@ -143,16 +143,16 @@ This ensures a reasoner cannot conflate `MorningType`, `EveningType`, and `Inter
 ---
 
 ### P04 — Creating Unconnected Ontology Elements
-**Severity: Minor** · **v0.0.1: 2 · v0.0.2: 0 · ✅ Resolved**
+**Severity: Minor** · **v0.1.0: 2 · v0.1.1: 0 · ✅ Resolved**
 
-In v0.0.1, two classes appeared with no property domain or range connection to the rest of the graph: `prov:Agent` and `time:TemporalEntity`. Both were external root superclasses re-declared as anchors for the local class hierarchy.
+In v0.1.0, two classes appeared with no property domain or range connection to the rest of the graph: `prov:Agent` and `time:TemporalEntity`. Both were external root superclasses re-declared as anchors for the local class hierarchy.
 
 **Fix:** `time:TemporalEntity` was removed — it was an intermediate superclass with no direct property connections in OCCO; `time:Instant` and `time:Interval` retain standalone declarations as they are directly used. For `prov:Agent`, the property graph was extended: `rdfs:range prov:Agent` was added to `prov:wasAssociatedWith` (consistent with the PROV-O specification), connecting `prov:Agent` to the property graph and resolving the P04 finding. The `prov:SoftwareAgent rdfs:subClassOf prov:Agent` axiom is retained to preserve the PROV-O class hierarchy for consumers loading only `occo.ttl` without `owl:imports`.
 
 ---
 
 ### P08 — Missing Annotations
-**Severity: Minor** · **v0.0.1: 67 · v0.0.2: 40 · ✅ Reduced**
+**Severity: Minor** · **v0.1.0: 67 · v0.1.1: 40 · ✅ Reduced**
 
 **Fixed (26 OCCO-native elements):** `rdfs:comment` descriptions were added to all native classes and properties:
 
@@ -165,18 +165,18 @@ In v0.0.1, two classes appeared with no property domain or range connection to t
 ---
 
 ### P13 — Inverse Relationships Not Explicitly Declared
-**Severity: Minor** · **v0.0.1: 28 · v0.0.2: 28 · Accepted**
+**Severity: Minor** · **v0.1.0: 28 · v0.1.1: 28 · Accepted**
 
 No `owl:inverseOf` axioms are declared. Inverse declarations are not required by the competency questions defined in the ORSD. Properties from external ontologies (SOSA, PROV-O, OWL-Time) declare inverses where semantically appropriate in their source specifications. Accepted.
 
 ---
 
 ### P22 — Using Different Naming Conventions
-**Severity: Minor** · **v0.0.1: 2 · v0.0.2: 0 · ✅ Resolved**
+**Severity: Minor** · **v0.1.0: 2 · v0.1.1: 0 · ✅ Resolved**
 
 Two object properties were found using PascalCase instead of the lowerCamelCase convention used throughout OCCO:
 
-| Property | v0.0.1 | v0.0.2 |
+| Property | v0.1.0 | v0.1.1 |
 |----------|--------|--------|
 | `occo:IncludesFeedback` | PascalCase | Renamed to `occo:includesFeedback` |
 | `occo:Overrides` | PascalCase | Renamed to `occo:overrides` |
@@ -186,9 +186,9 @@ Both renames were applied in the source Chowlk diagram prior to re-conversion. P
 ---
 
 ### Suggestion — Symmetric or Transitive Property
-**v0.0.1: 1 · v0.0.2: 1 · Declined**
+**v0.1.0: 1 · v0.1.1: 1 · Declined**
 
-OOPS! suggests `occo:hasBaseline` may be symmetric or transitive, as its domain and range are both `occo:PerformanceOutcome`. The property is neither: it expresses a directional reference — a performance outcome is compared *against* a designated baseline, but not vice versa. The `rdfs:comment` added in v0.0.2 explicitly documents this directionality. Declined.
+OOPS! suggests `occo:hasBaseline` may be symmetric or transitive, as its domain and range are both `occo:PerformanceOutcome`. The property is neither: it expresses a directional reference — a performance outcome is compared *against* a designated baseline, but not vice versa. The `rdfs:comment` added in v0.1.1 explicitly documents this directionality. Declined.
 
 ---
 
@@ -204,4 +204,4 @@ The implemented pitfall checks cover P02–P29. Pitfalls P30–P41 remain catalo
 
 ---
 
-*OOPS! evaluations performed via REST API. Raw scanner responses: `oops_response_v0.0.1.xml` and `oops_response_v0.0.2.xml`.*
+*OOPS! evaluations performed via REST API. Raw scanner responses: `oops_response_v0.1.0.xml` and `oops_response_v0.1.1.xml`.*

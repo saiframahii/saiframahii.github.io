@@ -11,7 +11,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/occo#">
-        <owl:versionIRI rdf:resource="https://w3id.org/occo/0.0.2"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/occo/0.1.1"/>
         <terms:bibliographicCitation>Alramahi, S., Mayouf, M., Del Zendeh, E., & Ismail, K. (2026). Towards a Semantic Ontology for Occupant-Centric Building Control. Submitted to EC3 2026 — 12th European Conference on Construction IT.</terms:bibliographicCitation>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-24</terms:created>
         <terms:creator>Saif Alramahi</terms:creator>
@@ -27,7 +27,7 @@
         <vann:preferredNamespacePrefix>occo</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/occo#"/>
         <rdfs:comment xml:lang="en">This ontology was developed as part of PhD research at Birmingham City University. The version presented here reflects the state at time of publication. The ontology will continue to evolve following formal validation and implementation.</rdfs:comment>
-        <owl:versionInfo>0.0.2-dev</owl:versionInfo>
+        <owl:versionInfo>0.1.1-dev</owl:versionInfo>
         <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
     </owl:Ontology>
     

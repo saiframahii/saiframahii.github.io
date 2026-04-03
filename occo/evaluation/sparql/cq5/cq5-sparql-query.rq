@@ -1,4 +1,5 @@
-# CQ5: How has an occupant's lighting preference profile changed over time?
+# CQ5: How does an occupant's preference profile evolve over time
+# in response to feedback events?
 
 PREFIX occo: <https://w3id.org/occo#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>

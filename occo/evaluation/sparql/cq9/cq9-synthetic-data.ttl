@@ -1,4 +1,4 @@
-# CQ9 Synthetic Data — v0.0.2
+# CQ9 Synthetic Data — v0.1.1
 # CQ: Which occupants most frequently override automated lighting controls,
 # and in which spaces do overrides occur?
 

@@ -93,8 +93,8 @@
     <vann:preferredNamespacePrefix>occo</vann:preferredNamespacePrefix>
     <vann:preferredNamespaceUri rdf:resource="https://w3id.org/occo#"/>
     <rdfs:comment xml:lang="en">This ontology was developed as part of PhD research at Birmingham City University. The version presented here reflects the state at time of publication. The ontology will continue to evolve following formal validation and implementation.</rdfs:comment>
-    <owl:versionIRI rdf:resource="https://w3id.org/occo/0.0.2"/>
-    <owl:versionInfo>0.0.2-dev</owl:versionInfo>
+    <owl:versionIRI rdf:resource="https://w3id.org/occo/0.1.1"/>
+    <owl:versionInfo>0.1.1-dev</owl:versionInfo>
     <mod:createdWith rdf:resource="https://chowlk.linkeddata.es/"/>
     <dcterms:publisher>Birmingham City University</dcterms:publisher>
     <dcterms:bibliographicCitation>Alramahi, S., Mayouf, M., Del Zendeh, E., &amp; Ismail, K. (2026). Towards a Semantic Ontology for Occupant-Centric Building Control. Submitted to EC3 2026 — 12th European Conference on Construction IT.</dcterms:bibliographicCitation>

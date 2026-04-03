@@ -4,7 +4,7 @@
 
 **Persistent URI:** `https://w3id.org/occo`
 
-**Version:** 0.0.2-dev
+**Version:** 0.1.1-dev
 
 **License:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 

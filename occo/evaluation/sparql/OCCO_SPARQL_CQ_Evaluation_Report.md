@@ -1,7 +1,7 @@
 # OCCO SPARQL Competency Question Evaluation
 
 **Ontology:** Occupant-Centric Control Ontology (OCCO)
-**Version:** 0.0.2-dev
+**Version:** 0.1.1-dev
 **Namespace:** `https://w3id.org/occo#`
 **Evaluation date:** 2026-03-29
 **Execution environment:** rdflib 7.6.0 (Python), SPARQL 1.1
@@ -12,7 +12,7 @@ Each CQ is evaluated against a purpose-built synthetic ABox loaded alongside the
 
 ## CQ1 — Occupancy-Triggered Actuations
 
-**Which building spaces have automated lighting control actuations triggered by occupancy during working hours?**
+**What control actions were taken in response to detected occupancy in each building space during working hours?**
 
 **Key classes/properties:** `sosa:Observation`, `occo:OccupancyStatus`, `sosa:Actuation`, `prov:wasInformedBy`
 
@@ -31,7 +31,7 @@ Each CQ is evaluated against a purpose-built synthetic ABox loaded alongside the
 
 ## CQ2 — Discomfort Feedback Correlation
 
-**Which building spaces received user-reported visual discomfort feedback in the past 7 days, and what were the corresponding glare or illuminance values?**
+**Which building spaces received visual discomfort feedback, and what were the corresponding glare or illuminance levels?**
 
 **Key classes/properties:** `ofo:Feedback`, `occo:comfortScore`, `prov:atLocation`, `prov:generatedAtTime`, `sosa:Observation`, `occo:GlareIndex`, `occo:Illuminance`
 
@@ -49,7 +49,7 @@ Each CQ is evaluated against a purpose-built synthetic ABox loaded alongside the
 
 ## CQ3 — Control Strategy Comparison
 
-**How do different control strategies compare in terms of occupant comfort score and energy consumption?**
+**Which control strategy resulted in the highest combined comfort scores and lowest energy consumption over the evaluation period?**
 
 **Key classes/properties:** `occo:ControlStrategy`, `occo:strategyCategory`, `occo:PerformanceOutcome`, `occo:comfortScore`, `occo:hasEnergyConsumption`, `qudt:numericValue`, `prov:wasGeneratedBy`
 
@@ -88,7 +88,7 @@ Each CQ is evaluated against a purpose-built synthetic ABox loaded alongside the
 
 ## CQ5 — Preference Evolution Over Time
 
-**How has an occupant's lighting preference profile changed over time?**
+**How does an occupant's preference profile evolve over time in response to feedback events?**
 
 **Key classes/properties:** `ofo:Person`, `occo:hasPreference`, `occo:Preference`, `occo:forTask`, `occo:preferredIlluminance`, `occo:preferredCCT`, `qudt:numericValue`, `prov:generatedAtTime`
 
@@ -109,9 +109,9 @@ Each CQ is evaluated against a purpose-built synthetic ABox loaded alongside the
 
 ## CQ6 — Circadian Strategy CCT Patterns
 
-**Which building spaces have circadian-friendly lighting control strategies applied, and what are the CCT patterns across different times of day?**
+**Which building spaces have circadian-friendly lighting control strategies applied, based on occupant chronotype?**
 
-**Key classes/properties:** `occo:ControlStrategy`, `occo:strategyCategory`, `occo:appliesToSpace`, `sosa:Observation`, `occo:CCT`, `sosa:hasSimpleResult`, `sosa:resultTime`
+**Key classes/properties:** `occo:ControlStrategy`, `occo:strategyCategory`, `occo:appliesToSpace`, `sosa:Observation`, `occo:CCT`, `sosa:hasResult`, `sosa:resultTime`
 
 **Edge case:** Office 303 has a `"Static"` strategy and constant 4000 K CCT observations. The `FILTER(REGEX(?category, "Circadian", "i"))` correctly excludes it. CCT values for Office 301 (standard circadian: 5000 K → 4000 K → 2700 K) and Office 302 (morning chronotype: 5500 K → 4200 K → 3000 K) demonstrate temporal dimming patterns.
 
@@ -130,7 +130,7 @@ Each CQ is evaluated against a purpose-built synthetic ABox loaded alongside the
 
 ## CQ7 — Standards Compliance with Negative Feedback
 
-**Which building spaces meet EN 12464-1:2021 illuminance standards while also receiving negative comfort feedback from occupants?**
+**Which building spaces meet the applicable comfort standard while also receiving negative comfort feedback from occupants?**
 
 **Key classes/properties:** `occo:PerformanceOutcome`, `occo:assessedAgainst`, `occo:meetsStandard`, `occo:comfortScore`, `occo:includesFeedback`, `ofo:Feedback`, `prov:atLocation`, `prov:wasAssociatedWith`
 
@@ -147,9 +147,9 @@ Each CQ is evaluated against a purpose-built synthetic ABox loaded alongside the
 
 ## CQ8 — Illuminance Range Compliance Proportion
 
-**What proportion of illuminance observations fall within the EN 12464-1:2021 recommended range of 300–750 lux?**
+**What proportion of illuminance observations fall within the range recommended by the applicable comfort standard?**
 
-**Key classes/properties:** `sosa:Observation`, `occo:Illuminance`, `sosa:hasSimpleResult`
+**Key classes/properties:** `sosa:Observation`, `occo:Illuminance`, `sosa:hasResult`
 
 **Dataset:** 10 observations total across two spaces. 7 fall within [300, 750] lux; 3 are out of range (150 lux, 900 lux, 250 lux). The aggregation query uses `SUM(IF(...))` / `COUNT(...)` to compute the proportion without sub-queries.
 
@@ -163,7 +163,7 @@ Each CQ is evaluated against a purpose-built synthetic ABox loaded alongside the
 
 ## CQ9 — Override Frequency by Occupant
 
-**Which occupants most frequently override automated lighting controls, and in which spaces do overrides occur?**
+**Which occupants most frequently override automated controls, and in which building spaces do overrides occur?**
 
 **Key classes/properties:** `occo:OverrideEvent`, `occo:overrides`, `prov:wasAssociatedWith`, `prov:atLocation`, `prov:generatedAtTime`
 
@@ -181,7 +181,7 @@ Each CQ is evaluated against a purpose-built synthetic ABox loaded alongside the
 
 ## CQ10 — Best-Balanced Strategy
 
-**Which control strategy achieves the best balance of energy efficiency, occupant comfort, and compliance with EN 12464-1:2021?**
+**Which control strategy achieves the best balance of energy efficiency, occupant satisfaction, and compliance with comfort standards?**
 
 **Key classes/properties:** `occo:ControlStrategy`, `occo:strategyCategory`, `occo:PerformanceOutcome`, `occo:assessedAgainst`, `occo:meetsStandard`, `occo:comfortScore`, `occo:hasEnergyConsumption`, `qudt:numericValue`, `prov:wasGeneratedBy`
 
@@ -201,13 +201,13 @@ Each CQ is evaluated against a purpose-built synthetic ABox loaded alongside the
 
 | CQ | Description | Results | Edge Case Validated |
 |---|---|---|---|
-| CQ1 | Occupancy-triggered actuations (working hours) | 4 | Out-of-hours actuation excluded |
-| CQ2 | Discomfort feedback (7-day window) | 3 | Positive feedback + out-of-window feedback excluded |
-| CQ3 | Strategy comparison by comfort + energy | 4 | Low-comfort energy-saving strategy ranked last |
-| CQ4 | Task-based preferences | 5 | Singleton task (one person, one task) handled |
-| CQ5 | Preference evolution over time | 6 | Temporal ordering across 3 snapshots correct |
-| CQ6 | Circadian CCT patterns | 6 | Static strategy (Office 303) excluded |
-| CQ7 | Compliant spaces with negative feedback | 2 | Positive-feedback and non-compliant cases excluded |
-| CQ8 | Illuminance range compliance proportion | 1 (agg.) | Out-of-range values correctly subtracted |
-| CQ9 | Override frequency by occupant | 3 | Zero-override person absent from results |
-| CQ10 | Best-balanced compliant strategy | 3 | Non-compliant strategy excluded despite best energy |
+| CQ1 | Control actions triggered by occupancy during working hours | 4 | Out-of-hours actuation excluded |
+| CQ2 | Spaces with discomfort feedback and corresponding sensor levels | 3 | Positive feedback + out-of-window feedback excluded |
+| CQ3 | Strategy with highest comfort scores and lowest energy consumption | 4 | Low-comfort energy-saving strategy ranked last |
+| CQ4 | Task-based illuminance and CCT preferences | 5 | Singleton task (one person, one task) handled |
+| CQ5 | Preference profile evolution over time | 6 | Temporal ordering across 3 snapshots correct |
+| CQ6 | Circadian strategies applied by chronotype | 6 | Static strategy (Office 303) excluded |
+| CQ7 | Spaces meeting comfort standard with negative feedback | 2 | Positive-feedback and non-compliant cases excluded |
+| CQ8 | Proportion of illuminance observations within comfort standard range | 1 (agg.) | Out-of-range values correctly excluded from count |
+| CQ9 | Override frequency by occupant and building space | 3 | Zero-override person absent from results |
+| CQ10 | Best-balanced compliant strategy by satisfaction and energy | 3 | Non-compliant strategy excluded despite best energy |

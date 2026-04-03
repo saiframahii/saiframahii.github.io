@@ -1,5 +1,5 @@
 # CQ6: Which building spaces have circadian-friendly lighting control strategies
-# applied, and what are the CCT patterns across different times of day?
+# applied, based on occupant chronotype?
 
 PREFIX occo: <https://w3id.org/occo#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
