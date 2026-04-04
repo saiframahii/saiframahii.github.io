@@ -86,7 +86,7 @@ ex:outcome_occ a occo:PerformanceOutcome ;
     occo:includesFeedback ex:fb_occ_1 ;
     occo:includesFeedback ex:fb_occ_2 ;
     prov:wasGeneratedBy ex:strategy_occupancy ;
-    occo:assessedAgainst occo:EN_12464_1_2021 .
+    occo:assessedAgainst occo:EN_12464_1 .
 
 ex:outcome_pref a occo:PerformanceOutcome ;
     occo:comfortScore "2.85"^^xsd:decimal ;
@@ -94,7 +94,7 @@ ex:outcome_pref a occo:PerformanceOutcome ;
     occo:includesFeedback ex:fb_pref_1 ;
     occo:includesFeedback ex:fb_pref_2 ;
     prov:wasGeneratedBy ex:strategy_preference ;
-    occo:assessedAgainst occo:EN_12464_1_2021 .
+    occo:assessedAgainst occo:EN_12464_1 .
 
 ex:outcome_circ a occo:PerformanceOutcome ;
     occo:comfortScore "3.05"^^xsd:decimal ;
@@ -102,7 +102,7 @@ ex:outcome_circ a occo:PerformanceOutcome ;
     occo:includesFeedback ex:fb_circ_1 ;
     occo:includesFeedback ex:fb_circ_2 ;
     prov:wasGeneratedBy ex:strategy_circadian ;
-    occo:assessedAgainst occo:EN_12464_1_2021 .
+    occo:assessedAgainst occo:EN_12464_1 .
 
 ex:outcome_enrg a occo:PerformanceOutcome ;
     occo:comfortScore "1.95"^^xsd:decimal ;
@@ -110,4 +110,4 @@ ex:outcome_enrg a occo:PerformanceOutcome ;
     occo:includesFeedback ex:fb_enrg_1 ;
     occo:includesFeedback ex:fb_enrg_2 ;
     prov:wasGeneratedBy ex:strategy_energy ;
-    occo:assessedAgainst occo:EN_12464_1_2021 .
+    occo:assessedAgainst occo:EN_12464_1 .

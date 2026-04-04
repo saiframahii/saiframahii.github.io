@@ -64,7 +64,7 @@ ex:energy_min a qudt:QuantityValue ;
 # Occupancy-Based: moderate comfort, moderate energy, meets standard
 ex:outcome_occ a occo:PerformanceOutcome ;
     rdfs:label "Outcome Occupancy-Based" ;
-    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:assessedAgainst occo:EN_12464_1 ;
     occo:meetsStandard "true"^^xsd:boolean ;
     occo:comfortScore "1.8"^^xsd:decimal ;
     occo:hasEnergyConsumption ex:energy_occ ;
@@ -73,7 +73,7 @@ ex:outcome_occ a occo:PerformanceOutcome ;
 # Preference-Based: high comfort, higher energy, meets standard
 ex:outcome_pref a occo:PerformanceOutcome ;
     rdfs:label "Outcome Preference-Based" ;
-    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:assessedAgainst occo:EN_12464_1 ;
     occo:meetsStandard "true"^^xsd:boolean ;
     occo:comfortScore "3.2"^^xsd:decimal ;
     occo:hasEnergyConsumption ex:energy_pref ;
@@ -82,7 +82,7 @@ ex:outcome_pref a occo:PerformanceOutcome ;
 # Circadian: highest comfort, moderate energy, meets standard → BEST BALANCE
 ex:outcome_circ a occo:PerformanceOutcome ;
     rdfs:label "Outcome Circadian-Optimised" ;
-    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:assessedAgainst occo:EN_12464_1 ;
     occo:meetsStandard "true"^^xsd:boolean ;
     occo:comfortScore "3.5"^^xsd:decimal ;
     occo:hasEnergyConsumption ex:energy_circ ;
@@ -92,7 +92,7 @@ ex:outcome_circ a occo:PerformanceOutcome ;
 # Edge case: best energy but fails compliance — should be excluded by meetsStandard filter
 ex:outcome_min a occo:PerformanceOutcome ;
     rdfs:label "Outcome Energy-Minimisation" ;
-    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:assessedAgainst occo:EN_12464_1 ;
     occo:meetsStandard "false"^^xsd:boolean ;
     occo:comfortScore "0.5"^^xsd:decimal ;
     occo:hasEnergyConsumption ex:energy_min ;

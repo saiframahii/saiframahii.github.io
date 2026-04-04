@@ -173,7 +173,7 @@ This section provides details for each class and property defined by Occupant-Ce
   <h3>Control Strategy<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/occo#ControlStrategy</p>
   <div class="comment">
-   <span class="markdown">A defined approach for adjusting lighting parameters in a building space, such as dimming or colour tuning, selected by the controller to meet occupant requirements.</span>
+   <span class="markdown">A defined approach for adjusting environmental parameters in a building space, selected by the controller to meet occupant comfort requirements.</span>
   </div>
   <dl class="description">
    <dt>
@@ -194,7 +194,7 @@ This section provides details for each class and property defined by Occupant-Ce
   <h3>Controller<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/occo#Controller</p>
   <div class="comment">
-   <span class="markdown">An automated software agent that selects and applies a lighting control strategy within a building space based on occupant preferences and environmental observations.</span>
+   <span class="markdown">An automated software agent that selects and applies a control strategy within a building space based on occupant preferences and environmental observations.</span>
   </div>
   <dl class="description">
    <dt>
@@ -597,7 +597,7 @@ This section provides details for each class and property defined by Occupant-Ce
     has members
    </dt>
    <dd>
-    <a href="#EN_12464_1_2021" title="https://w3id.org/occo#EN_12464_1_2021">E N 12464 1 2021</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ISO_8995_1" title="https://w3id.org/occo#ISO_8995_1">I S O 8995 1</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="#EN_12464_1" title="https://w3id.org/occo#EN_12464_1">EN 12464-1</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#ISO_CIE_8995_1" title="https://w3id.org/occo#ISO_CIE_8995_1">ISO/CIE 8995-1</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -1574,7 +1574,7 @@ This section provides details for each class and property defined by Occupant-Ce
   <h3>strategy category<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/occo#strategyCategory</p>
   <div class="comment">
-   <span class="markdown">A string label categorising the type of control strategy applied, such as dimming, colour tuning, or scene-based control.</span>
+   <span class="markdown">A string label categorising the type of control strategy applied, such as dimming, setpoint adjustment, or occupancy-based scheduling.</span>
   </div>
   <div class="description">
    <dl>
@@ -1597,9 +1597,9 @@ This section provides details for each class and property defined by Occupant-Ce
  <h3 id="namedindividuals" class="list">Named Individuals</h3>
  <ul class="hlist">
   <li><a href="#" title="https://w3id.org/occo#"> <span></span> </a></li>
-  <li><a href="#EN_12464_1_2021" title="https://w3id.org/occo#EN_12464_1_2021"> <span>E N 12464 1 2021</span> </a></li>
+  <li><a href="#EN_12464_1" title="https://w3id.org/occo#EN_12464_1"> <span>EN 12464-1</span> </a></li>
   <li><a href="#EveningType" title="https://w3id.org/occo#EveningType"> <span>Evening Type</span> </a></li>
-  <li><a href="#ISO_8995_1" title="https://w3id.org/occo#ISO_8995_1"> <span>I S O 8995 1</span> </a></li>
+  <li><a href="#ISO_CIE_8995_1" title="https://w3id.org/occo#ISO_CIE_8995_1"> <span>ISO/CIE 8995-1</span> </a></li>
   <li><a href="#IntermediateType" title="https://w3id.org/occo#IntermediateType"> <span>Intermediate Type</span> </a></li>
   <li><a href="#MorningType" title="https://w3id.org/occo#MorningType"> <span>Morning Type</span> </a></li>
  </ul>
@@ -1618,9 +1618,9 @@ This section provides details for each class and property defined by Occupant-Ce
    </dd>
   </dl>
  </div>
- <div class="entity" id="EN_12464_1_2021">
-  <h3>E N 12464 1 2021<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/occo#EN_12464_1_2021</p>
+ <div class="entity" id="EN_12464_1">
+  <h3>EN 12464-1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#EN_12464_1</p>
   <dl class="description">
    <dt>
     belongs to
@@ -1638,7 +1638,7 @@ This section provides details for each class and property defined by Occupant-Ce
     <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">issued</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2021-08-31"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
    </dd>
    <dd>
-    <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">publisher</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"BSI"</span>
+    <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">publisher</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"CEN"</span>
    </dd>
    <dd>
     <a href="http://purl.org/dc/terms/title" target="_blank" title="http://purl.org/dc/terms/title">title</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Light and lighting. Lighting of work places - Indoor work places"@en</span>
@@ -1657,9 +1657,9 @@ This section provides details for each class and property defined by Occupant-Ce
    </dd>
   </dl>
  </div>
- <div class="entity" id="ISO_8995_1">
-  <h3>I S O 8995 1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/occo#ISO_8995_1</p>
+ <div class="entity" id="ISO_CIE_8995_1">
+  <h3>ISO/CIE 8995-1<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/occo#ISO_CIE_8995_1</p>
   <dl class="description">
    <dt>
     belongs to
@@ -1671,13 +1671,13 @@ This section provides details for each class and property defined by Occupant-Ce
     has facts
    </dt>
    <dd>
-    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"ISO 8995-1"</span>
+    <a href="#http://purl.org/dc/terms/identifier" title="http://purl.org/dc/terms/identifier">identifier</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"ISO/CIE 8995-1:2025"</span>
    </dd>
    <dd>
     <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">issued</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"2025-01-01"^^<a href="http://www.w3.org/2001/XMLSchema#date" target="_blank" title="http://www.w3.org/2001/XMLSchema#date">date</a> </span>
    </dd>
    <dd>
-    <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">publisher</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"ISO"</span>
+    <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">publisher</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"ISO/CIE"</span>
    </dd>
    <dd>
     <a href="http://purl.org/dc/terms/title" target="_blank" title="http://purl.org/dc/terms/title">title</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Light and lighting — Lighting of work places Part 1: Indoor"@en</span>

@@ -97,7 +97,7 @@ ex:feedback_carlos a ofo:Feedback ;
 # Office 401: meetsStandard=true, includes negative feedback → SHOULD APPEAR
 ex:outcome_401 a occo:PerformanceOutcome ;
     rdfs:label "Outcome Office 401" ;
-    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:assessedAgainst occo:EN_12464_1 ;
     occo:meetsStandard "true"^^xsd:boolean ;
     occo:comfortScore "-2"^^xsd:decimal ;
     occo:includesFeedback ex:feedback_james ;
@@ -106,7 +106,7 @@ ex:outcome_401 a occo:PerformanceOutcome ;
 # Office 402: meetsStandard=true, includes negative feedback → SHOULD APPEAR
 ex:outcome_402 a occo:PerformanceOutcome ;
     rdfs:label "Outcome Office 402" ;
-    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:assessedAgainst occo:EN_12464_1 ;
     occo:meetsStandard "true"^^xsd:boolean ;
     occo:comfortScore "-1"^^xsd:decimal ;
     occo:includesFeedback ex:feedback_priya ;
@@ -115,7 +115,7 @@ ex:outcome_402 a occo:PerformanceOutcome ;
 # Office 403: meetsStandard=true, positive feedback → should NOT appear (filter: score < 0)
 ex:outcome_403 a occo:PerformanceOutcome ;
     rdfs:label "Outcome Office 403" ;
-    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:assessedAgainst occo:EN_12464_1 ;
     occo:meetsStandard "true"^^xsd:boolean ;
     occo:comfortScore "2"^^xsd:decimal ;
     occo:includesFeedback ex:feedback_anna ;
@@ -124,7 +124,7 @@ ex:outcome_403 a occo:PerformanceOutcome ;
 # Office 404: meetsStandard=false, negative feedback → should NOT appear (filter: meetsStandard=true)
 ex:outcome_404 a occo:PerformanceOutcome ;
     rdfs:label "Outcome Office 404" ;
-    occo:assessedAgainst occo:EN_12464_1_2021 ;
+    occo:assessedAgainst occo:EN_12464_1 ;
     occo:meetsStandard "false"^^xsd:boolean ;
     occo:comfortScore "-3"^^xsd:decimal ;
     occo:includesFeedback ex:feedback_carlos ;

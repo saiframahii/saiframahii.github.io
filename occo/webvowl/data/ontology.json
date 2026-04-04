@@ -544,7 +544,7 @@
       "undefined" : "Standard"
     },
     "individuals" : [ {
-      "iri" : "https://w3id.org/occo#ISO_8995_1",
+      "iri" : "https://w3id.org/occo#ISO_CIE_8995_1",
       "baseIri" : "https://w3id.org/occo",
       "annotations" : {
         "title" : [ {
@@ -555,10 +555,10 @@
         } ]
       },
       "labels" : {
-        "IRI-based" : "ISO_8995_1"
+        "IRI-based" : "ISO_CIE_8995_1"
       }
     }, {
-      "iri" : "https://w3id.org/occo#EN_12464_1_2021",
+      "iri" : "https://w3id.org/occo#EN_12464_1",
       "baseIri" : "https://w3id.org/occo",
       "annotations" : {
         "title" : [ {
@@ -569,7 +569,7 @@
         } ]
       },
       "labels" : {
-        "IRI-based" : "EN_12464_1_2021"
+        "IRI-based" : "EN_12464_1"
       }
     } ],
     "attributes" : [ "external" ],
@@ -583,7 +583,7 @@
       "undefined" : "Control Strategy"
     },
     "comment" : {
-      "en" : "A defined approach for adjusting lighting parameters in a building space, such as dimming or colour tuning, selected by the controller to meet occupant requirements."
+      "en" : "A defined approach for adjusting environmental parameters in a building space, selected by the controller to meet occupant comfort requirements."
     },
     "id" : "58"
   }, {
@@ -764,7 +764,7 @@
       "undefined" : "Controller"
     },
     "comment" : {
-      "en" : "An automated software agent that selects and applies a lighting control strategy within a building space based on occupant preferences and environmental observations."
+      "en" : "An automated software agent that selects and applies a control strategy within a building space based on occupant preferences and environmental observations."
     },
     "id" : "32",
     "superClasses" : [ "23" ]
@@ -1557,7 +1557,7 @@
     },
     "domain" : "58",
     "comment" : {
-      "en" : "A string label categorising the type of control strategy applied, such as dimming, colour tuning, or scene-based control."
+      "en" : "A string label categorising the type of control strategy applied, such as dimming, setpoint adjustment, or occupancy-based scheduling."
     },
     "attributes" : [ "datatype" ],
     "id" : "76"

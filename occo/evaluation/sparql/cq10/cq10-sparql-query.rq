@@ -14,7 +14,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?strategyLabel ?category ?comfortScore ?energyKwh ?meetsStandard
 WHERE {
     ?outcome a occo:PerformanceOutcome ;
-             occo:assessedAgainst occo:EN_12464_1_2021 ;
+             occo:assessedAgainst occo:EN_12464_1 ;
              occo:meetsStandard "true"^^xsd:boolean ;
              occo:meetsStandard ?meetsStandard ;
              occo:comfortScore ?comfortScore ;

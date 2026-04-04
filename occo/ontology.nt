@@ -347,7 +347,7 @@
 <https://w3id.org/occo#strategyCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/occo#strategyCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/occo#ControlStrategy> .
 <https://w3id.org/occo#strategyCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/occo#strategyCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "A string label categorising the type of control strategy applied, such as dimming, colour tuning, or scene-based control."@en .
+<https://w3id.org/occo#strategyCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "A string label categorising the type of control strategy applied, such as dimming, setpoint adjustment, or occupancy-based scheduling."@en .
 <https://w3id.org/occo#strategyCategory> <http://www.w3.org/2000/01/rdf-schema#label> "strategy category" .
 # 
 # https://w3id.org/ofo#hasSimpleFeedbackState
@@ -462,13 +462,13 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/occo#ControlStrategy
 <https://w3id.org/occo#ControlStrategy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/occo#ControlStrategy> <http://www.w3.org/2000/01/rdf-schema#comment> "A defined approach for adjusting lighting parameters in a building space, such as dimming or colour tuning, selected by the controller to meet occupant requirements."@en .
+<https://w3id.org/occo#ControlStrategy> <http://www.w3.org/2000/01/rdf-schema#comment> "A defined approach for adjusting environmental parameters in a building space, selected by the controller to meet occupant comfort requirements."@en .
 <https://w3id.org/occo#ControlStrategy> <http://www.w3.org/2000/01/rdf-schema#label> "Control Strategy" .
 # 
 # https://w3id.org/occo#Controller
 <https://w3id.org/occo#Controller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/occo#Controller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#SoftwareAgent> .
-<https://w3id.org/occo#Controller> <http://www.w3.org/2000/01/rdf-schema#comment> "An automated software agent that selects and applies a lighting control strategy within a building space based on occupant preferences and environmental observations."@en .
+<https://w3id.org/occo#Controller> <http://www.w3.org/2000/01/rdf-schema#comment> "An automated software agent that selects and applies a control strategy within a building space based on occupant preferences and environmental observations."@en .
 <https://w3id.org/occo#Controller> <http://www.w3.org/2000/01/rdf-schema#label> "Controller" .
 # 
 # https://w3id.org/occo#GlareIndex
@@ -545,25 +545,25 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/occo#> <http://purl.org/dc/terms/issued> "2026-03-29"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/occo#> <http://purl.org/dc/terms/publisher> "Birmingham City University" .
 # 
-# https://w3id.org/occo#EN_12464_1_2021
-<https://w3id.org/occo#EN_12464_1_2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/occo#EN_12464_1_2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/Standard> .
-<https://w3id.org/occo#EN_12464_1_2021> <http://purl.org/dc/terms/identifier> "EN 12464-1:2021" .
-<https://w3id.org/occo#EN_12464_1_2021> <http://purl.org/dc/terms/issued> "2021-08-31"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/occo#EN_12464_1_2021> <http://purl.org/dc/terms/publisher> "BSI" .
-<https://w3id.org/occo#EN_12464_1_2021> <http://purl.org/dc/terms/title> "Light and lighting. Lighting of work places - Indoor work places"@en .
+# https://w3id.org/occo#EN_12464_1
+<https://w3id.org/occo#EN_12464_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/occo#EN_12464_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/Standard> .
+<https://w3id.org/occo#EN_12464_1> <http://purl.org/dc/terms/identifier> "EN 12464-1:2021" .
+<https://w3id.org/occo#EN_12464_1> <http://purl.org/dc/terms/issued> "2021-08-31"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/occo#EN_12464_1> <http://purl.org/dc/terms/publisher> "CEN" .
+<https://w3id.org/occo#EN_12464_1> <http://purl.org/dc/terms/title> "Light and lighting. Lighting of work places - Indoor work places"@en .
 # 
 # https://w3id.org/occo#EveningType
 <https://w3id.org/occo#EveningType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/occo#EveningType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/occo#Chronotype> .
 # 
-# https://w3id.org/occo#ISO_8995_1
-<https://w3id.org/occo#ISO_8995_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/occo#ISO_8995_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/Standard> .
-<https://w3id.org/occo#ISO_8995_1> <http://purl.org/dc/terms/identifier> "ISO 8995-1" .
-<https://w3id.org/occo#ISO_8995_1> <http://purl.org/dc/terms/issued> "2025-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/occo#ISO_8995_1> <http://purl.org/dc/terms/publisher> "ISO" .
-<https://w3id.org/occo#ISO_8995_1> <http://purl.org/dc/terms/title> "Light and lighting — Lighting of work places Part 1: Indoor"@en .
+# https://w3id.org/occo#ISO_CIE_8995_1
+<https://w3id.org/occo#ISO_CIE_8995_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/occo#ISO_CIE_8995_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/Standard> .
+<https://w3id.org/occo#ISO_CIE_8995_1> <http://purl.org/dc/terms/identifier> "ISO/CIE 8995-1:2025" .
+<https://w3id.org/occo#ISO_CIE_8995_1> <http://purl.org/dc/terms/issued> "2025-01-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/occo#ISO_CIE_8995_1> <http://purl.org/dc/terms/publisher> "ISO/CIE" .
+<https://w3id.org/occo#ISO_CIE_8995_1> <http://purl.org/dc/terms/title> "Light and lighting — Lighting of work places Part 1: Indoor"@en .
 # 
 # https://w3id.org/occo#IntermediateType
 <https://w3id.org/occo#IntermediateType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

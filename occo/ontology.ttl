@@ -385,7 +385,7 @@ xsd:date rdf:type rdfs:Datatype .
 :strategyCategory rdf:type owl:DatatypeProperty ;
                   rdfs:domain :ControlStrategy ;
                   rdfs:range xsd:string ;
-                  rdfs:comment "A string label categorising the type of control strategy applied, such as dimming, colour tuning, or scene-based control."@en ;
+                  rdfs:comment "A string label categorising the type of control strategy applied, such as dimming, setpoint adjustment, or occupancy-based scheduling."@en ;
                   rdfs:label "strategy category" .
 
 
@@ -513,14 +513,14 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/occo#ControlStrategy
 :ControlStrategy rdf:type owl:Class ;
-                 rdfs:comment "A defined approach for adjusting lighting parameters in a building space, such as dimming or colour tuning, selected by the controller to meet occupant requirements."@en ;
+                 rdfs:comment "A defined approach for adjusting environmental parameters in a building space, selected by the controller to meet occupant comfort requirements."@en ;
                  rdfs:label "Control Strategy" .
 
 
 ###  https://w3id.org/occo#Controller
 :Controller rdf:type owl:Class ;
             rdfs:subClassOf <http://www.w3.org/ns/prov#SoftwareAgent> ;
-            rdfs:comment "An automated software agent that selects and applies a lighting control strategy within a building space based on occupant preferences and environmental observations."@en ;
+            rdfs:comment "An automated software agent that selects and applies a control strategy within a building space based on occupant preferences and environmental observations."@en ;
             rdfs:label "Controller" .
 
 
@@ -603,12 +603,12 @@ xsd:date rdf:type rdfs:Datatype .
                          <http://purl.org/dc/terms/publisher> "Birmingham City University" .
 
 
-###  https://w3id.org/occo#EN_12464_1_2021
-:EN_12464_1_2021 rdf:type owl:NamedIndividual ,
+###  https://w3id.org/occo#EN_12464_1
+:EN_12464_1 rdf:type owl:NamedIndividual ,
                           <http://purl.org/dc/terms/Standard> ;
                  <http://purl.org/dc/terms/identifier> "EN 12464-1:2021" ;
                  <http://purl.org/dc/terms/issued> "2021-08-31"^^xsd:date ;
-                 <http://purl.org/dc/terms/publisher> "BSI" ;
+                 <http://purl.org/dc/terms/publisher> "CEN" ;
                  <http://purl.org/dc/terms/title> "Light and lighting. Lighting of work places - Indoor work places"@en .
 
 
@@ -617,12 +617,12 @@ xsd:date rdf:type rdfs:Datatype .
                       :Chronotype .
 
 
-###  https://w3id.org/occo#ISO_8995_1
-:ISO_8995_1 rdf:type owl:NamedIndividual ,
+###  https://w3id.org/occo#ISO_CIE_8995_1
+:ISO_CIE_8995_1 rdf:type owl:NamedIndividual ,
                      <http://purl.org/dc/terms/Standard> ;
-            <http://purl.org/dc/terms/identifier> "ISO 8995-1" ;
+            <http://purl.org/dc/terms/identifier> "ISO/CIE 8995-1:2025" ;
             <http://purl.org/dc/terms/issued> "2025-01-01"^^xsd:date ;
-            <http://purl.org/dc/terms/publisher> "ISO" ;
+            <http://purl.org/dc/terms/publisher> "ISO/CIE" ;
             <http://purl.org/dc/terms/title> "Light and lighting — Lighting of work places Part 1: Indoor"@en .
 
 
