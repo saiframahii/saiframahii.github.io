@@ -581,20 +581,20 @@
   "@id" : "https://w3id.org/occo#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/bibliographicCitation" : [ {
-    "@value" : "Alramahi, S., Mayouf, M., Del Zendeh, E., & Ismail, K. (2026). Towards a Semantic Ontology for Occupant-Centric Building Control. Submitted to EC3 2026 — 12th European Conference on Construction IT."
+    "@value" : "Alramahi, S. et al. (2026) 'Towards a Semantic Ontology for Occupant-Centric Building Control', Proceedings of the 2026 European Conference on Computing in Construction. 2026 European Conference on Computing in Construction (2026 EC3), Corfu, Greece: European Council on Computing in Construction (EC3). Available at: https://doi.org/10.35490/EC3.2026.205."
   } ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-09-24"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "Saif Alramahi"
-  }, {
-    "@value" : "Mohammad Mayouf"
-  }, {
     "@value" : "Elham Del Zendeh"
   }, {
     "@value" : "Khalid Ismail"
+  }, {
+    "@value" : "Mohammad Mayouf"
+  }, {
+    "@value" : "Saif Alramahi"
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
@@ -609,7 +609,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-03-29"
+    "@value" : "2026-08-28"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "Birmingham City University"
@@ -739,7 +739,7 @@
     "@value" : "2025-01-01"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
-    "@value" : "ISO"
+    "@value" : "ISO/CIE"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",

@@ -12,15 +12,15 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/occo#">
         <owl:versionIRI rdf:resource="https://w3id.org/occo/0.1.1"/>
-        <terms:bibliographicCitation>Alramahi, S., Mayouf, M., Del Zendeh, E., & Ismail, K. (2026). Towards a Semantic Ontology for Occupant-Centric Building Control. Submitted to EC3 2026 — 12th European Conference on Construction IT.</terms:bibliographicCitation>
+        <terms:bibliographicCitation>Alramahi, S. et al. (2026) &apos;Towards a Semantic Ontology for Occupant-Centric Building Control&apos;, Proceedings of the 2026 European Conference on Computing in Construction. 2026 European Conference on Computing in Construction (2026 EC3), Corfu, Greece: European Council on Computing in Construction (EC3). Available at: https://doi.org/10.35490/EC3.2026.205.</terms:bibliographicCitation>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-24</terms:created>
-        <terms:creator>Saif Alramahi</terms:creator>
-        <terms:creator>Mohammad Mayouf</terms:creator>
         <terms:creator>Elham Del Zendeh</terms:creator>
         <terms:creator>Khalid Ismail</terms:creator>
+        <terms:creator>Mohammad Mayouf</terms:creator>
+        <terms:creator>Saif Alramahi</terms:creator>
         <terms:description xml:lang="en">A semantic framework for occupant-centric building control. This ontology is under active development and has not yet been fully validated.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-29</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-28</terms:modified>
         <terms:source rdf:resource="https://github.com/saiframahii/saiframahii.github.io"/>
         <terms:title xml:lang="en">Occupant-Centric Control Ontology (OCCO)</terms:title>
         <bibo:status>Ontology Specification Draft</bibo:status>
@@ -1014,7 +1014,7 @@
         <rdf:type rdf:resource="http://purl.org/dc/terms/Standard"/>
         <terms:identifier>ISO/CIE 8995-1:2025</terms:identifier>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-01-01</terms:issued>
-        <terms:publisher>ISO</terms:publisher>
+        <terms:publisher>ISO/CIE</terms:publisher>
         <terms:title xml:lang="en">Light and lighting — Lighting of work places Part 1: Indoor</terms:title>
     </owl:NamedIndividual>
     

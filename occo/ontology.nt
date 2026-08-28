@@ -1,14 +1,14 @@
 <https://w3id.org/occo#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/occo#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/occo/0.1.1> .
-<https://w3id.org/occo#> <http://purl.org/dc/terms/bibliographicCitation> "Alramahi, S., Mayouf, M., Del Zendeh, E., & Ismail, K. (2026). Towards a Semantic Ontology for Occupant-Centric Building Control. Submitted to EC3 2026 — 12th European Conference on Construction IT." .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/bibliographicCitation> "Alramahi, S. et al. (2026) 'Towards a Semantic Ontology for Occupant-Centric Building Control', Proceedings of the 2026 European Conference on Computing in Construction. 2026 European Conference on Computing in Construction (2026 EC3), Corfu, Greece: European Council on Computing in Construction (EC3). Available at: https://doi.org/10.35490/EC3.2026.205." .
 <https://w3id.org/occo#> <http://purl.org/dc/terms/created> "2025-09-24"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/occo#> <http://purl.org/dc/terms/creator> "Saif Alramahi" .
-<https://w3id.org/occo#> <http://purl.org/dc/terms/creator> "Mohammad Mayouf" .
 <https://w3id.org/occo#> <http://purl.org/dc/terms/creator> "Elham Del Zendeh" .
 <https://w3id.org/occo#> <http://purl.org/dc/terms/creator> "Khalid Ismail" .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/creator> "Mohammad Mayouf" .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/creator> "Saif Alramahi" .
 <https://w3id.org/occo#> <http://purl.org/dc/terms/description> "A semantic framework for occupant-centric building control. This ontology is under active development and has not yet been fully validated."@en .
 <https://w3id.org/occo#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/occo#> <http://purl.org/dc/terms/modified> "2026-03-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/occo#> <http://purl.org/dc/terms/modified> "2026-08-28"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/occo#> <http://purl.org/dc/terms/source> <https://github.com/saiframahii/saiframahii.github.io> .
 <https://w3id.org/occo#> <http://purl.org/dc/terms/title> "Occupant-Centric Control Ontology (OCCO)"@en .
 <https://w3id.org/occo#> <http://purl.org/ontology/bibo/status> "Ontology Specification Draft" .

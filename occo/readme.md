@@ -54,7 +54,7 @@ Content negotiation is supported — dereference `https://w3id.org/occo` with th
 
 ## Citation
 
-> Alramahi, S., Mayouf, M., Del Zendeh, E., & Ismail, K. (2026). *Towards a Semantic Ontology for Occupant-Centric Building Control*. Submitted to EC3 2026 — 12th European Conference on Construction IT.
+> Alramahi, S. et al. (2026) 'Towards a Semantic Ontology for Occupant-Centric Building Control', *Proceedings of the 2026 European Conference on Computing in Construction*. 2026 European Conference on Computing in Construction (2026 EC3), Corfu, Greece: European Council on Computing in Construction (EC3). Available at: https://doi.org/10.35490/EC3.2026.205.
 
 ---
 

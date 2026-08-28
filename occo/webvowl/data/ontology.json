@@ -8,7 +8,7 @@
     },
     "iri" : "https://w3id.org/occo#",
     "version" : "0.1.1-dev",
-    "author" : [ "Saif Alramahi", "Mohammad Mayouf", "Elham Del Zendeh", "Khalid Ismail" ],
+    "author" : [ "Elham Del Zendeh", "Mohammad Mayouf", "Khalid Ismail", "Saif Alramahi" ],
     "description" : {
       "en" : "A semantic framework for occupant-centric building control. This ontology is under active development and has not yet been fully validated."
     },
@@ -25,12 +25,7 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Saif Alramahi",
-        "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "Mohammad Mayouf",
+        "value" : "Khalid Ismail",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -40,7 +35,12 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Khalid Ismail",
+        "value" : "Mohammad Mayouf",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Saif Alramahi",
         "type" : "label"
       } ],
       "createdWith" : [ {
@@ -64,14 +64,14 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2026-03-29",
+        "value" : "2026-08-28",
         "type" : "label"
       } ],
-      "source" : [ {
-        "identifier" : "source",
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
         "language" : "undefined",
-        "value" : "https://github.com/saiframahii/saiframahii.github.io",
-        "type" : "iri"
+        "value" : "Alramahi, S. et al. (2026) 'Towards a Semantic Ontology for Occupant-Centric Building Control', Proceedings of the 2026 European Conference on Computing in Construction. 2026 European Conference on Computing in Construction (2026 EC3), Corfu, Greece: European Council on Computing in Construction (EC3). Available at: https://doi.org/10.35490/EC3.2026.205.",
+        "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
@@ -79,11 +79,11 @@
         "value" : "0.1.1-dev",
         "type" : "label"
       } ],
-      "bibliographicCitation" : [ {
-        "identifier" : "bibliographicCitation",
+      "source" : [ {
+        "identifier" : "source",
         "language" : "undefined",
-        "value" : "Alramahi, S., Mayouf, M., Del Zendeh, E., & Ismail, K. (2026). Towards a Semantic Ontology for Occupant-Centric Building Control. Submitted to EC3 2026 — 12th European Conference on Construction IT.",
-        "type" : "label"
+        "value" : "https://github.com/saiframahii/saiframahii.github.io",
+        "type" : "iri"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
@@ -544,20 +544,6 @@
       "undefined" : "Standard"
     },
     "individuals" : [ {
-      "iri" : "https://w3id.org/occo#ISO_CIE_8995_1",
-      "baseIri" : "https://w3id.org/occo",
-      "annotations" : {
-        "title" : [ {
-          "identifier" : "title",
-          "language" : "en",
-          "value" : "Light and lighting — Lighting of work places Part 1: Indoor",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "ISO_CIE_8995_1"
-      }
-    }, {
       "iri" : "https://w3id.org/occo#EN_12464_1",
       "baseIri" : "https://w3id.org/occo",
       "annotations" : {
@@ -570,6 +556,20 @@
       },
       "labels" : {
         "IRI-based" : "EN_12464_1"
+      }
+    }, {
+      "iri" : "https://w3id.org/occo#ISO_CIE_8995_1",
+      "baseIri" : "https://w3id.org/occo",
+      "annotations" : {
+        "title" : [ {
+          "identifier" : "title",
+          "language" : "en",
+          "value" : "Light and lighting � Lighting of work places Part 1: Indoor",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ISO_CIE_8995_1"
       }
     } ],
     "attributes" : [ "external" ],
@@ -1024,7 +1024,7 @@
   }, {
     "range" : "2",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "3"
   }, {
     "iri" : "https://w3id.org/ofo#hasLocation",
@@ -1081,12 +1081,12 @@
   }, {
     "range" : "2",
     "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "16"
   }, {
     "range" : "2",
     "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "18"
   }, {
     "iri" : "https://w3id.org/occo#hasChronotype",
@@ -1105,7 +1105,7 @@
   }, {
     "range" : "24",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "22"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasAssociatedWith",
@@ -1129,17 +1129,17 @@
   }, {
     "range" : "9",
     "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "27"
   }, {
     "range" : "2",
     "domain" : "30",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "29"
   }, {
     "range" : "23",
     "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "31"
   }, {
     "iri" : "http://www.w3.org/ns/prov#atLocation",
